@@ -3,7 +3,15 @@
  :default-profile-name "default"
  :compact-views #{}
  :vcs {:name "git"
-       :auto-add false}
+       ;;:auto-add false
+       :auto-add true
+       }
  :tag-patterns {:stable "stable-*"
                 :release "v[0-9]*"}
- :projects {"development" {:alias "dev"}}}
+
+ ;; what do these do?
+ :projects {"development" {:alias "dev"}
+            "command-line" {:alias "cli"}
+            "http-server" {:alias "http-server"}
+            }
+}

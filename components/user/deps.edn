@@ -1,0 +1,5 @@
+{:paths ["src" "resources"]
+ :deps {}
+ :extra-deps {poly/api-raml {:local/root "components/api-raml"}}
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps {}}}}

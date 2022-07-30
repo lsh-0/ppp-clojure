@@ -1,0 +1,11 @@
+{:deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/tools.deps.alpha {:mvn/version "0.12.985"}
+        poly/user {:local/root "../../components/user"}
+        poly/cli {:local/root "../../bases/cli"}
+        }
+
+ :aliases {:test {:extra-paths []
+                  :extra-deps  {}}
+
+           :uberjar {:main ppp.cli.core}
+           }}
