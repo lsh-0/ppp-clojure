@@ -2,6 +2,8 @@
   (:require
    [ppp.api-raml.specs]))
 
+;; I consider this the super-type for the derived elife types.
+;; If a client/user-agent says they support json, they can support application/vnd.elife.*+json
 (def application-json ["application/json" {}])
 
 (def related-article-list ["application/vnd.elife.article-related+json" {}])

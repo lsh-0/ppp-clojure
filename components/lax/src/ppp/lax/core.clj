@@ -20,7 +20,10 @@
   "converts a list of content-type pairs into a string suitable for a HTTP 'Accept' header."
   [content-type-list]
   (clojure.string/join ", " (mapv (fn [[content-type content-type-params]]
-                                    (str content-type "; version=" (:version content-type-params))) content-type-list)))
+                                    (if-let [v (:version content-type-params)]
+                                      (str content-type "; version=" (:version content-type-params))
+                                      content-type))
+                                  content-type-list)))
 
 (defn api-url
   [endpoint]
@@ -41,7 +44,7 @@
                         :page nil
                         :per-page nil
                         :order nil
-                        ;; further options for the HTTP request to be made
+                        ;; further options for the HTTP request
                         :request {}}
         kwargs (merge default-kwargs kwargs)
         kwargs (select-keys kwargs (keys default-kwargs)) ;; prunes any unsupported kwargs
@@ -61,14 +64,16 @@
             ;; only pass query params if their values are non-nil.
             query-params (into {} (filter second query-params))
             
-            http-defaults {;;:as :json
-                           :decompress-body false
+            http-defaults {:as :json
+                           :decompress-body true
                            :throw-exceptions false
                            :headers headers
                            :query-params query-params}
-            http-kwargs (merge http-defaults (:request kwargs))
+            http-kwargs (:request kwargs)
+            http-kwargs (merge http-defaults http-kwargs)
 
             http-resp (http/get (api-url endpoint) http-kwargs)
+
             ;; warn: KONG-Authenticated is unique to lax
             authenticated? (-> http-resp :headers (get "KONG-Authenticated") string-to-boolean)
             ;; 'warning' ? not the best header around :( assume it's presence means deprecation
@@ -77,24 +82,31 @@
         (cond
           (> (:status http-resp) 499)
           ;; todo: content-type for server errors not defined
-          {:content http-resp :content-type "server error" :content-type-version 1 :authenticated? authenticated?}
+          {:http-resp http-resp :content "server error" :content-type "server error" :content-type-version 1 :authenticated? authenticated?}
           
           (> (:status http-resp) 399)
           ;; todo: content-type for client errors not defined
-          {:content http-resp :content-type "client error" :content-type-version 1 :authenticated? authenticated?}
+          {:http-resp http-resp :content "client error" :content-type "client error" :content-type-version 1 :authenticated? authenticated?}
 
           :else
           ;; todo: content-type parsing sucks, version should be an int
           (let [[content-type content-type-version] (-> http-resp
                                                         :headers
                                                         (get "Content-Type")
-                                                        (clojure.string/split #"; "))]
-            {:http-resp http-resp
-             :content (:body http-resp)
-             :content-type content-type
-             :content-type-version content-type-version
-             :content-type-version-deprecated? deprecated?
-             :authenticated? authenticated?}))))))
+                                                        (clojure.string/split #"; "))
+                resp {:content (:body http-resp)
+                      :content-type content-type
+                      :content-type-version content-type-version
+                      :content-type-version-deprecated? deprecated?
+                      :authenticated? authenticated?}]
+
+            ;; if request was 'proxied', replace the 'content' with 'http-resp', caller can figure it out.
+            (if-not (:decompress-body http-kwargs)
+              (-> resp
+                  (dissoc :content)
+                  (assoc :http-resp http-resp))
+
+              resp)))))))
 
 
 ;; ---

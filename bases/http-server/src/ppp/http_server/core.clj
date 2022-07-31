@@ -11,6 +11,11 @@
    [org.tobereplaced.http-accept-headers]
    ))
 
+(defn spy
+  [x]
+  (println "spy:" x)
+  x)
+
 (defn to-int
   "given any value `x`, converts it to an integer or returns `nil` if it can't be converted."
   [x]
@@ -22,9 +27,10 @@
 
 (defn parse-accept-header
   [accept-header]
-  (let [wildcard-defaults {"*" "application/json"
-                           "*/*" "application/json"
-                           "application/*" "application/json"}
+  (let [;; api gateway accepts '*/*' but not '*' ...
+        ;; api gateway accepts 'application/*' but not 'application/json' ...
+        ;; is this strictness, pedantry, an oversight, a bug or what?
+        wildcard-defaults {"*" "*/*"}
 
         ;; "application/vnd.elife.article-list+json;version=1" =>
         ;; (["application/vnd.elife.article-list+json" {"version" "1"}])
@@ -49,7 +55,7 @@
 
 (defn acceptable-content-types-middleware
   "we know the types of content supported because of the api-raml.
-  any requests for content (or content versions) that are not supported are not made."
+  any requests for content (or specific versions of content) that are not supported are not made."
   [handler]
   (fn [request]
     (let [accept-header (-> request :headers (get "accept"))
@@ -60,38 +66,36 @@
          :body (str "Could not negotiate an acceptable content type for: %s" accept-header)})
       (handler (assoc request :content-type-list content-type-list)))))
 
-;;
-
-(defn debug-handler
-  [page per-page order content-type-list]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (str "page:" page "\nper-page:" per-page "\norder:" order "\naccepts:" content-type-list "\n" )})
-
-;; the route needs to extract and parse the 'accepts' header
-;; the route needs to extract pagination parameters
-;; the route needs to pass the whole lot to the interface fn
-
 (defn api-response-handler
   [f & rest]
-  (let [resp (apply f rest)]
+  (let [;; effectively 'proxies' the response through clj-http without decompression or coercion of body contents.
+        ;; the response from the article interface will otherwise always return native EDN across implementations.
+        kwargs {:request {:decompress-body false
+                          :as nil}} ;; output coercion, not compojure destructuring magic
+        resp (apply f (conj (vec rest) kwargs))]
     (if-let [proxy-resp (:http-resp resp)]
-
-      ;; two problems:
-      ;; 1. proxying content is desirable
-      ;; 2. coercion from json and decompression of request is desirable
-      (assoc proxy-resp "Content-Length")
+      proxy-resp
         
       {:status 200
        :body (:content resp)})))
 
+;;
+
 (defroutes api-routes
   (GET "/articles" [page per-page order api-key :as {content-type-list :content-type-list}]
        (api-response-handler articles/article-list content-type-list page per-page order api-key))
-  (GET "/articles/:id" [id] articles/article)
-  (GET "/articles/:id/related" [id] articles/related-article-list)
-  (GET "/articles/:id/versions" [id] articles/article-version-list)
-  (GET "/articles/:id/versions/:version" [id version] articles/article-version))
+
+  (GET "/articles/:id" [id api-key :as {content-type-list :content-type-list}]
+       (api-response-handler articles/article id content-type-list api-key))
+  
+  (GET "/articles/:id/related" [id api-key :as {content-type-list :content-type-list}]
+       (api-response-handler articles/related-article-list id content-type-list api-key))
+
+  (GET "/articles/:id/versions" [id api-key :as {content-type-list :content-type-list}]
+       (api-response-handler articles/article-version-list id content-type-list api-key))
+
+  (GET "/articles/:id/versions/:version" [id version api-key :as {content-type-list :content-type-list}]
+       (api-response-handler articles/article-version id version content-type-list api-key)))
 
 (defn run-server
   "starts a http web server on port 3000, does not block thread by default."
