@@ -9,7 +9,8 @@
    ;;[ring.middleware.reload :refer [wrap-reload]]
    ;; this is fine for now, but probably a bit slow.
    [org.tobereplaced.http-accept-headers]
-   ))
+   )
+  (:gen-class))
 
 (defn spy
   [x]
