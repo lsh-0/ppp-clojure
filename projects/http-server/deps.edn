@@ -7,5 +7,10 @@
 
  :aliases {:test {:extra-paths []
                   :extra-deps  {}}
+
+           :uberjar {:main ppp.http-server.core
+                     :uber-file "target/ppp.http-server.uber.jar"}
+
+           
            }
  }

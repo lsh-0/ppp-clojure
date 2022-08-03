@@ -30,6 +30,18 @@
                                 {:git/url   "https://github.com/polyfy/polylith"
                                  :sha       "349875fa6898d5f8c785c0d7279e6d35c7a39086"
                                  :deps/root "projects/poly"}}}
-
+            
+            ;; tool, execute with `clj -T:build <fn> [<key> <val>, ...]`
+            ;; for example, `clj -T:build uberjar :project http-server`
+            ;; alias added to `.dir-locals.el` for dev with cider-jack-in, use `(require '[build])`
+            :build {:deps {io.github.clojure/tools.build {:git/tag "v0.8.3" :git/sha "0d20256"}
+                           ;; convenience tasks you would find in lein but not provided in deps.edn,
+                           ;; like clean, jar, uber, test, etc
+                           io.github.seancorfield/build-clj {:git/tag "v0.5.2" :git/sha "8f75b81088b9809ec3cfc34e951036b3975007fd"}
+                           }
+                    :paths ["build/resources"]  
+                    :ns-default build
+                    :extra-paths ["."]
+                    }
             }
  }

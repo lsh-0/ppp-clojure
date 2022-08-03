@@ -101,13 +101,13 @@
 (defn run-server
   "starts a http web server on port 3000, does not block thread by default."
   [opts]
-  (let [repl-opts {:port 3000
-                   :join? false}
+  (let [repl-opts {:join? false}
         opts (merge repl-opts opts)
         routes (-> api-routes
                    (wrap-defaults api-defaults)
                    (acceptable-content-types-middleware))
         ]
+    (println "opts" opts)
     (jetty/run-jetty routes opts)))
 
 (defn -main
@@ -117,7 +117,7 @@
   ;; - https://github.com/ring-clojure/ring/blob/1.9.4/ring-jetty-adapter/src/ring/adapter/jetty.clj
   (let [opts {;; blocks thread until server ends, rendering a REPL unusable.
               :join? true
-              :port 80
+              :port 8080
               :host "localhost"
               :ssl? false
               :max-threads 50
