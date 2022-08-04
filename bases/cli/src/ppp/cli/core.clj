@@ -1,12 +1,8 @@
 (ns ppp.cli.core
   (:require
-   [ppp.user.interface :as user])
+   [ppp.cli.api :as api])
   (:gen-class))
 
-(defn foo
-  [bar]
-  (println "baz" bar))
-
 (defn -main [& args]
-  (println (user/hello (first args)))
+  (println "hello, goodbye")
   (System/exit 0))

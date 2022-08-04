@@ -28,8 +28,8 @@
             :repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}
                                 }
                    ;; https://old.reddit.com/r/Clojure/comments/fzjyw8/depsedn_how_to_declare_init_ns_and_init_fn_for_a/
-                   :main-opts  ["-e" "(require,'[ppp.lax.interface :as api])"
-                                ;;"-e" "(in-ns,'ppp.http-server.core)"
+                   :main-opts  ["-e" "(require,'[ppp.cli.core])"
+                                "-e" "(in-ns,'ppp.cli.core)"
                                 "-m" "rebel-readline.main"
                                 ]
                    }
