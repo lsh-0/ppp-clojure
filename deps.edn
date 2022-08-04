@@ -25,6 +25,15 @@
                                  "bases/cli/test"
                                  ]}
 
+            :repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}
+                                }
+                   ;; https://old.reddit.com/r/Clojure/comments/fzjyw8/depsedn_how_to_declare_init_ns_and_init_fn_for_a/
+                   :main-opts  ["-e" "(require,'[ppp.http-server.core])"
+                                "-e" "(in-ns,'ppp.http-server.core)"
+                                "-m" "rebel-readline.main"
+                                ]
+                   }
+
             :poly {:main-opts ["-m" "polylith.clj.core.poly-cli.core"]
                    :extra-deps {polyfy/polylith
                                 {:git/url   "https://github.com/polyfy/polylith"

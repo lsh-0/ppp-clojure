@@ -99,9 +99,15 @@
        (api-response-handler articles/article-version id version content-type-list api-key)))
 
 (defn run-server
-  "starts a http web server on port 3000, does not block thread by default."
+  "starts a http web server on an unprivileged port, does not block thread by default.
+  returns the server object that can be stopped with `.stop`."
   [opts]
-  (let [repl-opts {:join? false}
+  (let [repl-opts {:join? false
+                   :port 8080
+                   :host "localhost"
+                   :ssl? false
+                   :max-threads 50
+                   :min-threads 8}
         opts (merge repl-opts opts)
         routes (-> api-routes
                    (wrap-defaults api-defaults)
@@ -116,12 +122,6 @@
   ;; make some options more visible. full set here:
   ;; - https://github.com/ring-clojure/ring/blob/1.9.4/ring-jetty-adapter/src/ring/adapter/jetty.clj
   (let [opts {;; blocks thread until server ends, rendering a REPL unusable.
-              :join? true
-              :port 8080
-              :host "localhost"
-              :ssl? false
-              :max-threads 50
-              :min-threads 8
-              }]
+              :join? true}]
     (run-server opts)
     (System/exit 0)))
