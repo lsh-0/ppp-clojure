@@ -1,2 +1,2 @@
 #!/bin/bash
-clojure -M:repl -A:build -A:dev
+clojure -A:dev -A:build -M:repl
