@@ -2,6 +2,11 @@
         org.clojure/tools.deps.alpha {:mvn/version "0.12.985"}
         poly/lax {:local/root "../../components/lax"}
         poly/cli {:local/root "../../bases/cli"}
+
+        ;; transitive dependencies.
+        ;; dependencies not used directly but that the above depend upon.
+        poly/api-raml {:local/root "../../components/api-raml"}
+
         }
 
  :aliases {:test {:extra-paths []

@@ -4,3 +4,6 @@
 
 (deftest dummy-test
   (is (= 1 1)))
+
+(deftest dummy-test-2
+  (is (= 1 2)))
