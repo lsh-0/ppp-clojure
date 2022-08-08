@@ -8,6 +8,8 @@
  :aliases {:test {:extra-paths []
                   :extra-deps  {}}
 
+           :run {:main-opts  ["-m" "ppp.http-server.core"]}
+
            :uberjar {:main ppp.http-server.core
                      :uber-file "target/ppp.http-server.uber.jar"}
 
