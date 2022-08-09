@@ -47,4 +47,4 @@ Run all tests:
 
 Run component tests:
 
-    ./test http-server
+    ./test <component>
