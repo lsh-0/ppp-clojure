@@ -18,4 +18,33 @@ The Polylith documentation can be found here:
 
 'ppp' was an internal name for the frontend infrastructure used by eLife before 'continuum'. 
 
-It's also short and the first thing that came to mind.
+It's also very short.
+
+## usage
+
+As a webserver:
+
+    ./http-server
+
+As a command line tool:
+
+    ./cli <api-fn> [arg1 arg2 ... argN]
+
+As a REPL:
+
+    ./repl
+
+As a REPL from within emacs + cider:
+
+    c-x, c-f, deps.edn
+    m-x, cider-jack-in
+
+## testing
+
+Run all tests:
+
+    ./test
+
+Run component tests:
+
+    ./test http-server
