@@ -3,8 +3,8 @@
                                 "components/user/resources"
                                 "components/lax/src"
                                 "components/api-raml/src"
-                                "bases/cli/src"
-                                "bases/cli/resources"
+                                "bases/command-line/src"
+                                "bases/command-line/resources"
                                 "bases/http-server/src"
                                 "bases/http-server/resources"
                                 ]
@@ -22,14 +22,14 @@
                   }
 
             :test {:extra-paths ["components/user/test"
-                                 "bases/cli/test"
+                                 "bases/command-line/test"
                                  ]}
 
             :repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}
                                 }
                    ;; https://old.reddit.com/r/Clojure/comments/fzjyw8/depsedn_how_to_declare_init_ns_and_init_fn_for_a/
-                   :main-opts  ["-e" "(require,'[ppp.cli.core])"
-                                "-e" "(in-ns,'ppp.cli.core)"
+                   :main-opts  ["-e" "(require,'[ppp.command-line.core])"
+                                "-e" "(in-ns,'ppp.command-line.core)"
                                 "-m" "rebel-readline.main"
                                 ]
                    }
@@ -57,7 +57,7 @@
                     }
 
             ;; see 'cli' bash script
-            :cli {:main-opts  ["-m" "ppp.cli.core"]}
+            :cli {:main-opts  ["-m" "ppp.command-line.core"]}
             :http-server {:main-opts ["-m" "ppp.http-server.core"]}
             }
  }

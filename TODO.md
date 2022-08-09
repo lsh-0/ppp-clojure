@@ -47,6 +47,8 @@
     - the cli should be doing something similar to ppp.http-server.core/api-routes
         - each of the interfaces is pulled in and made available
             - done
+* http-proxy implementation of the lax component
+    - done
 
 # todo
 
@@ -61,7 +63,8 @@
 
 * another service added
     - so we can see where duplication in http proxying is happening
-        - ...
+        - recommendations
+            - because it's also greedy
 
 * pass in configuration
     - from the environment?
@@ -74,17 +77,12 @@
 
 # todo bucket
 
+* command-line project has an 'uberjar' alias
+    - isn't this centrally managed in root deps.edn?
+* a 'bus' implementation for components to notify other components
+* test speed of talking to (non-cdn) api gateway vs talking to services directly
+    - with and without persistant connections
 * component for each of the elife projects
-    - lax
-    - journal
-        - does it partake in the API? it's certainly the main consumer
-    - journal-cms
-    - 
 * a base (? a set of interfaces, right?) representing the api-raml
-* http-proxy implementation of the lax component
-* a local implementation of the lax interface
-    - talking to the same remote database? 
 * a gui
-* a cli
-    - fast-ish, like the poly cli
 * a long list of use-cases

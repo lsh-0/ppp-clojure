@@ -1,7 +1,7 @@
 {:deps {org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/tools.deps.alpha {:mvn/version "0.12.985"}
         poly/lax {:local/root "../../components/lax"}
-        poly/cli {:local/root "../../bases/cli"}
+        poly/command-line {:local/root "../../bases/command-line"}
 
         ;; transitive dependencies.
         ;; dependencies not used directly but that the above depend upon.
@@ -12,5 +12,5 @@
  :aliases {:test {:extra-paths []
                   :extra-deps  {}}
 
-           :uberjar {:main ppp.cli.core}
+           :uberjar {:main ppp.command-line.core}
            }}
