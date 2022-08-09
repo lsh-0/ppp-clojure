@@ -1,6 +1,2 @@
 #!/bin/bash
-set -e
-(
-    cd projects/http-server
-    clj -M:run
-)
+clj -A:dev -M:http-server

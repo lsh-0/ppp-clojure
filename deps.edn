@@ -58,5 +58,6 @@
 
             ;; see 'cli' bash script
             :cli {:main-opts  ["-m" "ppp.cli.core"]}
+            :http-server {:main-opts ["-m" "ppp.http-server.core"]}
             }
  }
