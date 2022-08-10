@@ -1,5 +1,6 @@
 (ns ppp.api-raml.interface
   (:require
+   [ppp.api-raml.http]
    [ppp.api-raml.specs]))
 
 ;; I consider this the super-type for the derived elife types.
@@ -14,6 +15,10 @@
 
 (def article-list ["application/vnd.elife.article-list+json" {}])
 (def article-list-v1 ["application/vnd.elife.article-list+json" {:version 1}])
+
+(def recommendations-list ["application/vnd.elife.recommendations+json" {}])
+(def recommendations-list-v1 ["application/vnd.elife.recommendations+json;version=1" {}])
+(def recommendations-list-v2 ["application/vnd.elife.recommendations+json;version=2" {}])
 
 (def poa ["application/vnd.elife.article-poa+json" {}])
 (def poa-v2 ["application/vnd.elife.article-poa+json" {:version 2}])
@@ -30,3 +35,7 @@
     article-list article-list-v1
     poa poa-v2 poa-v3
     vor vor-v5 vor-v6})
+
+;; ---
+
+(def api-request ppp.api-raml.http/api-request)

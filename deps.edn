@@ -3,6 +3,7 @@
                                 "components/user/resources"
                                 "components/lax/src"
                                 "components/api-raml/src"
+                                "components/recommendations/src"
                                 "bases/command-line/src"
                                 "bases/command-line/resources"
                                 "bases/http-server/src"
@@ -10,11 +11,15 @@
                                 ]
 
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.0"}
-                               poly/api-raml {:local/root "components/api-raml"}
+                               orchestra/orchestra {:mvn/version "2021.01.01-1"}
+
+                               ;; components
                                poly/lax {:local/root "components/lax"}
-                               orchestra/orchestra {:mvn/version "2021.01.01-1"}                               
+                               poly/api-raml {:local/root "components/api-raml"}
+                               poly/recommendations {:local/root "components/recommendations"}
                                poly/user {:local/root "components/user"}
 
+                               ;; bases
                                poly/http-server {:local/root "bases/http-server"}
 
                                }

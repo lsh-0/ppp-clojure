@@ -4,11 +4,10 @@
    [clojure.spec.alpha :as s]
    [orchestra.core :refer [defn-spec]]
    [ppp.api-raml.interface]
-   [clj-http.client :as http]
    ))
 
-;; the default should be to decompress and coerce json to edn
-;; ppp.http-server.core should pass the right options along to prevent decompressing and decoding
+;; the default should be to decompress and coerce json to edn.
+;; ppp.http-server.core passes in the further kwargs to prevent decompressing and decoding the response.
 
 (defn-spec article-list (s/or :ok :api-raml/article-summary-list, :error :api-raml/error)
   ([kwargs map?]

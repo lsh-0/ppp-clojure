@@ -3,8 +3,7 @@
  :default-profile-name "default"
  :compact-views #{}
  :vcs {:name "git"
-       ;;:auto-add false
-       :auto-add true
+       :auto-add false
        }
  :tag-patterns {:stable "stable-*"
                 :release "v[0-9]*"}

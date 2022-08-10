@@ -4,6 +4,7 @@
    [compojure.route]
    [ring.adapter.jetty :as jetty]
    [ppp.lax.interface :as articles]
+   [ppp.recommendations.interface :as recommendations]
    [ppp.api-raml.interface :as api-raml]
    [ring.middleware.defaults :refer [wrap-defaults api-defaults]]
    ;;[ring.middleware.reload :refer [wrap-reload]]
@@ -106,6 +107,9 @@
 
    (GET "/api/articles/:id/versions/:version" [id version api-key :as {content-type-list :content-type-list}]
         (api-response-handler articles/article-version id version content-type-list api-key))
+
+   (GET "/api/recommendations/:type/:id" [type id page per-page order api-key :as {content-type-list :as-content-type-list}]
+        (api-response-handler recommendations/recommendation-list type id page per-page order api-key))
 
    (compojure.route/not-found "404 Not Found.")))
 
