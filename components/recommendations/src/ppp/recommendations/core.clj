@@ -5,7 +5,8 @@
 
 (defn recommendation-list
   [type id & [kwargs]]
-  (let [defaults {:content-type-list [api-raml/recommendations-list-v2]
+  (let [defaults {:content-type-list [api-raml/recommendations-list-v2
+                                      api-raml/recommendations-list-v1]
                   :page 1
                   :per-page 20
                   :order "desc"
