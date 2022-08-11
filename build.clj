@@ -1,3 +1,4 @@
+;; https://clojure.org/guides/tools_build
 ;; https://github.com/polyfy/polylith/blob/master/examples/doc-example/build.clj
 
 (ns build
@@ -7,6 +8,15 @@
    [clojure.tools.deps.alpha.util.dir :refer [with-dir]]
    [org.corfield.build :as bb]
    [clojure.tools.build.api :as b]))
+
+;; roughly modelled on Leiningen, no place for it in deps.edn
+(def project
+  {:name "ppp"
+   :version "0.0.2-unreleased"
+   :description "Pretty Perfect Publishing (PPP)"
+   :url "https://github.com/lsh-0/ppp"
+   :licence {:name "GNU Affero General Public License (AGPL)"
+             :url "https://www.gnu.org/licenses/agpl-3.0.en.html"}})
 
 (defn get-project-aliases []
   (let [edn-fn (juxt :root-edn :project-edn)]
