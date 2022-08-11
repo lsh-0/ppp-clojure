@@ -48,3 +48,10 @@ Run all tests:
 Run component tests:
 
     ./test <component>
+
+## License
+
+Copyright © 2022 Luke Skibinski
+
+Distributed under the GNU Affero General Public Licence, version 3 [with additional permissions](LICENCE.txt#L665)
+
