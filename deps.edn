@@ -1,6 +1,4 @@
 {:aliases  {:dev {:extra-paths ["development/src"
-                                "components/user/src"
-                                "components/user/resources"
                                 "components/lax/src"
                                 "components/api-raml/src"
                                 "components/recommendations/src"
@@ -17,7 +15,6 @@
                                poly/lax {:local/root "components/lax"}
                                poly/api-raml {:local/root "components/api-raml"}
                                poly/recommendations {:local/root "components/recommendations"}
-                               poly/user {:local/root "components/user"}
 
                                ;; bases
                                poly/http-server {:local/root "bases/http-server"}
@@ -26,8 +23,7 @@
                   
                   }
 
-            :test {:extra-paths ["components/user/test"
-                                 "bases/command-line/test"
+            :test {:extra-paths ["bases/command-line/test"
                                  ]}
 
             :repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}
