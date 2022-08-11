@@ -80,7 +80,8 @@
 
 (defn paginate
   [content page per-page order]
-  content)
+  (let [offset (* per-page (dec page))]
+    (take per-page (nthrest content offset))))
 
 (defn negotiate
   [content acceptable-content-type-list]
