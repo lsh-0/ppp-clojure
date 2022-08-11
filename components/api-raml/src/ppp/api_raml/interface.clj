@@ -17,8 +17,8 @@
 (def article-list-v1 ["application/vnd.elife.article-list+json" {:version 1}])
 
 (def recommendations-list ["application/vnd.elife.recommendations+json" {}])
-(def recommendations-list-v1 ["application/vnd.elife.recommendations+json;version=1" {}])
-(def recommendations-list-v2 ["application/vnd.elife.recommendations+json;version=2" {}])
+(def recommendations-list-v1 ["application/vnd.elife.recommendations+json" {:version 1}])
+(def recommendations-list-v2 ["application/vnd.elife.recommendations+json" {:version 2}])
 
 (def poa ["application/vnd.elife.article-poa+json" {}])
 (def poa-v2 ["application/vnd.elife.article-poa+json" {:version 2}])

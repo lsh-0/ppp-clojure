@@ -12,12 +12,21 @@
 (s/def :api-raml/order #{"asc" "desc"})
 (s/def :api-raml/manuscript-id pos-int?)
 
-
 ;; components fulfilling API endpoints are given an ordered list of supported content-type+version pairs:
 ;;   [("application/vnd.elife.article-poa+json" {:version 2}), ("application/vnd.elife.article-poa+json" {:version 1})]
 
+(s/def :api-raml/authenticated? boolean?)
+(s/def :api-raml/content map?) ;; keep these specs separate from api-raml specs
 (s/def :api-raml/content-type string?)
 (s/def :api-raml/content-type-version pos-int?)
+(s/def :api-raml/content-type-version-deprecated boolean?)
 (s/def :api-raml/content-type-params (s/keys :req-un [::content-type-version]))
 (s/def :api-raml/content-type-pair (s/tuple :api-raml/content-type :api-raml/content-type-params))
 (s/def :api-raml/content-type-list (s/coll-of :api-raml/content-type-pair))
+
+;; what each component serving as a microservice should return
+(s/def :component/response (s/keys :req-un [:api-raml/content
+                                            :api-raml/content-type
+                                            :api-raml/content-type-version
+                                            :api-raml/content-type-version-deprecated?
+                                            :api-raml/authenticated?]))

@@ -2,6 +2,7 @@
                                 "components/lax/src"
                                 "components/api-raml/src"
                                 "components/recommendations/src"
+                                "components/recommendations2/src"
                                 "bases/command-line/src"
                                 "bases/command-line/resources"
                                 "bases/http-server/src"
@@ -15,12 +16,12 @@
                                poly/lax {:local/root "components/lax"}
                                poly/api-raml {:local/root "components/api-raml"}
                                poly/recommendations {:local/root "components/recommendations"}
+                               poly/recommendations2 {:local/root "components/recommendations2"}
 
                                ;; bases
                                poly/http-server {:local/root "bases/http-server"}
 
                                }
-                  
                   }
 
             :test {:extra-paths ["bases/command-line/test"
@@ -34,7 +35,6 @@
                                 "-m" "rebel-readline.main"
                                 ]
                    }
-
 
             ;; :run { ... a tool that accepts a project name and then finds and runs it ... }
             
@@ -59,6 +59,8 @@
 
             ;; see 'cli' bash script
             :cli {:main-opts  ["-m" "ppp.command-line.core"]}
+
+            ;; see 'http-server' bash script
             :http-server {:main-opts ["-m" "ppp.http-server.core"]}
             }
  }
