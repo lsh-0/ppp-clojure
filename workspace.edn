@@ -1,3 +1,5 @@
+;; https://polylith.gitbook.io/poly/workflow/configuration
+
 {:top-namespace "ppp"
  :interface-ns "interface"
  :default-profile-name "default"
