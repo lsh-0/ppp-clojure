@@ -15,7 +15,7 @@ see CHANGELOG.md for a more formal list of changes by release
 * http, set 'vary' header
     - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
     - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/ApiResponse.php#L14
-    - accept header will vary response
+    - 'accept' header will vary response
 * http, set response timeout
     - https://github.com/elifesciences/recommendations/blob/develop/src/bootstrap.php#L53
 * http, set connection timeout

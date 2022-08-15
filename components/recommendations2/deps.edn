@@ -1,4 +1,9 @@
 {:paths ["src" "resources"]
- :deps {}
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        }
+ :extra-deps {poly/api-raml {:local/root "../components/api-raml"}
+              poly/lax {:local/root "../components/lax"}
+              poly/journal-cms {:local/root "../components/journal-cms"}
+              }
  :aliases {:test {:extra-paths ["test"]
                   :extra-deps {}}}}

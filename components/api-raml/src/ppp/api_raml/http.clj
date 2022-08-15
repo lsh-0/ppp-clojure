@@ -34,8 +34,11 @@
 (defn api-request
   [endpoint kwargs]
   (let [;; a super-set of all possible params.
-        default-kwargs {:content-type-list []
+        default-kwargs {:subject-list [] ;; trait, see 'subjected'
+                        :containing-list [] ;; trait, see 'container'
+                        :content-type-list [] ;; header, see 'accept'
                         :api-key nil
+                        ;; trait, see 'paged'
                         :page nil
                         :per-page nil
                         :order nil
@@ -51,11 +54,14 @@
     (if-not valid?
       (invalid validation-response kwargs)
 
-      (let [{:keys [content-type-list api-key page per-page order api-key]} kwargs
+      (let [{:keys [content-type-list api-key subject-list containing-list page per-page order api-key]} kwargs
             headers {"Accept" (content-type-list-header content-type-list)}
             query-params {:page page
                           :per-page per-page
-                          :order order}
+                          :order order
+                          :subject subject-list
+                          :containing containing-list
+                          }
             ;; only pass query params if their values are non-nil.
             query-params (into {} (filter second query-params))
             
@@ -63,7 +69,9 @@
                            :decompress-body true
                            :throw-exceptions false
                            :headers headers
-                           :query-params query-params}
+                           :query-params query-params
+                           :multi-param-style :array ;; php-style, `[1 2 3]` => `"a[]=1&a[]=2&a[]=3"`
+                           }
             http-kwargs (:request kwargs)
             http-kwargs (merge http-defaults http-kwargs)
 

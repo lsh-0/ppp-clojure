@@ -2,6 +2,7 @@
   (:require
    [ppp.api-raml.interface :as api-raml]
    [ppp.lax.interface :as article-api]
+   [ppp.journal-cms.interface :as journal-cms]
    ))
 
 (def article-order
@@ -40,8 +41,8 @@
 
 (defn find-collections
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L169-L171
-  [id]
-  nil)
+  [id api-key]
+  (journal-cms/collection id {:api-key api-key}))
 
 (defn find-articles-by-subject
   [article-version-list]
@@ -59,7 +60,7 @@
   (if-let [article-version-list (find-article id api-key)]
     ;; article exists, now find the rest
     (let [relations #(find-related-articles id api-key)
-          collections #(find-collections id)
+          collections #(find-collections id api-key)
           recent-articles-with-subject #(find-articles-by-subject article-version-list)
           podcasts #(find-podcast-episodes id)
 

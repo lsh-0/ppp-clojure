@@ -3,6 +3,7 @@
                                 "components/api-raml/src"
                                 "components/recommendations/src"
                                 "components/recommendations2/src"
+                                "components/journal-cms/src"
                                 "bases/command-line/src"
                                 "bases/command-line/resources"
                                 "bases/http-server/src"
@@ -17,6 +18,7 @@
                                poly/api-raml {:local/root "components/api-raml"}
                                poly/recommendations {:local/root "components/recommendations"}
                                poly/recommendations2 {:local/root "components/recommendations2"}
+                               poly/journal-cms {:local/root "components/journal-cms"}
 
                                ;; bases
                                poly/http-server {:local/root "bases/http-server"}
