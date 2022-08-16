@@ -4,6 +4,7 @@
                                 "components/recommendations/src"
                                 "components/recommendations2/src"
                                 "components/journal-cms/src"
+                                "components/search/src"
                                 "bases/command-line/src"
                                 "bases/command-line/resources"
                                 "bases/http-server/src"
@@ -19,6 +20,7 @@
                                poly/recommendations {:local/root "components/recommendations"}
                                poly/recommendations2 {:local/root "components/recommendations2"}
                                poly/journal-cms {:local/root "components/journal-cms"}
+                               poly/search {:local/root "components/search"}
 
                                ;; bases
                                poly/http-server {:local/root "bases/http-server"}
@@ -27,7 +29,8 @@
                   }
 
             :test {:extra-paths ["bases/command-line/test"
-                                 ]}
+                                 ]
+                   }
 
             :repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}
                                 }

@@ -1,9 +1,6 @@
 (ns ppp.lax.core
   (:require
-   [clojure.spec.alpha :as s]
-   [orchestra.core :refer [defn-spec]]
    [ppp.api-raml.interface :as api-raml :refer [api-request]]
-   [clj-http.client :as http]
    ))
 
 (defn article-list

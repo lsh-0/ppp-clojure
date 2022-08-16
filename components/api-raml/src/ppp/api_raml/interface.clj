@@ -35,6 +35,9 @@
 (def collection-v1 ["application/vnd.elife.collection+json" {:version 1}])
 (def collection-v2 ["application/vnd.elife.collection+json" {:version 2}])
 
+(def search ["application/vnd.elife.search+json" {}])
+(def search-v1 ["application/vnd.elife.search+json" {:version 1}])
+
 (def supported-content-type-set
   "a complete set of all supported content types.
   the 'accept' header on all api requests to the http-server are checked against this and
@@ -48,6 +51,7 @@
     recommendations-list recommendations-list-v1 recommendations-list-v2
     collections-list collections-list-v1
     collection collection-v1 collection-v2
+    search search-v1
     })
 
 ;; ---

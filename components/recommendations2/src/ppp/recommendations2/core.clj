@@ -47,8 +47,13 @@
 (defn find-articles-by-subject
   [article-version-list]
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L187-L192
-  (when-let [subject-id (get-in article-version-list [0 :subjects 0 :id])]
-    nil))
+  (let [subject-id (get-in article-version-list [0 :subjects 0 :id])
+        search-for subject-id
+        search-sort "date"
+        search-type-list ["editorial" "feature" "insight" "research-advance" "research-article" "research-communication" "registered-report" "replication-study" "review-article" "scientific-correspondence" "short-report" "tools-resources"]
+        ]
+    (when subject-id
+      (search/search search-for search-sort search-type-list {}))))
 
 (defn find-podcast-episodes
   [id]
