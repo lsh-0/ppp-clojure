@@ -1,5 +1,5 @@
 (ns ppp.command-line.core-test
-  (:require [clojure.test :as test :refer :all]
+  (:require [clojure.test :as test :refer [deftest testing is]]
             [ppp.command-line.core :as core]))
 
 (deftest dummy-test

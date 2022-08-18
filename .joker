@@ -1,0 +1,3 @@
+{
+:known-macros [orchestra.core/defn-spec]
+}
