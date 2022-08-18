@@ -38,6 +38,9 @@
 (def search ["application/vnd.elife.search+json" {}])
 (def search-v1 ["application/vnd.elife.search+json" {:version 1}])
 
+(def podcast-episode-list ["application/vnd.elife.podcast-episode-list+json" {}])
+(def podcast-episode-list-v1 ["application/vnd.elife.podcast-episode-list+json" {:version 1}])
+
 (def supported-content-type-set
   "a complete set of all supported content types.
   the 'accept' header on all api requests to the http-server are checked against this and
@@ -52,8 +55,10 @@
     collections-list collections-list-v1
     collection collection-v1 collection-v2
     search search-v1
+    podcast-episode-list podcast-episode-list-v1
     })
 
 ;; ---
 
 (def api-request ppp.api-raml.http/api-request)
+(def handle-api-response ppp.api-raml.http/handle-api-response)

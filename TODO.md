@@ -64,3 +64,5 @@ see CHANGELOG.md for a more formal list of changes by release
     - isn't this centrally managed in root deps.edn?
 * a gui
 * a long list of use-cases
+    - how to add a new api endpoint to system
+    - how to handle error responses from api-gateway

@@ -19,3 +19,13 @@
                                       api-raml/collection-v1]
                   :api-key nil}]
     (api-raml/api-request (str "/collections/" id) (merge defaults kwargs))))
+
+(defn podcast-episode-list
+  [& [kwargs]]
+  (let [defaults {:containing-list []
+                  :content-type-list [api-raml/podcast-episode-list-v1]
+                  :page 1
+                  :per-page 20
+                  :order "desc"
+                  :api-key nil}]
+    (api-raml/api-request "/podcast-episodes" (merge defaults kwargs))))

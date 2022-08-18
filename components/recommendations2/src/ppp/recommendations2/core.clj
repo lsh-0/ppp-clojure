@@ -3,6 +3,7 @@
    [ppp.api-raml.interface :as api-raml]
    [ppp.lax.interface :as article-api]
    [ppp.journal-cms.interface :as journal-cms]
+   [ppp.search.interface :as search]
    ))
 
 (def article-order
@@ -42,7 +43,11 @@
 (defn find-collections
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L169-L171
   [id api-key]
-  (journal-cms/collection id {:api-key api-key}))
+  (let [collection (journal-cms/collection id {:api-key api-key})
+        [content error?] (api-raml/handle-api-response collection)]
+    (if error?
+      nil
+      content)))
 
 (defn find-articles-by-subject
   [article-version-list]
@@ -53,22 +58,34 @@
         search-type-list ["editorial" "feature" "insight" "research-advance" "research-article" "research-communication" "registered-report" "replication-study" "review-article" "scientific-correspondence" "short-report" "tools-resources"]
         ]
     (when subject-id
-      (search/search search-for search-sort search-type-list {}))))
+      (let [search-results (search/search search-for search-sort search-type-list {})
+            [content error?] (api-raml/handle-api-response search-results)]
+        (if error?
+          nil ;; log error? assume it's been handled elsewhere and carry on? push into `handle-api-response` ?
+          content)))))
 
 (defn find-podcast-episodes
   [id]
   ;; https://github.com/elifesciences/recommendations/blob/develop/src/bootstrap.php#L195-L209
-  nil)
+  (let [podcast-episode-list (journal-cms/podcast-episode-list {:containing-list [id]
+                                                                :per-page 100})
+        [content error?] (api-raml/handle-api-response podcast-episode-list)]
+    (if error?
+      nil ;; log error? assume it's been handled elsewhere and carry on? push into `handle-api-response` ?
+      ;; todo:
+      ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L198-L206
+      content)))
 
 (defn find-article-recommendations
   [id api-key]
   (if-let [article-version-list (find-article id api-key)]
-    ;; article exists, now find the rest
+    ;; article with `id` exists, now find the rest
     (let [relations #(find-related-articles id api-key)
           collections #(find-collections id api-key)
           recent-articles-with-subject #(find-articles-by-subject article-version-list)
           podcasts #(find-podcast-episodes id)
 
+          ;; call above functions in parallel (pmap ...), return a single list of results (reduce into ...)
           results (reduce into (pmap #(%) [relations collections recent-articles-with-subject podcasts]))
 
           ;; what is this doing? some kind of de-duplication?
@@ -79,9 +96,9 @@
       results)))
 
 (defn find-recommendations
-  [type id]
+  [type id api-key]
   (case type
-    "articles" (find-article-recommendations id)
+    "articles" (find-article-recommendations id api-key)
     nil))
 
 (defn paginate
@@ -104,7 +121,7 @@
                   :order "desc"
                   :api-key nil}
         kwargs (merge defaults kwargs)
-        content (find-recommendations type id)
+        content (find-recommendations type id (:api-key kwargs))
         content (paginate content (:page kwargs) (:per-page kwargs) (:order kwargs))
         content-type-pair (negotiate content (:content-type-list kwargs))
         [content-type, content-type-version] content-type-pair]

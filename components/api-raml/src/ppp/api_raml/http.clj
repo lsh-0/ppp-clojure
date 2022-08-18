@@ -15,8 +15,8 @@
   "converts a list of content-type pairs into a string suitable for a HTTP 'Accept' header."
   [content-type-list]
   (clojure.string/join ", " (mapv (fn [[content-type content-type-params]]
-                                    (if-let [v (:version content-type-params)]
-                                      (str content-type "; version=" (:version content-type-params))
+                                    (if-let [version (:version content-type-params)]
+                                      (str content-type "; version=" version)
                                       content-type))
                                   content-type-list)))
 
@@ -70,6 +70,20 @@
 
 ;; ---
 
+(defn handle-api-response
+  "convenience. given a response from calling `api-request`, returns a pair of `[http-resp-body, error-boolean]`.
+  if the response is a client or server error, the pair returned is `[http-resp, error-boolean]`.
+
+  (the details of errors and passing errors around internally isn't well defined yet, this allows an
+  unpacking of the response so the error can be inspected elsewhere).
+  "
+  [api-response]
+  (let [{:keys [content]} api-response]
+    (cond
+      (= content "server error") [api-response true]
+      (= content "client error") [api-response true]
+      :else [content false])))
+
 (defn api-request
   [endpoint kwargs]
   (let [;; a super-set of all common kwargs. these get validated, if present.
@@ -114,11 +128,13 @@
             
             ;; only pass query params if their values are non-nil.
             http-kwargs (update-in http-kwargs [:query-params] #(into {} (filter second %)))
-            
+
+            ;; todo: capture exceptions, especially timeouts
             http-resp (http/get (api-url endpoint) http-kwargs)
 
             ;; warn: KONG-Authenticated is unique to lax
             authenticated? (-> http-resp :headers (get "KONG-Authenticated") string-to-boolean)
+            
             ;; 'warning' ? not the best header around :( assume it's presence means deprecation
             deprecated? (-> http-resp :headers (get "warning") string-to-boolean)]
 
