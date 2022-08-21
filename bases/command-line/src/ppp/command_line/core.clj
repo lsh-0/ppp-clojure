@@ -19,7 +19,7 @@
 
 (defn test
   [& [ns-kw fn-kw]]
-  ;;(clojure.tools.namespace.repl/refresh) ;; reloads all namespaces, including strongbox.whatever-test ones
+  ;;(clojure.tools.namespace.repl/refresh) ;; reloads all namespaces, including ppp.whatever-test ones
   ;;(utils/instrument true) ;; always test with spec checking ON
 
   (try
