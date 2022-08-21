@@ -62,3 +62,4 @@
 
 (def api-request ppp.api-raml.http/api-request)
 (def handle-api-response ppp.api-raml.http/handle-api-response)
+(def http-error-response ppp.api-raml.http/http-error-response)

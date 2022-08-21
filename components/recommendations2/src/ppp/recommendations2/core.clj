@@ -16,12 +16,17 @@
    :scientific-correspondence 7,
    :research-article 8,
    :research-communication 8,
-   :tools-resourcesk 9,
+   :tools-resources 9,
    :feature 10,
    :insight 11,
    :editorial 12,
    :short-report 13,
    :review-article 14})
+
+(defn spy
+  [x]
+  (println "spy:" x)
+  x)
 
 (defn find-article
   [id api-key]
@@ -78,22 +83,25 @@
 
 (defn find-article-recommendations
   [id api-key]
-  (if-let [article-version-list (find-article id api-key)]
-    ;; article with `id` exists, now find the rest
-    (let [relations #(find-related-articles id api-key)
-          collections #(find-collections id api-key)
-          recent-articles-with-subject #(find-articles-by-subject article-version-list)
-          podcasts #(find-podcast-episodes id)
+  (let [article-version-list (find-article id api-key)
+        [content error?] (api-raml/handle-api-response article-version-list)]
+    (if error?
+      content
 
-          ;; call above functions in parallel (pmap ...), return a single list of results (reduce into ...)
-          results (reduce into (pmap #(%) [relations collections recent-articles-with-subject podcasts]))
+      (let [;; article with `id` exists, now find the rest
+            relations #(find-related-articles id api-key)
+            collections #(find-collections id api-key)
+            recent-articles-with-subject #(find-articles-by-subject article-version-list)
+            podcasts #(find-podcast-episodes id)
 
-          ;; what is this doing? some kind of de-duplication?
-          ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L227-L229
-          ;; https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L30
-          
-          ]
-      results)))
+            ;; call above functions in parallel (pmap ...), return a single list of results (reduce into ...)
+            results (reduce into (pmap #(%) [relations collections recent-articles-with-subject podcasts]))
+
+            ;; what is this doing? some kind of de-duplication?
+            ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L227-L229
+            ;; https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L30
+            ]
+        results))))
 
 (defn find-recommendations
   [type id api-key]
@@ -121,12 +129,17 @@
                   :order "desc"
                   :api-key nil}
         kwargs (merge defaults kwargs)
-        content (find-recommendations type id (:api-key kwargs))
-        content (paginate content (:page kwargs) (:per-page kwargs) (:order kwargs))
-        content-type-pair (negotiate content (:content-type-list kwargs))
-        [content-type, content-type-version] content-type-pair]
-    {:content content
-     :content-type content-type
-     :content-type-version content-type-version
-     :content-type-version-deprecated? (not= content-type-pair api-raml/recommendations-list-v2)
-     :authenticated? false}))
+        results (find-recommendations type id (:api-key kwargs))
+        [content error?] (api-raml/handle-api-response results)]
+
+    (if error?
+      content
+
+      (let [content (paginate content (:page kwargs) (:per-page kwargs) (:order kwargs))
+            content-type-pair (negotiate content (:content-type-list kwargs))
+            [content-type, content-type-version] content-type-pair]
+        {:content content
+         :content-type content-type
+         :content-type-version content-type-version
+         :content-type-version-deprecated? (not= content-type-pair api-raml/recommendations-list-v2)
+         :authenticated? false}))))

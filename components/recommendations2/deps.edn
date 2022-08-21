@@ -1,5 +1,6 @@
 {:paths ["src" "resources"]
- :deps {}
+ :deps {clj-http-fake/clj-http-fake {:mvn/version "1.0.3"}
+        }
  :extra-deps {}
  :aliases {:test {:extra-paths ["test"]
                   :extra-deps {}}}}

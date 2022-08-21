@@ -70,6 +70,39 @@
 
 ;; ---
 
+(defn http-error?
+  [http-resp]
+  (-> http-resp :status (not= 200)))
+
+(def http-resp-map
+  "https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"
+  {:4xx ["Client Error" "Client Error"]
+   400 ["Bad Request" "The request could not be understood by the server due to malformed syntax."]
+   404 ["Not Found" "The server has not found anything matching that URI."]
+   406 ["Not Acceptable" "The server is not capable of generating a response that is acceptable according to the accept headers sent in the request."]
+
+   :5xx ["Server Error" "Server Error"]
+   
+   })
+
+(defn http-error-response
+  "returns an internal error response using a title and description from `http-resp-map`"
+  [http-resp & [overrides]]
+  (let [status (:status http-resp)
+        key (or (when (contains? http-resp-map status) status)
+                (when (> status 399) :4xx)
+                (when (> status 499) :5xx))
+        
+        [title description] (get http-resp-map key)
+
+        resp {:http-resp http-resp
+              :content {:title title, :description description}
+              :content-type "application/problem+json"
+              :content-type-version nil
+              :content-type-version-deprecated? false
+              :authenticated? false}]
+    (merge resp overrides)))
+
 (defn handle-api-response
   "convenience. given a response from calling `api-request`, returns a pair of `[http-resp-body, error-boolean]`.
   if the response is a client or server error, the pair returned is `[http-resp, error-boolean]`.
@@ -79,10 +112,9 @@
   "
   [api-response]
   (let [{:keys [content]} api-response]
-    (cond
-      (= content "server error") [api-response true]
-      (= content "client error") [api-response true]
-      :else [content false])))
+    (if (http-error? api-response)
+      [api-response true]
+      [content false])))
 
 (defn api-request
   [endpoint kwargs]
@@ -138,17 +170,10 @@
             ;; 'warning' ? not the best header around :( assume it's presence means deprecation
             deprecated? (-> http-resp :headers (get "warning") string-to-boolean)]
 
-        (cond
-          (> (:status http-resp) 499)
-          ;; todo: content-type for server errors not defined
-          {:http-resp http-resp :content "server error" :content-type "server error" :content-type-version 1 :authenticated? authenticated?}
+        (if (http-error? http-resp)
+          (http-error-response http-resp {:authenticated? authenticated?})
           
-          (> (:status http-resp) 399)
-          ;; todo: content-type for client errors not defined
-          {:http-resp http-resp :content "client error" :content-type "client error" :content-type-version 1 :authenticated? authenticated?}
-
-          :else
-          ;; todo: content-type parsing sucks, version should be an int
+          ;; todo: content-type-version should be an int
           (let [[content-type content-type-version] (-> http-resp
                                                         :headers
                                                         (get "Content-Type")
@@ -159,7 +184,8 @@
                       :content-type-version-deprecated? deprecated?
                       :authenticated? authenticated?}]
 
-            ;; if request was 'proxied', replace the 'content' with 'http-resp', caller can figure it out.
+            ;; if request was both successful and 'proxied', replace the 'content' with 'http-resp'
+            ;; the client can figure out the rest.
             (if-not (:decompress-body http-kwargs)
               (-> resp
                   (dissoc :content)
