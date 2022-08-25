@@ -43,6 +43,10 @@ see CHANGELOG.md for a more formal list of changes by release
     - it may be confusing with the other parameters
         - like "type" (content type) and "id" (content id) in recommendations
 
+* how to keep content type definitions and versions in one place
+    - components only refer to content-types and not versions unless they have to
+    - this list of content-types can be used in tests without hardcoding versions
+        - how to test for content-type upgrades and downgrades?
 # todo bucket
 
 * http-server, per-route caching rules

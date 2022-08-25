@@ -83,7 +83,10 @@
 
 (defn find-article-recommendations
   [id api-key]
-  (let [article-version-list (find-article id api-key)
+  (let [;; todo: this is an expensive existence check. a HEAD request would be cheaper but that would assume implementation knowledge.
+        ;; a volatile msid cache could be possible
+        article-version-list (find-article id api-key)
+
         [content error?] (api-raml/handle-api-response article-version-list)]
     (if error?
       content
@@ -118,28 +121,51 @@
   [content acceptable-content-type-list]
   ;; what magic is this doing?
   ;; https://github.com/elifesciences/recommendations/blob/cf601c2290834d8cad34716e04a5da1982f9d820/src/bootstrap.php#L292-L295
-  (first acceptable-content-type-list))
+  (let [v2-compatible? true ;; assume whatever content is returned is v1 and v2 compatible
+        latest-content-type (first api-raml/recommendations-list-content-type)
+        ;; todo: recurse through all acceptable content types?
+        accepts-content-type (first acceptable-content-type-list) 
+        [content-type content-type-opts] accepts-content-type
+        version (:version content-type-opts)]
+    (cond
+      ;; request specified the generic any '*' or '*/*' or 'application/*' or 'application/json'
+      ;; return the most specific we can
+      (= content-type api-raml/application-json) latest-content-type
+
+      ;; request specified a non-generic content-type but no version
+      ;; return the most specific we can
+      (not version) latest-content-type
+
+      ;; request specified a non-generic, versioned content-type
+      v2-compatible? (first acceptable-content-type-list)
+
+      ;; could not negotiate a content-type
+      :else (api-raml/http-error-response {:status 406}))))
 
 (defn recommendation-list
   [type id & [kwargs]]
-  (let [defaults {:content-type-list [api-raml/recommendations-list-v2
-                                      api-raml/recommendations-list-v1]
+  (let [defaults {:content-type-list api-raml/recommendations-list-content-type
                   :page 1
                   :per-page 20
                   :order "desc"
                   :api-key nil}
         kwargs (merge defaults kwargs)
         results (find-recommendations type id (:api-key kwargs))
-        [content error?] (api-raml/handle-api-response results)]
 
+        ;; non-200 responses may be passed through. 
+        [content error?] (if (api-raml/api-response? results)
+                           (api-raml/handle-api-response results)
+                           [results false])]
     (if error?
       content
 
       (let [content (paginate content (:page kwargs) (:per-page kwargs) (:order kwargs))
             content-type-pair (negotiate content (:content-type-list kwargs))
-            [content-type, content-type-version] content-type-pair]
+            [content-type, content-type-opts] content-type-pair]
+
         {:content content
          :content-type content-type
-         :content-type-version content-type-version
+         :content-type-pair content-type-pair ;; todo: this is new and saves a bunch of destructuring.
+         :content-type-version (:version content-type-opts)
          :content-type-version-deprecated? (not= content-type-pair api-raml/recommendations-list-v2)
          :authenticated? false}))))

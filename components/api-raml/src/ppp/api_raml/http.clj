@@ -103,6 +103,10 @@
               :authenticated? false}]
     (merge resp overrides)))
 
+(defn api-response?
+  [api-response]
+  (contains? api-response :content))
+
 (defn handle-api-response
   "convenience. given a response from calling `api-request`, returns a pair of `[http-resp-body, error-boolean]`.
   if the response is a client or server error, the pair returned is `[http-resp, error-boolean]`.
@@ -112,7 +116,7 @@
   "
   [api-response]
   (let [{:keys [content]} api-response]
-    (if (http-error? api-response)
+    (if (http-error? content)
       [api-response true]
       [content false])))
 

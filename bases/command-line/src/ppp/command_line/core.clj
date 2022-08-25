@@ -1,5 +1,6 @@
 (ns ppp.command-line.core
   (:require
+   [clojure.tools.namespace.repl :refer [refresh]]
    [clojure.test]
    [ppp.command-line.api :as api])
   (:gen-class))
