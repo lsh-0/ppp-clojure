@@ -4,6 +4,9 @@
    [ppp.recommendations2.core :as core]
    [ppp.api-raml.interface :as api-raml]
    [clj-http.fake :refer [with-global-fake-routes-in-isolation]]
+   [me.raynes.fs :as fs]
+   [clojure.java.io :as io]
+   [cheshire.core :as json]
    ))
 
 ;; https://github.com/elifesciences/recommendations/blob/develop/test/RecommendationsTest.php
@@ -14,12 +17,26 @@
     (with-global-fake-routes-in-isolation fake-routes
       (test-fn))))
 
+(use-fixtures :each no-http-calls-fixture)
+
+;; ---
+
 (defn spy
   [x]
   (println "spy:" x)
   x)
 
-(use-fixtures :each no-http-calls-fixture)
+(def fixture-dir (-> "test/fixtures" fs/absolute fs/normalized str))
+
+(defn fixture-path
+  [filename]
+  (if-let [r (io/resource (str "fixtures/" filename))]
+    r
+    (println filename "not found")))
+
+(defn slurp-json
+  [path]
+  (-> path slurp json/parse-string))
 
 ;; ---
 
@@ -44,11 +61,42 @@
             (is (= expected-content-type (:content-type-pair result)))))))))
 
 (deftest recommendations-list--article-not-found
-  (testing "failure to find an article skips any further lookups and passed the 'Not Found' error through."
+  (testing "failure to find an article skips any further lookups and passes the 'Not Found' response through."
     (let [expected (api-raml/http-error-response {:status 404})]
       (with-redefs [core/find-article (constantly expected)]
         (is (= expected (core/recommendation-list "articles" "1234")))))))
 
 (deftest recommendations-list--article-found-no-recommendations
-  (testing "it returns an empty recommendations for an article that exists"
-    nil))
+  (testing "empty recommendations for an article that exists"
+    (let [dummy-article {:content {:status 200}}
+          empty-response {}
+          expected {:content {:total 0
+                              :items []}
+                    :content-type (first api-raml/recommendations-list)
+                    :content-type-version 2
+                    :content-type-pair api-raml/recommendations-list-v2
+                    :content-type-version-deprecated? false
+                    :authenticated? false}]
+      (with-redefs [core/find-article (constantly dummy-article)
+                    core/find-related-articles (constantly empty-response)
+                    core/find-collections (constantly empty-response)
+                    core/find-articles-by-subject (constantly empty-response)
+                    core/find-podcast-episodes (constantly empty-response)]
+        (is (= expected (core/recommendation-list "articles" "1234")))))))
+
+(deftest recommendations-list--article-found-some-recommendations
+  (testing "recommendations for an article that exists"
+    (let [dummy-article {:content {:status 200}}
+          expected {:content {:total 4
+                              :items []}
+                    :content-type (first api-raml/recommendations-list)
+                    :content-type-pair api-raml/recommendations-list-v2
+                    :content-type-version 2
+                    :content-type-version-deprecated? false
+                    :authenticated? false}]
+      (with-redefs [core/find-article (constantly dummy-article)
+                    core/find-related-articles (-> "related-articles.json" fixture-path slurp-json constantly)
+                    core/find-collections (-> "collections.json" fixture-path slurp-json constantly)
+                    core/find-articles-by-subject (-> "article.json" fixture-path slurp-json constantly)
+                    core/find-podcast-episodes (-> "podcast-episodes.json" fixture-path slurp constantly)]
+        (is (= expected (core/recommendation-list "articles" "1234")))))))

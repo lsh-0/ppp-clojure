@@ -114,8 +114,10 @@
 
 (defn paginate
   [content page per-page order]
-  (let [offset (* per-page (dec page))]
-    (take per-page (nthrest content offset))))
+  (let [offset (* per-page (dec page))
+        items (vec (take per-page (nthrest content offset)))]
+    {:total (count items)
+     :items items}))
 
 (defn negotiate
   [content acceptable-content-type-list]
