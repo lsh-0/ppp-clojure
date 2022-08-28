@@ -1,0 +1,102 @@
+{
+  "total" : 0,
+  "items" : [ ],
+  "types" : {
+    "tools-resources" : 0,
+    "research-communication" : 0,
+    "blog-article" : 0,
+    "retraction" : 0,
+    "podcast-episode" : 0,
+    "scientific-correspondence" : 0,
+    "labs-post" : 0,
+    "short-report" : 0,
+    "correction" : 0,
+    "interview" : 0,
+    "research-article" : 0,
+    "replication-study" : 0,
+    "research-advance" : 0,
+    "feature" : 0,
+    "registered-report" : 0,
+    "collection" : 0,
+    "editorial" : 0,
+    "insight" : 0,
+    "review-article" : 0
+  },
+  "subjects" : [ {
+    "id" : "biochemistry-chemical-biology",
+    "name" : "Biochemistry Chemical Biology",
+    "results" : 0
+  }, {
+    "id" : "cancer-biology",
+    "name" : "Cancer Biology",
+    "results" : 0
+  }, {
+    "id" : "cell-biology",
+    "name" : "Cell Biology",
+    "results" : 0
+  }, {
+    "id" : "chromosomes-gene-expression",
+    "name" : "Chromosomes Gene Expression",
+    "results" : 0
+  }, {
+    "id" : "computational-systems-biology",
+    "name" : "Computational Systems Biology",
+    "results" : 0
+  }, {
+    "id" : "developmental-biology",
+    "name" : "Developmental Biology",
+    "results" : 0
+  }, {
+    "id" : "ecology",
+    "name" : "Ecology",
+    "results" : 0
+  }, {
+    "id" : "epidemiology-global-health",
+    "name" : "Epidemiology Global Health",
+    "results" : 0
+  }, {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology",
+    "results" : 0
+  }, {
+    "id" : "genetics-genomics",
+    "name" : "Genetics Genomics",
+    "results" : 0
+  }, {
+    "id" : "human-biology-medicine",
+    "name" : "Human Biology Medicine",
+    "results" : 0
+  }, {
+    "id" : "immunology-inflammation",
+    "name" : "Immunology Inflammation",
+    "results" : 0
+  }, {
+    "id" : "medicine",
+    "name" : "Medicine",
+    "results" : 0
+  }, {
+    "id" : "microbiology-infectious-disease",
+    "name" : "Microbiology Infectious Disease",
+    "results" : 0
+  }, {
+    "id" : "neuroscience",
+    "name" : "Neuroscience",
+    "results" : 0
+  }, {
+    "id" : "physics-living-systems",
+    "name" : "Physics Living Systems",
+    "results" : 0
+  }, {
+    "id" : "plant-biology",
+    "name" : "Plant Biology",
+    "results" : 0
+  }, {
+    "id" : "stem-cells-regenerative-medicine",
+    "name" : "Stem Cells Regenerative Medicine",
+    "results" : 0
+  }, {
+    "id" : "structural-biology-molecular-biophysics",
+    "name" : "Structural Biology Molecular Biophysics",
+    "results" : 0
+  } ]
+}

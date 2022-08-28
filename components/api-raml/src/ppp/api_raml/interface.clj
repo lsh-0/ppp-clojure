@@ -1,7 +1,8 @@
 (ns ppp.api-raml.interface
   (:require
+   [ppp.api-raml.specs] ;; todo: order matters because of clojure.spec global ns weirdness
    [ppp.api-raml.http]
-   [ppp.api-raml.specs]))
+   ))
 
 ;; I consider this the super-type for the derived elife types.
 ;; If a client/user-agent says they support json, they can support application/vnd.elife.*+json
@@ -81,7 +82,8 @@
 
 ;; ---
 
+(def http-error? ppp.api-raml.http/http-error?)
+(def api-response-error? ppp.api-raml.http/api-response-error?)
 (def api-request ppp.api-raml.http/api-request)
-(def api-response? ppp.api-raml.http/api-response?)
 (def handle-api-response ppp.api-raml.http/handle-api-response)
 (def http-error-response ppp.api-raml.http/http-error-response)

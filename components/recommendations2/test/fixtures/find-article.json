@@ -1,0 +1,109 @@
+{
+  "http-resp" : {
+    "cached" : null,
+    "request-time" : 169,
+    "repeatable?" : false,
+    "protocol-version" : {
+      "name" : "HTTP",
+      "major" : 1,
+      "minor" : 1
+    },
+    "streaming?" : true,
+    "chunked?" : false,
+    "reason-phrase" : "OK",
+    "headers" : {
+      "X-Cache" : "MISS, HIT",
+      "X-Timer" : "S1661681604.850080,VS0,VE1",
+      "Referrer-Policy" : "same-origin",
+      "warning" : "Deprecation: Support for this Content-Type version will be removed",
+      "Server" : "nginx",
+      "Age" : "18",
+      "Via" : "kong/0.10.4, 1.1 varnish, 1.1 varnish",
+      "Content-Type" : "application/vnd.elife.article-history+json; version=1",
+      "Access-Control-Allow-Origin" : "*",
+      "X-Content-Type-Options" : "nosniff",
+      "Content-Length" : "885",
+      "X-Frame-Options" : "DENY",
+      "X-Kong-Upstream-Latency" : "44",
+      "Connection" : "close",
+      "Accept-Ranges" : "bytes",
+      "X-Kong-Proxy-Latency" : "0",
+      "KONG-Authenticated" : "False",
+      "X-Consumer-Groups-Filtered" : "user",
+      "X-Cache-Hits" : "0, 1",
+      "Date" : "Sun, 28 Aug 2022 10:13:23 GMT",
+      "Vary" : "Accept, Authorization, Accept-Encoding",
+      "Cache-Control" : "public, max-age=300, stale-while-revalidate=300, stale-if-error=86400",
+      "X-Served-By" : "cache-iad-kcgs7200104-IAD, cache-syd10137-SYD"
+    },
+    "orig-content-encoding" : "gzip",
+    "status" : 200,
+    "length" : 885,
+    "trace-redirects" : [ ]
+  },
+  "content" : {
+    "received" : "2022-04-15",
+    "accepted" : "2022-08-04",
+    "versions" : [ {
+      "researchOrganisms" : [ "Human" ],
+      "stage" : "published",
+      "copyright" : {
+        "license" : "CC0-1.0",
+        "statement" : "This is an open-access article, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. The work is made available under the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons CC0</a> public domain dedication."
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/79530/elife-79530-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.79530",
+      "versionDate" : "2022-08-05T00:00:00Z",
+      "title" : "An auto-inhibited state of protein kinase G and implications for selective activation",
+      "volume" : 11,
+      "status" : "poa",
+      "id" : "79530",
+      "statusDate" : "2022-08-05T00:00:00Z",
+      "elocationId" : "e79530",
+      "authorLine" : "Rajesh Sharma et al.",
+      "subjects" : [ {
+        "id" : "biochemistry-chemical-biology",
+        "name" : "Biochemistry and Chemical Biology"
+      }, {
+        "id" : "structural-biology-molecular-biophysics",
+        "name" : "Structural Biology and Molecular Biophysics"
+      } ],
+      "version" : 1,
+      "published" : "2022-08-05T00:00:00Z"
+    }, {
+      "figuresPdf" : "https://cdn.elifesciences.org/articles/79530/elife-79530-figures-v2.pdf",
+      "researchOrganisms" : [ "Human" ],
+      "stage" : "published",
+      "copyright" : {
+        "license" : "CC0-1.0",
+        "statement" : "This is an open-access article, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. The work is made available under the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons CC0 public domain dedication</a>."
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/79530/elife-79530-v2.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.79530",
+      "versionDate" : "2022-08-26T14:22:55Z",
+      "title" : "An auto-inhibited state of protein kinase G and implications for selective activation",
+      "volume" : 11,
+      "impactStatement" : "The crystal structure of a mammalian protein kinase G reveals contacts between the regulatory and catalytic domains, indicates how cGMP binding alters domain conformations and thus domain:domain interactions, and informs a model for enzyme auto-inhibition and cooperative activation.",
+      "status" : "vor",
+      "id" : "79530",
+      "statusDate" : "2022-08-26T14:22:55Z",
+      "elocationId" : "e79530",
+      "authorLine" : "Rajesh Sharma, Jeong Joo Kim ... Choel Kim",
+      "subjects" : [ {
+        "id" : "biochemistry-chemical-biology",
+        "name" : "Biochemistry and Chemical Biology"
+      }, {
+        "id" : "structural-biology-molecular-biophysics",
+        "name" : "Structural Biology and Molecular Biophysics"
+      } ],
+      "version" : 2,
+      "published" : "2022-08-05T00:00:00Z"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.article-history+json",
+  "content-type-version" : 1,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

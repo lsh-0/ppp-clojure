@@ -1,9 +1,12 @@
 (ns ppp.recommendations2.core
   (:require
+   [ppp.utils.interface :as utils :refer [spy]]
    [ppp.api-raml.interface :as api-raml]
    [ppp.lax.interface :as article-api]
    [ppp.journal-cms.interface :as journal-cms]
    [ppp.search.interface :as search]
+   [orchestra.core :refer [defn-spec]]
+   [clojure.spec.alpha :as s]
    ))
 
 (def article-order
@@ -23,41 +26,46 @@
    :short-report 13,
    :review-article 14})
 
-(defn spy
-  [x]
-  (println "spy:" x)
-  x)
+(defn article-comparator
+  "compares two articles, sorting by article type if types are different, or published date if types are the same."
+  [a b]
+  (let [at (:type a)
+        bt (:type b)]
+    (if (= at bt)
+      (compare (:published a) (:published b))
+      (compare (get article-order at) (get article-order bt)))))
 
 (defn find-article
   [id api-key]
-  (article-api/article-version-list id {:api-key api-key}))
+  (let [results (article-api/article-version-list id {:api-key api-key})]
+    (utils/spit-json results "find-article.json")
+    results))
 
 (defn find-related-articles
   [id api-key]
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L138-L167
   (let [;; a mixed list of article types
-        article-list (:content (article-api/related-article-list id {:api-key api-key}))
-        comparator (fn [a b]
-                     (let [at (:type a)
-                           bt (:type b)]
-                       (if (= at bt)
-                         (compare (:published a) (:published b))
-                         (compare (get article-order at) (get article-order bt)))))]
-    (sort comparator article-list)))
+        results (article-api/related-article-list id {:api-key api-key})
+        [content error?] (api-raml/handle-api-response results)]
+    (if error?
+      nil
+      (do ;;(utils/spit-json content "find-related-articles.json")
+          (sort article-comparator content)))))
 
 (defn find-collections
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L169-L171
   [id api-key]
-  (let [collection (journal-cms/collection id {:api-key api-key})
-        [content error?] (api-raml/handle-api-response collection)]
+  (let [results (journal-cms/collections-list {:containing [id] :per-page 100 :api-key api-key})
+        [content error?] (api-raml/handle-api-response results)]
     (if error?
       nil
-      content)))
+      (do ;;(utils/spit-json content "find-collections.json")
+          content))))
 
 (defn find-articles-by-subject
-  [article-version-list]
+  [article-versions]
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L187-L192
-  (let [subject-id (get-in article-version-list [0 :subjects 0 :id])
+  (let [subject-id (get-in article-versions [:versions 0 :subjects 0 :id])
         search-for subject-id
         search-sort "date"
         search-type-list ["editorial" "feature" "insight" "research-advance" "research-article" "research-communication" "registered-report" "replication-study" "review-article" "scientific-correspondence" "short-report" "tools-resources"]
@@ -66,50 +74,78 @@
       (let [search-results (search/search search-for search-sort search-type-list {})
             [content error?] (api-raml/handle-api-response search-results)]
         (if error?
-          nil ;; log error? assume it's been handled elsewhere and carry on? push into `handle-api-response` ?
-          content)))))
+          nil
+          (do ;;(utils/spit-json content "find-articles-by-subject.json")
+              content))))))
 
 (defn find-podcast-episodes
   [id]
   ;; https://github.com/elifesciences/recommendations/blob/develop/src/bootstrap.php#L195-L209
-  (let [podcast-episode-list (journal-cms/podcast-episode-list {:containing-list [id]
-                                                                :per-page 100})
+  (let [podcast-episode-list (journal-cms/podcast-episode-list {:containing-list [(str "article/" id)] :per-page 100
+                                                                           :request {:debug? true}})
         [content error?] (api-raml/handle-api-response podcast-episode-list)]
     (if error?
       nil ;; log error? assume it's been handled elsewhere and carry on? push into `handle-api-response` ?
       ;; todo:
       ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L198-L206
-      content)))
+      (do ;;(utils/spit-json content "find-podcast-episodes.json")
+          content))))
 
-(defn find-article-recommendations
-  [id api-key]
-  (let [;; todo: this is an expensive existence check. a HEAD request would be cheaper but that would assume implementation knowledge.
-        ;; a volatile msid cache could be possible
-        article-version-list (find-article id api-key)
-
-        [content error?] (api-raml/handle-api-response article-version-list)]
+(defn-spec find-article-recommendations :ppp/list-of-maps
+  [id :api-raml/manuscript-id, api-key :api-raml/api-key]
+  (let [article-versions (find-article id api-key)
+        [content error?] (api-raml/handle-api-response article-versions)]
     (if error?
-      content
+      [content]
 
       (let [;; article with `id` exists, now find the rest
             relations #(find-related-articles id api-key)
             collections #(find-collections id api-key)
-            recent-articles-with-subject #(find-articles-by-subject article-version-list)
+            recent-articles-with-subject #(find-articles-by-subject content)
             podcasts #(find-podcast-episodes id)
 
             ;; call above functions in parallel (pmap ...), return a single list of results (reduce into ...)
-            results (reduce into (pmap #(%) [relations collections recent-articles-with-subject podcasts]))
+            ;;results (reduce into (pmap #(%) [relations collections recent-articles-with-subject podcasts]))
+            ;;result-list (pmap #(%) [relations collections recent-articles-with-subject podcasts])
 
+            runner (fn [f]
+                     (try
+                       (f)
+                       (catch Exception e
+                         (println "error calling" f)
+                         (println e)
+                         )))
+
+            ;; do the requests synchronously
+            result-list (mapv runner [relations
+                                      collections
+                                      ;;recent-articles-with-subject
+                                      ;;podcasts
+                                      ])
+
+            ;; if any result is empty, 
+            result-list (->> result-list
+                             (remove empty?)
+                             ;; won't work as we've already dropped down to :content in the find-* fn error checks
+                             ;;(remove api-raml/api-response-error?) 
+                             
+                             (mapv :items)
+                             (reduce into)
+                             
+                             )
+
+            _ (clojure.pprint/pprint result-list)
+            
             ;; what is this doing? some kind of de-duplication?
             ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L227-L229
             ;; https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L30
             ]
-        results))))
+        result-list))))
 
 (defn find-recommendations
   [type id api-key]
   (case type
-    "articles" (find-article-recommendations id api-key)
+    "article" (find-article-recommendations id api-key)
     nil))
 
 (defn paginate
@@ -154,20 +190,20 @@
         kwargs (merge defaults kwargs)
         results (find-recommendations type id (:api-key kwargs))
 
-        ;; non-200 responses may be passed through. 
-        [content error?] (if (api-raml/api-response? results)
-                           (api-raml/handle-api-response results)
-                           [results false])]
+        type-content (first results) ;; the only supported type is 'article'
+        error? (and (contains? type-content :http-resp)
+                    (api-raml/http-error? type-content))
+        ]
     (if error?
-      content
+      type-content
 
-      (let [content (paginate content (:page kwargs) (:per-page kwargs) (:order kwargs))
+      (let [content (paginate results (:page kwargs) (:per-page kwargs) (:order kwargs))
             content-type-pair (negotiate content (:content-type-list kwargs))
             [content-type, content-type-opts] content-type-pair]
 
         {:content content
          :content-type content-type
-         :content-type-pair content-type-pair ;; todo: this is new and saves a bunch of destructuring.
+         :content-type-pair content-type-pair
          :content-type-version (:version content-type-opts)
          :content-type-version-deprecated? (not= content-type-pair api-raml/recommendations-list-v2)
          :authenticated? false}))))

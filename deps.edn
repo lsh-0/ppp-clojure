@@ -1,4 +1,5 @@
 {:aliases  {:dev {:extra-paths ["development/src"
+                                "components/utils/src"
                                 "components/lax/src"
                                 "components/api-raml/src"
                                 "components/recommendations/src"
@@ -15,10 +16,14 @@
                   :extra-deps {org.clojure/clojure {:mvn/version "1.11.0"}
                                orchestra/orchestra {:mvn/version "2021.01.01-1"}
                                org.clojure/tools.namespace {:mvn/version "1.3.0"} ;; reload code
-
+                               cheshire/cheshire {:mvn/version "5.11.0"} ;; json library
                                clj-commons/fs {:mvn/version "1.6.307"} ;; file system wrangling                               
 
+                               ;; todo: why extra-paths *and* extra-deps for local/root deps?
+                               
                                ;; components
+                               
+                               poly/utils {:local/root "components/utils"}
                                poly/lax {:local/root "components/lax"}
                                poly/api-raml {:local/root "components/api-raml"}
                                poly/recommendations {:local/root "components/recommendations"}
@@ -34,6 +39,7 @@
 
             :test {:extra-paths ["bases/command-line/test"
 
+                                 "components/utils/test"
                                  "components/lax/test"
                                  "components/api-raml/test"
                                  "components/recommendations/test"
@@ -42,8 +48,6 @@
                                  "components/search/test"
 
                                  "bases/http-server/test"
-
-                                 
                                  ]
 
                    :extra-deps {;;[gui-diff "0.6.7" :exclusions [net.cgrant/parsley]] ;; pops up a graphical diff for test results

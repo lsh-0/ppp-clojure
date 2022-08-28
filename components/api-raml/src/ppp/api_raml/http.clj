@@ -1,6 +1,8 @@
 (ns ppp.api-raml.http
   (:require
    [clj-http.client :as http]
+   [orchestra.core :refer [defn-spec]]
+   [clojure.spec.alpha :as s]
    ))
 
 (defn validate
@@ -70,9 +72,13 @@
 
 ;; ---
 
-(defn http-error?
-  [http-resp]
-  (-> http-resp :status (not= 200)))
+(defn-spec http-error? boolean?
+  [http-resp map?]
+  (-> http-resp :status (= 200) not))
+
+(defn-spec api-response-error? boolean?
+  [api-response :ppp.component/response]
+  (-> api-response :http-resp http-error?))
 
 (def http-resp-map
   "https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html"
@@ -95,7 +101,7 @@
         
         [title description] (get http-resp-map key)
 
-        resp {:http-resp http-resp
+        resp {:http-resp (-> http-resp (dissoc :body) (dissoc :http-client))
               :content {:title title, :description description}
               :content-type "application/problem+json"
               :content-type-version nil
@@ -103,20 +109,12 @@
               :authenticated? false}]
     (merge resp overrides)))
 
-(defn api-response?
-  [api-response]
-  (contains? api-response :content))
-
-(defn handle-api-response
-  "convenience. given a response from calling `api-request`, returns a pair of `[http-resp-body, error-boolean]`.
-  if the response is a client or server error, the pair returned is `[http-resp, error-boolean]`.
-
-  (the details of errors and passing errors around internally isn't well defined yet, this allows an
-  unpacking of the response so the error can be inspected elsewhere).
-  "
-  [api-response]
+(defn-spec handle-api-response :ppp/pair-of-map+bool
+  "convenience. given a successful response from calling `api-request`, returns a pair [http-body, true].
+  if the response was unsuccessful, the pair returned is the full response and false."
+  [api-response :ppp.component/response]
   (let [{:keys [content]} api-response]
-    (if (http-error? content)
+    (if (api-response-error? api-response)
       [api-response true]
       [content false])))
 
@@ -132,7 +130,8 @@
                         :per-page nil
                         :order nil
                         ;; further options for the HTTP request
-                        :request {:query-params {}}}
+                        :request {:debug? false
+                                  :query-params {}}}
 
         kwargs (deep-merge default-kwargs kwargs)
         kwargs (select-keys kwargs (keys default-kwargs)) ;; prunes any unsupported kwargs
@@ -182,17 +181,22 @@
                                                         :headers
                                                         (get "Content-Type")
                                                         (clojure.string/split #"; "))
-                resp {:content (:body http-resp)
+
+                content-type-version (some-> content-type-version (subs 8) Integer/parseInt)
+
+                resp {;; highly practical to have access to the http response, if available.
+                      ;; the http-client is an object and cannot be serialised.
+                      ;; the body is re-attached at 'content'
+                      :http-resp (-> http-resp (dissoc :body) (dissoc :http-client))
+                      :content (:body http-resp)
+                      ;; todo: make this a single map `:content-type {:mime ..., :version 1, :deprecated? false, ...}`
                       :content-type content-type
                       :content-type-version content-type-version
                       :content-type-version-deprecated? deprecated?
                       :authenticated? authenticated?}]
 
-            ;; if request was both successful and 'proxied', replace the 'content' with 'http-resp'
-            ;; the client can figure out the rest.
             (if-not (:decompress-body http-kwargs)
-              (-> resp
-                  (dissoc :content)
-                  (assoc :http-resp http-resp))
-
+              ;; if request was both successful and 'proxied', replace 'http-resp' with the original http-resp.
+              ;; the client (projects.http-server) can figure out the rest.
+              (assoc resp :http-resp http-resp)
               resp)))))))

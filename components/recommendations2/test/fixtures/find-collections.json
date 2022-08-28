@@ -1,0 +1,1603 @@
+{
+  "total" : 28,
+  "items" : [ {
+    "id" : "8d233d47",
+    "title" : "Meta-Research: A Collection of Articles",
+    "published" : "2018-11-23T15:13:10Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-07%2Fmetadata_-_1_1.jpg",
+        "alt" : "Meta-research",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-07%2Fmetadata_-_1_1.jpg/full/full/0/default.jpg",
+          "filename" : "metadata_-_1_1.jpg"
+        },
+        "size" : {
+          "width" : 9921,
+          "height" : 4961
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "http://vividbiology.com/" ]
+      }
+    },
+    "impactStatement" : "The study of science itself is a growing field of research.",
+    "selectedCurator" : {
+      "id" : "392bba9e",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Features Editor, eLife, United Kingdom"
+      },
+      "name" : {
+        "surname" : "Rodgers",
+        "givenNames" : "Peter A",
+        "preferred" : "Peter A Rodgers",
+        "index" : "Rodgers, Peter A"
+      },
+      "orcid" : "0000-0001-8332-936X",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0491.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0491.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0491.jpg"
+        },
+        "size" : {
+          "width" : 2862,
+          "height" : 2044
+        },
+        "focalPoint" : {
+          "x" : 49,
+          "y" : 31
+        }
+      }
+    }
+  }, {
+    "id" : "1926c529",
+    "title" : "Sparks of Change",
+    "published" : "2022-02-08T09:09:45Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2022-01%2Fsparkscollectioncms.jpg",
+        "alt" : "A gloved hand holding an orange sparks, on a pale yellow background ",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2022-01%2Fsparkscollectioncms.jpg/full/full/0/default.jpg",
+          "filename" : "sparkscollectioncms.jpg"
+        },
+        "size" : {
+          "width" : 2100,
+          "height" : 1180
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "<a href=\"http://www.munafomarzia.com\">www.munafomarzia.com</a> (CC BY 4.0)" ]
+      }
+    },
+    "impactStatement" : "Tell us how the culture of research is changing.",
+    "selectedCurator" : {
+      "id" : "b350b7d2",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate Features Editor"
+      },
+      "name" : {
+        "surname" : "Loissel",
+        "givenNames" : "Elsa",
+        "preferred" : "Elsa Loissel",
+        "index" : "Loissel, Elsa"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Felsa.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Felsa.jpg/full/full/0/default.jpg",
+          "filename" : "elsa.jpg"
+        },
+        "size" : {
+          "width" : 3741,
+          "height" : 2672
+        },
+        "focalPoint" : {
+          "x" : 48,
+          "y" : 37
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "5587bfbf",
+    "title" : "COVID-19: A Collection of Articles",
+    "published" : "2020-05-28T12:39:08Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-05%2Fvirus-4835301_1920.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-05%2Fvirus-4835301_1920.jpg/full/full/0/default.jpg",
+          "filename" : "virus-4835301_1920.jpg"
+        },
+        "size" : {
+          "width" : 1920,
+          "height" : 1080
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife has published the following articles on SARS-CoV-2 and COVID-19.",
+    "subjects" : [ {
+      "id" : "epidemiology-global-health",
+      "name" : "Epidemiology and Global Health"
+    }, {
+      "id" : "medicine",
+      "name" : "Medicine"
+    }, {
+      "id" : "microbiology-infectious-disease",
+      "name" : "Microbiology and Infectious Disease"
+    } ],
+    "selectedCurator" : {
+      "id" : "80661004",
+      "type" : {
+        "id" : "leadership",
+        "label" : "Deputy Editor"
+      },
+      "name" : {
+        "surname" : "Harper",
+        "givenNames" : "Diane M",
+        "preferred" : "Diane M Harper",
+        "index" : "Harper, Diane M"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2020-10%2Fdiane_harper_3.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2020-10%2Fdiane_harper_3.jpg/full/full/0/default.jpg",
+          "filename" : "diane_harper_3.jpg"
+        },
+        "size" : {
+          "width" : 2341,
+          "height" : 2000
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "edf1261b",
+    "title" : "Research Culture: A Selection of Articles",
+    "published" : "2020-05-07T09:15:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-05%2Frc_illustration_final.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-05%2Frc_illustration_final.jpg/full/full/0/default.jpg",
+          "filename" : "rc_illustration_final.jpg"
+        },
+        "size" : {
+          "width" : 10000,
+          "height" : 3333
+        },
+        "focalPoint" : {
+          "x" : 79,
+          "y" : 42
+        },
+        "attribution" : [ "Image credit: Vivid Biology" ]
+      }
+    },
+    "impactStatement" : "Research culture needs to be improved for the benefit of science and scientists.",
+    "selectedCurator" : {
+      "id" : "be4f9d53",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate Features Editor"
+      },
+      "name" : {
+        "surname" : "Deathridge",
+        "givenNames" : "Julia",
+        "preferred" : "Julia Deathridge",
+        "index" : "Deathridge, Julia"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-04%2FJulia_final.jpg",
+        "alt" : "Deathridge, Julia",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-04%2FJulia_final.jpg/full/full/0/default.jpg",
+          "filename" : "Julia_final.jpg"
+        },
+        "size" : {
+          "width" : 2773,
+          "height" : 1828
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 39
+        }
+      }
+    }
+  }, {
+    "id" : "8de90445",
+    "title" : "The Natural History of Model Organisms",
+    "published" : "2015-09-11T09:01:15Z",
+    "updated" : "2017-04-26T12:58:40Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F8de90445-model-organisms-elife-collections.png",
+        "alt" : "The Natural History of Model Organisms",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F8de90445-model-organisms-elife-collections.png/full/full/0/default.jpg",
+          "filename" : "8de90445-model-organisms-elife-collections.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 900
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Illustration by Claudia Stocker" ]
+      }
+    },
+    "impactStatement" : "Essays on the wild lives of model organisms, from <i>Arabidopsis </i>to the zebrafish.",
+    "subjects" : [ {
+      "id" : "ecology",
+      "name" : "Ecology"
+    }, {
+      "id" : "evolutionary-biology",
+      "name" : "Evolutionary Biology"
+    } ],
+    "selectedCurator" : {
+      "id" : "c7248050",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate Features Editor"
+      },
+      "name" : {
+        "surname" : "Pérez Valle",
+        "givenNames" : "Helena",
+        "preferred" : "Helena Pérez Valle",
+        "index" : "Pérez Valle, Helena"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-11%2Fhelena_0.jpg",
+        "alt" : "Helena",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-11%2Fhelena_0.jpg/full/full/0/default.jpg",
+          "filename" : "helena_0.jpg"
+        },
+        "size" : {
+          "width" : 3260,
+          "height" : 2080
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 58
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "3a6a7db3",
+    "title" : "Equity, Diversity and Inclusion",
+    "published" : "2021-02-11T16:05:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-02%2Fbanner_5c_1.png",
+        "alt" : "Image of raised hands to represent diversity",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-02%2Fbanner_5c_1.png/full/full/0/default.jpg",
+          "filename" : "banner_5c_1.jpg"
+        },
+        "size" : {
+          "width" : 3000,
+          "height" : 1000
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "The research community needs to do more to support scientists from underrepresented groups.",
+    "selectedCurator" : {
+      "id" : "be4f9d53",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate Features Editor"
+      },
+      "name" : {
+        "surname" : "Deathridge",
+        "givenNames" : "Julia",
+        "preferred" : "Julia Deathridge",
+        "index" : "Deathridge, Julia"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-04%2FJulia_final.jpg",
+        "alt" : "Deathridge, Julia",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-04%2FJulia_final.jpg/full/full/0/default.jpg",
+          "filename" : "Julia_final.jpg"
+        },
+        "size" : {
+          "width" : 2773,
+          "height" : 1828
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 39
+        }
+      }
+    }
+  }, {
+    "id" : "80db56f5",
+    "title" : "Living Science",
+    "published" : "2019-05-24T09:14:03Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2019-05%2Fliving_science_essays_by_eve_marder_detail_two.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2019-05%2Fliving_science_essays_by_eve_marder_detail_two.png/full/full/0/default.jpg",
+          "filename" : "living_science_essays_by_eve_marder_detail_two.jpg"
+        },
+        "size" : {
+          "width" : 1855,
+          "height" : 906
+        },
+        "focalPoint" : {
+          "x" : 86,
+          "y" : 80
+        },
+        "attribution" : [ "BEN MARDER" ]
+      }
+    },
+    "impactStatement" : "Essays on the human side of science by Eve Marder.",
+    "selectedCurator" : {
+      "id" : "81dd36b6",
+      "type" : {
+        "id" : "leadership",
+        "label" : "Brandeis University"
+      },
+      "name" : {
+        "surname" : "Marder",
+        "givenNames" : "Eve",
+        "preferred" : "Eve Marder",
+        "index" : "Marder, Eve"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fem03.jpg",
+        "alt" : "Eve Marder",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fem03.jpg/full/full/0/default.jpg",
+          "filename" : "em03.jpg"
+        },
+        "size" : {
+          "width" : 3000,
+          "height" : 2000
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    }
+  }, {
+    "id" : "a4a23f22",
+    "title" : "Ion channels: A Collection of Articles",
+    "published" : "2020-12-07T10:09:13Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-12%2Fion_channels_0.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-12%2Fion_channels_0.png/full/full/0/default.jpg",
+          "filename" : "ion_channels_0.jpg"
+        },
+        "size" : {
+          "width" : 1850,
+          "height" : 950
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife has published papers on topics related to the molecular structure and functional mechanisms of a diverse array of ion channel proteins.",
+    "selectedCurator" : {
+      "id" : "21e928a6",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "Swartz",
+        "givenNames" : "Kenton J",
+        "preferred" : "Kenton J Swartz",
+        "index" : "Swartz, Kenton J"
+      },
+      "orcid" : "0000-0003-3419-0765",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-11%2Fkenton_swartz.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-11%2Fkenton_swartz.jpg/full/full/0/default.jpg",
+          "filename" : "kenton_swartz.jpg"
+        },
+        "size" : {
+          "width" : 3280,
+          "height" : 2791
+        },
+        "focalPoint" : {
+          "x" : 58,
+          "y" : 44
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "842f35d5",
+    "title" : "#ECRWednesday webinars",
+    "published" : "2018-10-04T09:28:21Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-09%2Fwebinar-3199164_1920.jpg",
+        "alt" : "Early-career researcher webinars from eLife",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-09%2Fwebinar-3199164_1920.jpg/full/full/0/default.jpg",
+          "filename" : "webinar-3199164_1920.jpg"
+        },
+        "size" : {
+          "width" : 1920,
+          "height" : 1184
+        },
+        "focalPoint" : {
+          "x" : 32,
+          "y" : 55
+        }
+      }
+    },
+    "impactStatement" : "On the last Wednesday of each month, members of the eLife Early-Career Advisory Group invite experts to share their views and advice on subjects pertinent to research careers.",
+    "selectedCurator" : {
+      "id" : "3a87ec66",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate features editor and web content manager"
+      },
+      "name" : {
+        "surname" : "Pewsey",
+        "givenNames" : "Emma",
+        "preferred" : "Emma Pewsey",
+        "index" : "Pewsey, Emma"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0516.jpg"
+        },
+        "size" : {
+          "width" : 3156,
+          "height" : 2254
+        },
+        "focalPoint" : {
+          "x" : 44,
+          "y" : 32
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "d72819a9",
+    "title" : "Executable Research Articles",
+    "published" : "2021-06-29T15:00:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-06%2Fera.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-06%2Fera.png/full/full/0/default.jpg",
+          "filename" : "era.jpg"
+        },
+        "size" : {
+          "width" : 1855,
+          "height" : 962
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife’s Executable Research Article lets authors include live code, data and interactive figures in their published paper.",
+    "selectedCurator" : {
+      "id" : "7d336d4e",
+      "type" : {
+        "id" : "executive",
+        "label" : "Head of Production Operations"
+      },
+      "name" : {
+        "surname" : "Atherden",
+        "givenNames" : "Fred",
+        "preferred" : "Fred Atherden",
+        "index" : "Atherden, Fred"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Ffred.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Ffred.jpg/full/full/0/default.jpg",
+          "filename" : "fred.jpg"
+        },
+        "size" : {
+          "width" : 3173,
+          "height" : 2266
+        },
+        "focalPoint" : {
+          "x" : 38,
+          "y" : 34
+        }
+      }
+    }
+  }, {
+    "id" : "040eaa8d",
+    "title" : "Infectious Diseases: A Collection of Translational and Clinical Research Articles",
+    "published" : "2022-03-30T10:00:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2022-03%2F63195-a_striking_image.jpg",
+        "alt" : "Covid-19. Translational and Clinical Research",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2022-03%2F63195-a_striking_image.jpg/full/full/0/default.jpg",
+          "filename" : "63195-a_striking_image.jpg"
+        },
+        "size" : {
+          "width" : 4959,
+          "height" : 3265
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "<a href=\"https://elifesciences.org/articles/63195\">Linssen et al.</a>" ]
+      }
+    },
+    "impactStatement" : "eLife has published articles on a wide range of infectious diseases, including COVID-19, influenza, tuberculosis, HIV/AIDS, malaria and typhoid fever.",
+    "subjects" : [ {
+      "id" : "medicine",
+      "name" : "Medicine"
+    }, {
+      "id" : "microbiology-infectious-disease",
+      "name" : "Microbiology and Infectious Disease"
+    }, {
+      "id" : "epidemiology-global-health",
+      "name" : "Epidemiology and Global Health"
+    }, {
+      "id" : "immunology-inflammation",
+      "name" : "Immunology and Inflammation"
+    } ],
+    "selectedCurator" : {
+      "id" : "11ffd962",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "van der Meer",
+        "givenNames" : "Jos WM",
+        "preferred" : "Jos WM van der Meer",
+        "index" : "van der Meer, Jos WM"
+      },
+      "orcid" : "0000-0001-5120-3690",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2020-03%2Fdsc_0136.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2020-03%2Fdsc_0136.jpg/full/full/0/default.jpg",
+          "filename" : "dsc_0136.jpg"
+        },
+        "size" : {
+          "width" : 3113,
+          "height" : 2096
+        },
+        "focalPoint" : {
+          "x" : 47,
+          "y" : 48
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "8d9426aa",
+    "title" : "Evolutionary Medicine: A Special Issue",
+    "published" : "2021-07-22T11:50:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-07%2Felife-evolutionary-medicine-2.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-07%2Felife-evolutionary-medicine-2.jpg/full/full/0/default.jpg",
+          "filename" : "elife-evolutionary-medicine-2.jpg"
+        },
+        "size" : {
+          "width" : 10738,
+          "height" : 3579
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife is pleased to present a Special Issue to highlight recent advances in the growing and increasingly interdisciplinary field of evolutionary medicine.",
+    "subjects" : [ {
+      "id" : "evolutionary-biology",
+      "name" : "Evolutionary Biology"
+    }, {
+      "id" : "epidemiology-global-health",
+      "name" : "Epidemiology and Global Health"
+    }, {
+      "id" : "microbiology-infectious-disease",
+      "name" : "Microbiology and Infectious Disease"
+    }, {
+      "id" : "genetics-genomics",
+      "name" : "Genetics and Genomics"
+    } ],
+    "selectedCurator" : {
+      "id" : "d35a16db",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "Perry",
+        "givenNames" : "George H",
+        "preferred" : "George H Perry",
+        "index" : "Perry, George H"
+      },
+      "orcid" : "0000-0003-4527-3806",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2021-07%2Fgeorge_perry.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2021-07%2Fgeorge_perry.png/full/full/0/default.jpg",
+          "filename" : "george_perry.jpg"
+        },
+        "size" : {
+          "width" : 2212,
+          "height" : 1424
+        },
+        "focalPoint" : {
+          "x" : 55,
+          "y" : 44
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "9b1e83d1",
+    "title" : "Reproducibility Project: Cancer Biology",
+    "published" : "2014-12-10T00:00:00Z",
+    "updated" : "2019-03-29T12:43:11Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2017-05%2Ftest-tubes-blue-large.png",
+        "alt" : "Reproducibility Project",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2017-05%2Ftest-tubes-blue-large.png/full/full/0/default.jpg",
+          "filename" : "test-tubes-blue-large.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 900
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "Investigating reproducibility in preclinical cancer research.",
+    "subjects" : [ {
+      "id" : "cancer-biology",
+      "name" : "Cancer Biology"
+    } ],
+    "selectedCurator" : {
+      "id" : "7aaaf3b8",
+      "type" : {
+        "id" : "reviewing-editor",
+        "label" : "Reviewing Editor"
+      },
+      "name" : {
+        "surname" : "Davis",
+        "givenNames" : "Roger J",
+        "preferred" : "Roger J Davis",
+        "index" : "Davis, Roger J"
+      },
+      "orcid" : "0000-0002-0130-1652",
+      "etAl" : true
+    }
+  }, {
+    "id" : "ad8125f3",
+    "title" : "Mental Health in Academia",
+    "published" : "2019-10-23T14:34:28Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2019-10%2Fsurveymonkeyimage-copy.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2019-10%2Fsurveymonkeyimage-copy.jpg/full/full/0/default.jpg",
+          "filename" : "surveymonkeyimage-copy.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 900
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Image credit: Public domain" ]
+      }
+    },
+    "impactStatement" : "How can the scientific community support researchers with mental health issues?",
+    "selectedCurator" : {
+      "id" : "b350b7d2",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate Features Editor"
+      },
+      "name" : {
+        "surname" : "Loissel",
+        "givenNames" : "Elsa",
+        "preferred" : "Elsa Loissel",
+        "index" : "Loissel, Elsa"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Felsa.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Felsa.jpg/full/full/0/default.jpg",
+          "filename" : "elsa.jpg"
+        },
+        "size" : {
+          "width" : 3741,
+          "height" : 2672
+        },
+        "focalPoint" : {
+          "x" : 48,
+          "y" : 37
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "bcd6e924",
+    "title" : "Malaria: A Collection of Articles",
+    "published" : "2021-10-14T11:00:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-10%2Fmalaria-banner_portugaliza-et-al_0.png",
+        "alt" : "Mosquito infection by gametocytes from cultures exposed to dihydroartemisinin (DHA) from Figure 2, Portugaliza et al.",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-10%2Fmalaria-banner_portugaliza-et-al_0.png/full/full/0/default.jpg",
+          "filename" : "malaria-banner_portugaliza-et-al_0.jpg"
+        },
+        "size" : {
+          "width" : 4406,
+          "height" : 1626
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Portugaliza et al." ]
+      }
+    },
+    "impactStatement" : "eLife has recently published a wide range of papers on malaria, covering a diversity of themes including parasite biology, epidemiology, immunology, drugs and vaccines.",
+    "subjects" : [ {
+      "id" : "microbiology-infectious-disease",
+      "name" : "Microbiology and Infectious Disease"
+    } ],
+    "selectedCurator" : {
+      "id" : "ed48dfe2",
+      "type" : {
+        "id" : "reviewing-editor",
+        "label" : "Reviewing Editor"
+      },
+      "name" : {
+        "surname" : "Silvie",
+        "givenNames" : "Olivier ",
+        "preferred" : "Olivier  Silvie",
+        "index" : "Silvie, Olivier "
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "6d673315",
+    "title" : "Aging, Geroscience and Longevity: A Special Issue",
+    "published" : "2021-01-28T13:00:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-01%2Fgeroscience-final-copy.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-01%2Fgeroscience-final-copy.jpg/full/full/0/default.jpg",
+          "filename" : "geroscience-final-copy.jpg"
+        },
+        "size" : {
+          "width" : 10927,
+          "height" : 3311
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife is pleased to present a Special Issue to highlight recent advances in the mechanistic understanding of aging and interventions that extend longevity.",
+    "subjects" : [ {
+      "id" : "chromosomes-gene-expression",
+      "name" : "Chromosomes and Gene Expression"
+    }, {
+      "id" : "cell-biology",
+      "name" : "Cell Biology"
+    } ],
+    "selectedCurator" : {
+      "id" : "4de2aa23",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "Kaeberlein",
+        "givenNames" : "Matt",
+        "preferred" : "Matt Kaeberlein",
+        "index" : "Kaeberlein, Matt"
+      },
+      "orcid" : "0000-0002-1311-3421",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2020-08%2Fmatt_kaeberlein.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2020-08%2Fmatt_kaeberlein.jpg/full/full/0/default.jpg",
+          "filename" : "matt_kaeberlein.jpg"
+        },
+        "size" : {
+          "width" : 1478,
+          "height" : 1478
+        },
+        "focalPoint" : {
+          "x" : 54,
+          "y" : 40
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "7efbfb7a",
+    "title" : "Philosophy of Biology",
+    "published" : "2019-03-13T14:12:04Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2019-03%2Fphilosophy_fotor.jpg",
+        "alt" : "A series of articles on the philosophy of biology",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2019-03%2Fphilosophy_fotor.jpg/full/full/0/default.jpg",
+          "filename" : "philosophy_fotor.jpg"
+        },
+        "size" : {
+          "width" : 1900,
+          "height" : 949
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "<a href=\"http://vividbiology.com/\">vividbiology.com</a>" ]
+      }
+    },
+    "impactStatement" : "A series of articles offering philosophical perspectives on the life sciences.",
+    "selectedCurator" : {
+      "id" : "256061b0",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate Features Editor"
+      },
+      "name" : {
+        "surname" : "Groll",
+        "givenNames" : "Helga",
+        "preferred" : "Helga Groll",
+        "index" : "Groll, Helga"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhelga.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhelga.jpg/full/full/0/default.jpg",
+          "filename" : "helga.jpg"
+        },
+        "size" : {
+          "width" : 3286,
+          "height" : 2347
+        },
+        "focalPoint" : {
+          "x" : 40,
+          "y" : 37
+        }
+      }
+    }
+  }, {
+    "id" : "819ea095",
+    "title" : "Quantitative Genetics: A Collection of Articles",
+    "published" : "2021-04-08T11:59:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-04%2Fgenetics_banner2.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2021-04%2Fgenetics_banner2.png/full/full/0/default.jpg",
+          "filename" : "genetics_banner2.jpg"
+        },
+        "size" : {
+          "width" : 2601,
+          "height" : 1533
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Han et al." ]
+      }
+    },
+    "impactStatement" : "eLife publishes advances in quantitative genetics, including the genetic basis of complex traits, the maintenance of genetic variation, and their roles in evolution.",
+    "subjects" : [ {
+      "id" : "genetics-genomics",
+      "name" : "Genetics and Genomics"
+    } ],
+    "selectedCurator" : {
+      "id" : "5d913e91",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "Wittkopp",
+        "givenNames" : "Patricia",
+        "preferred" : "Patricia Wittkopp",
+        "index" : "Wittkopp, Patricia"
+      },
+      "orcid" : "0000-0001-7619-0048",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2018-01%2Fa06w3705.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2018-01%2Fa06w3705.jpg/full/full/0/default.jpg",
+          "filename" : "a06w3705.jpg"
+        },
+        "size" : {
+          "width" : 3600,
+          "height" : 2400
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "0a5cf428",
+    "title" : "Peer Review",
+    "published" : "2017-09-26T08:54:18Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-03%2Fpeer-review-new.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-03%2Fpeer-review-new.png/full/full/0/default.jpg",
+          "filename" : "peer-review-new.jpg"
+        },
+        "size" : {
+          "width" : 9793,
+          "height" : 3602
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Illustration by vividbiology.com" ]
+      }
+    },
+    "impactStatement" : "A series of articles exploring how journals, funding agencies and universities review papers, grant applications and people.",
+    "selectedCurator" : {
+      "id" : "392bba9e",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Features Editor, eLife, United Kingdom"
+      },
+      "name" : {
+        "surname" : "Rodgers",
+        "givenNames" : "Peter A",
+        "preferred" : "Peter A Rodgers",
+        "index" : "Rodgers, Peter A"
+      },
+      "orcid" : "0000-0001-8332-936X",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0491.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0491.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0491.jpg"
+        },
+        "size" : {
+          "width" : 2862,
+          "height" : 2044
+        },
+        "focalPoint" : {
+          "x" : 49,
+          "y" : 31
+        }
+      }
+    }
+  }, {
+    "id" : "bcfba6c6",
+    "title" : "Discovery and Translation of Cancer Immunology: A Special Issue",
+    "published" : "2020-06-11T12:30:00Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-06%2Fcancer-immu-special-issue-illustration_final_resized.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2020-06%2Fcancer-immu-special-issue-illustration_final_resized.jpg/full/full/0/default.jpg",
+          "filename" : "cancer-immu-special-issue-illustration_final_resized.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 900
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife is pleased to present a Special Issue to highlight recent advances in the mechanistic understanding of the immune response to cancer cells.",
+    "subjects" : [ {
+      "id" : "cancer-biology",
+      "name" : "Cancer Biology"
+    }, {
+      "id" : "immunology-inflammation",
+      "name" : "Immunology and Inflammation"
+    } ],
+    "selectedCurator" : {
+      "id" : "8291b653",
+      "type" : {
+        "id" : "reviewing-editor",
+        "label" : "Reviewing Editor"
+      },
+      "name" : {
+        "surname" : "Settleman",
+        "givenNames" : "Jeffrey",
+        "preferred" : "Jeffrey Settleman",
+        "index" : "Settleman, Jeffrey"
+      },
+      "orcid" : "0000-0003-3569-6493",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2018-04%2Fjeff_settleman.png",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2018-04%2Fjeff_settleman.png/full/full/0/default.jpg",
+          "filename" : "jeff_settleman.jpg"
+        },
+        "size" : {
+          "width" : 716,
+          "height" : 537
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "29e48019",
+    "title" : "Scientist and Parent",
+    "published" : "2018-04-04T13:51:31Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-03%2Ffinal_hero_2.jpg",
+        "alt" : "Parents and children work together to build a tower of blocks that feature images representing work and family activities that a scientist may take part in",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-03%2Ffinal_hero_2.jpg/full/full/0/default.jpg",
+          "filename" : "final_hero_2.jpg"
+        },
+        "size" : {
+          "width" : 9924,
+          "height" : 4961
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "<a href=\"http://vividbiology.com\">vividbiology.com</a>" ]
+      }
+    },
+    "impactStatement" : "A research career and family life are not incompatible.",
+    "selectedCurator" : {
+      "id" : "3a87ec66",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate features editor and web content manager"
+      },
+      "name" : {
+        "surname" : "Pewsey",
+        "givenNames" : "Emma",
+        "preferred" : "Emma Pewsey",
+        "index" : "Pewsey, Emma"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0516.jpg"
+        },
+        "size" : {
+          "width" : 3156,
+          "height" : 2254
+        },
+        "focalPoint" : {
+          "x" : 44,
+          "y" : 32
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "e8dda407",
+    "title" : "Mechanistic Microbiome Studies: A Special Issue",
+    "published" : "2018-09-10T13:42:24Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-09%2Fbacteria-108898_1.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-09%2Fbacteria-108898_1.jpg/full/full/0/default.jpg",
+          "filename" : "bacteria-108898_1.jpg"
+        },
+        "size" : {
+          "width" : 4272,
+          "height" : 2848
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Image: Geralt / CC BY 0" ]
+      }
+    },
+    "impactStatement" : "eLife is pleased to present a Special Issue to highlight recent advances in the mechanistic understanding of microbiome function.",
+    "subjects" : [ {
+      "id" : "microbiology-infectious-disease",
+      "name" : "Microbiology and Infectious Disease"
+    } ],
+    "selectedCurator" : {
+      "id" : "f240511a",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "Garrett",
+        "givenNames" : "Wendy S",
+        "preferred" : "Wendy S Garrett",
+        "index" : "Garrett, Wendy S"
+      },
+      "orcid" : "0000-0002-5092-0150",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2015-02%2Fwendy_garrett.jpg",
+        "alt" : "Wendy S Garrett",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2015-02%2Fwendy_garrett.jpg/full/full/0/default.jpg",
+          "filename" : "wendy_garrett.jpg"
+        },
+        "size" : {
+          "width" : 900,
+          "height" : 600
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "fecda514",
+    "title" : "The Author's Story: A Series of Interviews",
+    "published" : "2014-07-10T14:07:39Z",
+    "updated" : "2017-04-26T12:58:54Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2014-07%2Fearly-career-interviews-elife-collections.png",
+        "alt" : "The Author's Story",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2014-07%2Fearly-career-interviews-elife-collections.png/full/full/0/default.jpg",
+          "filename" : "early-career-interviews-elife-collections.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 900
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "Image credit: Katja Kornysheva (CC BY 3.0)" ]
+      }
+    },
+    "impactStatement" : "eLife authors answer questions about their life and work.",
+    "selectedCurator" : {
+      "id" : "3a87ec66",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate features editor and web content manager"
+      },
+      "name" : {
+        "surname" : "Pewsey",
+        "givenNames" : "Emma",
+        "preferred" : "Emma Pewsey",
+        "index" : "Pewsey, Emma"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0516.jpg"
+        },
+        "size" : {
+          "width" : 3156,
+          "height" : 2254
+        },
+        "focalPoint" : {
+          "x" : 44,
+          "y" : 32
+        }
+      }
+    }
+  }, {
+    "id" : "9e8f4a49",
+    "title" : "Plain-language Summaries of Research",
+    "published" : "2017-03-15T14:05:38Z",
+    "updated" : "2017-04-26T12:58:40Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2017-03%2F9e8f4a49-plain-language-elife-collections.png",
+        "alt" : "Plain-language summaries of research",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2017-03%2F9e8f4a49-plain-language-elife-collections.png/full/full/0/default.jpg",
+          "filename" : "9e8f4a49-plain-language-elife-collections.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 600
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "vividbiology.com" ]
+      }
+    },
+    "impactStatement" : "A growing number of research journals, scientific societies, medical charities and other organizations are publishing summaries of research papers and proposals that explain their content in plain language.",
+    "selectedCurator" : {
+      "id" : "392bba9e",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Features Editor, eLife, United Kingdom"
+      },
+      "name" : {
+        "surname" : "Rodgers",
+        "givenNames" : "Peter A",
+        "preferred" : "Peter A Rodgers",
+        "index" : "Rodgers, Peter A"
+      },
+      "orcid" : "0000-0001-8332-936X",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0491.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0491.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0491.jpg"
+        },
+        "size" : {
+          "width" : 2862,
+          "height" : 2044
+        },
+        "focalPoint" : {
+          "x" : 49,
+          "y" : 31
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "88b9994b",
+    "title" : "Working Lives: A Series of Interviews",
+    "published" : "2016-05-09T09:07:20Z",
+    "updated" : "2017-04-26T12:58:54Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-09%2Fworking_lives_bright_trimmed.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2018-09%2Fworking_lives_bright_trimmed.jpg/full/full/0/default.jpg",
+          "filename" : "working_lives_bright_trimmed.jpg"
+        },
+        "size" : {
+          "width" : 4449,
+          "height" : 1671
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        },
+        "attribution" : [ "<a href=\"http://vividbiology.com\">vividbiology.com</a>" ]
+      }
+    },
+    "impactStatement" : "People with a PhD in the life sciences answer questions about their life and work.",
+    "selectedCurator" : {
+      "id" : "3a87ec66",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate features editor and web content manager"
+      },
+      "name" : {
+        "surname" : "Pewsey",
+        "givenNames" : "Emma",
+        "preferred" : "Emma Pewsey",
+        "index" : "Pewsey, Emma"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0516.jpg"
+        },
+        "size" : {
+          "width" : 3156,
+          "height" : 2254
+        },
+        "focalPoint" : {
+          "x" : 44,
+          "y" : 32
+        }
+      }
+    }
+  }, {
+    "id" : "2df5cbe1",
+    "title" : "Paleontology: A Collection of Articles",
+    "published" : "2016-02-22T14:15:36Z",
+    "updated" : "2017-04-26T12:58:40Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2016-02%2F2df5cbe1-paleontology-elife-collections.png",
+        "alt" : "Paleontology",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2016-02%2F2df5cbe1-paleontology-elife-collections.png/full/full/0/default.jpg",
+          "filename" : "2df5cbe1-paleontology-elife-collections.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 600
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife has published papers on topics as diverse as paleoproteomics, ancient insects and the discovery of a new hominin species.",
+    "subjects" : [ {
+      "id" : "evolutionary-biology",
+      "name" : "Evolutionary Biology"
+    } ],
+    "selectedCurator" : {
+      "id" : "c923cc9b",
+      "type" : {
+        "id" : "senior-editor",
+        "label" : "Senior Editor"
+      },
+      "name" : {
+        "surname" : "Baldwin",
+        "givenNames" : "Ian",
+        "preferred" : "Ian Baldwin",
+        "index" : "Baldwin, Ian"
+      },
+      "orcid" : "0000-0001-5371-2974",
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0636d.jpg",
+        "alt" : "Ian Baldwin",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2012-03%2Fkegley120208elife0636d.jpg/full/full/0/default.jpg",
+          "filename" : "kegley120208elife0636d.jpg"
+        },
+        "size" : {
+          "width" : 4256,
+          "height" : 2832
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      },
+      "etAl" : true
+    }
+  }, {
+    "id" : "2d2e35c4",
+    "title" : "Tropical Disease: A Collection of Articles",
+    "published" : "2015-09-16T11:19:26Z",
+    "updated" : "2017-04-26T12:58:40Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png",
+        "alt" : "Tropical disease",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2015-09%2F2d2e35c4-tropical-disease-elife-collections.png/full/full/0/default.jpg",
+          "filename" : "2d2e35c4-tropical-disease-elife-collections.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 861
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "eLife has published papers on many tropical diseases, including malaria, Ebola, leishmaniases, Dengue and African sleeping sickness.",
+    "subjects" : [ {
+      "id" : "epidemiology-global-health",
+      "name" : "Epidemiology and Global Health"
+    }, {
+      "id" : "microbiology-infectious-disease",
+      "name" : "Microbiology and Infectious Disease"
+    } ],
+    "selectedCurator" : {
+      "id" : "4a5e6854",
+      "type" : {
+        "id" : "reviewing-editor",
+        "label" : "Reviewing Editor"
+      },
+      "name" : {
+        "surname" : "Jha",
+        "givenNames" : "Prabhat",
+        "preferred" : "Prabhat Jha",
+        "index" : "Jha, Prabhat"
+      },
+      "orcid" : "0000-0001-7067-8341",
+      "etAl" : true
+    }
+  }, {
+    "id" : "9ac286d4",
+    "title" : "Moving On: eLife at Five",
+    "published" : "2017-10-12T09:35:54Z",
+    "image" : {
+      "thumbnail" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2017-10%2Fanniversary-graphic_0.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/collection%2F2017-10%2Fanniversary-graphic_0.jpg/full/full/0/default.jpg",
+          "filename" : "anniversary-graphic_0.jpg"
+        },
+        "size" : {
+          "width" : 1800,
+          "height" : 900
+        },
+        "focalPoint" : {
+          "x" : 50,
+          "y" : 50
+        }
+      }
+    },
+    "impactStatement" : "To celebrate five years of eLife we catch up with some of our first authors and reflect on the current state of scientific publishing and peer review.",
+    "selectedCurator" : {
+      "id" : "3a87ec66",
+      "type" : {
+        "id" : "executive",
+        "label" : "Associate features editor and web content manager"
+      },
+      "name" : {
+        "surname" : "Pewsey",
+        "givenNames" : "Emma",
+        "preferred" : "Emma Pewsey",
+        "index" : "Pewsey, Emma"
+      },
+      "image" : {
+        "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg",
+        "alt" : "",
+        "source" : {
+          "mediaType" : "image/jpeg",
+          "uri" : "https://iiif.elifesciences.org/journal-cms/person%2F2019-02%2Fhrdsc_0516.jpg/full/full/0/default.jpg",
+          "filename" : "hrdsc_0516.jpg"
+        },
+        "size" : {
+          "width" : 3156,
+          "height" : 2254
+        },
+        "focalPoint" : {
+          "x" : 44,
+          "y" : 32
+        }
+      }
+    }
+  } ]
+}
