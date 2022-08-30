@@ -83,7 +83,8 @@
                   core/find-collections (-> "find-collections.json" fixture-path utils/slurp-json constantly)
                   core/find-articles-by-subject (-> "find-articles-by-subject.json" fixture-path utils/slurp-json constantly)
                   core/find-podcast-episodes (-> "find-podcast-episodes.json" fixture-path utils/slurp-json constantly)]
-      (let [expected (-> "recommendations-list.json" fixture-path utils/slurp-json)
+      (let [;; 79530
+            expected (-> "recommendations-list.json" fixture-path utils/slurp-json)
             actual (core/recommendation-list "article" 1234)]
 
         (is (= expected actual))

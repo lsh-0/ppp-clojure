@@ -38,7 +38,7 @@
 (defn find-article
   [id api-key]
   (let [results (article-api/article-version-list id {:api-key api-key})]
-    (utils/spit-json results "find-article.json")
+    ;;(utils/spit-json results "find-article.json")
     results))
 
 (defn find-related-articles
@@ -55,41 +55,50 @@
 (defn find-collections
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L169-L171
   [id api-key]
-  (let [results (journal-cms/collections-list {:containing [id] :per-page 100 :api-key api-key})
+  (let [results (journal-cms/collections-list {:containing-list [(str "article/" id)] :per-page 100 :api-key api-key})
         [content error?] (api-raml/handle-api-response results)]
     (if error?
       nil
       (do ;;(utils/spit-json content "find-collections.json")
-          content))))
+          (:items content)))))
 
 (defn find-articles-by-subject
-  [article-versions]
+  [id article-versions]
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L187-L192
-  (let [subject-id (get-in article-versions [:versions 0 :subjects 0 :id])
-        search-for subject-id
-        search-sort "date"
-        search-type-list ["editorial" "feature" "insight" "research-advance" "research-article" "research-communication" "registered-report" "replication-study" "review-article" "scientific-correspondence" "short-report" "tools-resources"]
-        ]
+  (let [search-for nil
+        search-for-type ["editorial" "feature" "insight" "research-advance" "research-article" "research-communication" "registered-report" "replication-study" "review-article" "scientific-correspondence" "short-report" "tools-resources"]
+        sort-by "date"
+        subject-id (get-in article-versions [:versions 0 :subjects 0 :id])
+        search-for-subject [subject-id]] ;; 'subjected' trait
     (when subject-id
-      (let [search-results (search/search search-for search-sort search-type-list {})
+      (let [search-results (search/search search-for sort-by search-for-type {:subject-list search-for-subject})
             [content error?] (api-raml/handle-api-response search-results)]
         (if error?
           nil
-          (do ;;(utils/spit-json content "find-articles-by-subject.json")
-              content))))))
+          (let [self? (fn [article]
+                        (= (str id) (:id article)))
+
+                ;; `->slice(0, 5)` => (take 4 ...)
+                content (remove self? (take 4 (:items content))) ;; what recommendations is doing
+                ;;content (take 4 (remove self? content)) ;; this seems better
+                ]
+
+            (do ;; (utils/spit-json content "find-articles-by-subject.json")
+                content
+                )))))))
 
 (defn find-podcast-episodes
   [id]
   ;; https://github.com/elifesciences/recommendations/blob/develop/src/bootstrap.php#L195-L209
   (let [podcast-episode-list (journal-cms/podcast-episode-list {:containing-list [(str "article/" id)] :per-page 100
-                                                                           :request {:debug? true}})
+                                                                :request {:debug? false}})
         [content error?] (api-raml/handle-api-response podcast-episode-list)]
     (if error?
       nil ;; log error? assume it's been handled elsewhere and carry on? push into `handle-api-response` ?
       ;; todo:
       ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L198-L206
       (do ;;(utils/spit-json content "find-podcast-episodes.json")
-          content))))
+          (:items content)))))
 
 (defn-spec find-article-recommendations :ppp/list-of-maps
   [id :api-raml/manuscript-id, api-key :api-raml/api-key]
@@ -101,7 +110,7 @@
       (let [;; article with `id` exists, now find the rest
             relations #(find-related-articles id api-key)
             collections #(find-collections id api-key)
-            recent-articles-with-subject #(find-articles-by-subject content)
+            recent-articles-with-subject #(find-articles-by-subject id content)
             podcasts #(find-podcast-episodes id)
 
             ;; call above functions in parallel (pmap ...), return a single list of results (reduce into ...)
@@ -119,20 +128,14 @@
             ;; do the requests synchronously
             result-list (mapv runner [relations
                                       collections
-                                      ;;recent-articles-with-subject
-                                      ;;podcasts
+                                      recent-articles-with-subject
+                                      podcasts ;; todo
                                       ])
 
             ;; if any result is empty, 
             result-list (->> result-list
-                             (remove empty?)
-                             ;; won't work as we've already dropped down to :content in the find-* fn error checks
-                             ;;(remove api-raml/api-response-error?) 
-                             
-                             (mapv :items)
-                             (reduce into)
-                             
-                             )
+                             (remove empty?) ;; todo: remove
+                             (reduce into))
 
             _ (clojure.pprint/pprint result-list)
             
