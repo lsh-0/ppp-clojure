@@ -137,8 +137,6 @@
                              (remove empty?) ;; todo: remove
                              (reduce into))
 
-            _ (clojure.pprint/pprint result-list)
-            
             ;; what is this doing? some kind of de-duplication?
             ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L227-L229
             ;; https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L30
@@ -206,7 +204,6 @@
 
         {:content content
          :content-type content-type
-         :content-type-pair content-type-pair
          :content-type-version (:version content-type-opts)
          :content-type-version-deprecated? (not= content-type-pair api-raml/recommendations-list-v2)
          :authenticated? false}))))

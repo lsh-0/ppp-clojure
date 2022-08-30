@@ -29,7 +29,6 @@
 (s/def :api-raml/content-type-version (s/nilable pos-int?)) ;; 'application/json' has no version for example
 (s/def :api-raml/content-type-version-deprecated boolean?)
 (s/def :api-raml/content-type-params (s/keys :req-un [::content-type-version]))
-(s/def :api-raml/content-type-pair (s/tuple :api-raml/content-type :api-raml/content-type-params))
 (s/def :api-raml/content-type-list (s/coll-of :api-raml/content-type-pair))
 
 (s/def :clj-http/status pos-int?)

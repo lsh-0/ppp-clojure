@@ -93,7 +93,7 @@
     } ]
   },
   "content-type" : "application/vnd.elife.recommendations+json",
-  "content-type-version" : "version=2",
+  "content-type-version" : 2,
   "content-type-version-deprecated?" : false,
   "authenticated?" : false
 }

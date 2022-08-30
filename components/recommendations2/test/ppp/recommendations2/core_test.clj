@@ -50,7 +50,10 @@
                       core/find-podcast-episodes (constantly empty-response)
                       ]
           (let [result (core/recommendation-list "article" 1234 {:content-type-list [given-content-type]})]
-            (is (= expected-content-type (:content-type-pair result)))))))))
+            ;;(is (= expected-content-type (:content-type-pair result)))
+            (is (= expected-content-type [(:content-type result) (:content-type-version result)]))
+
+            ))))))
 
 (deftest recommendations-list--article-not-found
   (testing "failure to find an article skips any further lookups and passes the 'Not Found' response through."
@@ -66,7 +69,6 @@
                               :items []}
                     :content-type (first api-raml/recommendations-list)
                     :content-type-version 2
-                    :content-type-pair api-raml/recommendations-list-v2
                     :content-type-version-deprecated? false
                     :authenticated? false}]
       (with-redefs [core/find-article (constantly dummy-article)
@@ -83,10 +85,9 @@
                   core/find-collections (-> "find-collections.json" fixture-path utils/slurp-json constantly)
                   core/find-articles-by-subject (-> "find-articles-by-subject.json" fixture-path utils/slurp-json constantly)
                   core/find-podcast-episodes (-> "find-podcast-episodes.json" fixture-path utils/slurp-json constantly)]
-      (let [;; 79530
-            expected (-> "recommendations-list.json" fixture-path utils/slurp-json)
-            actual (core/recommendation-list "article" 1234)]
-
+      (let [expected (-> "recommendations-list.json" fixture-path utils/slurp-json)
+            actual (core/recommendation-list "article" 1234) ;; 79530
+            ]
         (is (= expected actual))
 
         ))))
