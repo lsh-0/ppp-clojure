@@ -51,7 +51,7 @@
                       ]
           (let [result (core/recommendation-list "article" 1234 {:content-type-list [given-content-type]})]
             ;;(is (= expected-content-type (:content-type-pair result)))
-            (is (= expected-content-type [(:content-type result) (:content-type-version result)]))
+            (is (= expected-content-type [(:content-type result) {:version (:content-type-version result)}]))
 
             ))))))
 
@@ -63,7 +63,7 @@
 
 (deftest recommendations-list--article-found-no-recommendations
   (testing "empty recommendations for an article that exists"
-    (let [dummy-article {:content {:status 200}}
+    (let [dummy-article {:http-resp {:status 200}}
           empty-response {}
           expected {:content {:total 0
                               :items []}
