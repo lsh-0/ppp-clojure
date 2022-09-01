@@ -1,0 +1,110 @@
+[ {
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "In animals with slow ontogeny and long-term maternal investment, immatures are likely to experience the birth of a younger sibling before reaching maturity. In these species, the birth of a sibling marks a major event in an offspring's early life, as the older siblings experience a decrease in maternal support. The transition to siblinghood (TTS) is often considered to be stressful for the older offspring, but physiological evidence is lacking. To explore the TTS in wild bonobos, we investigated physiological changes in urinary cortisol (stress response), neopterin (cell-mediated immunity), and total triiodothyronine (T3, metabolic rate), as well as changes in behaviors that reflect the mother-offspring relationship. Following a sibling's birth, urinary cortisol levels of the older offspring increased fivefold, independent of their age, and remained elevated for seven months. The cortisol level increase was associated with declining neopterin levels, however T3 levels and behavioral measures did not change. Our results indicate that the TTS is accompanied by elevated cortisol levels and that this change does not coincide with nutritional weaning and attainment of physical independence. Our results suggest that bonobos and humans experience TTS in similar ways and that this developmental event may have emerged in the last common ancestor."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/77227/elife-77227-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.77227",
+  "versionDate" : "2022-08-30T00:00:00Z",
+  "title" : "Transition to siblinghood causes a substantial and long-lasting increase in urinary cortisol levels in wild bonobos",
+  "volume" : 11,
+  "status" : "poa",
+  "id" : "77227",
+  "statusDate" : "2022-08-30T00:00:00Z",
+  "elocationId" : "e77227",
+  "authorLine" : "Verena Behringer, Andreas Berghänel ... Gottfried Hohmann",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2022-08-30T00:00:00Z"
+}, {
+  "figuresPdf" : "https://cdn.elifesciences.org/articles/81567/elife-81567-figures-v1.pdf",
+  "researchOrganisms" : [ "<i>D. melanogaster</i>" ],
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "Transposable elements (TEs) are selfish genetic parasites that increase their copy number at the expense of host fitness. The ‘success’, or genome-wide abundance, of TEs differs widely between species. Deciphering the causes for this large variety in TE abundance has remained a central question in evolutionary genomics. We previously proposed that species-specific TE abundance could be driven by the inadvertent consequences of host-direct epigenetic silencing of TEs—the spreading of repressive epigenetic marks from silenced TEs into adjacent sequences. Here, we compared this TE-mediated local enrichment of repressive marks, or ‘the epigenetic effect of TEs’, in six species in the <i>Drosophila melanogaster</i> subgroup to dissect step-by-step the role of such effect in determining genomic TE abundance. We found that TE-mediated local enrichment of repressive marks is prevalent and substantially varies across and even within species. While this TE-mediated effect alters the epigenetic states of adjacent genes, we surprisingly discovered that the transcription of neighboring genes could reciprocally impact this spreading. Importantly, our multi-species analysis provides the power and appropriate phylogenetic resolution to connect species-specific host chromatin regulation, TE-mediated epigenetic effects, the strength of natural selection against TEs, and genomic TE abundance unique to individual species. Our findings point toward the importance of host chromatin landscapes in shaping genome evolution through the epigenetic effects of a selfish genetic parasite."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/81567/elife-81567-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.81567",
+  "versionDate" : "2022-08-23T00:00:00Z",
+  "title" : "Species-specific chromatin landscape determines how transposable elements shape genome evolution",
+  "volume" : 11,
+  "impactStatement" : "The ultimate driver for the substantial between-species difference in the success of transposable elements, the widely distributed genetic parasite, may lie in the overall chromatin environment.",
+  "status" : "vor",
+  "id" : "81567",
+  "statusDate" : "2022-08-23T00:00:00Z",
+  "elocationId" : "e81567",
+  "authorLine" : "Yuheng Huang, Harsh Shukla, Yuh Chwen G Lee",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2022-08-23T00:00:00Z"
+}, {
+  "figuresPdf" : "https://cdn.elifesciences.org/articles/79549/elife-79549-figures-v2.pdf",
+  "researchOrganisms" : [ "<i>E. coli</i>" ],
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "Bacteria use diverse immunity mechanisms to defend themselves against their viral predators, bacteriophages. In turn, phages can acquire counter-defense systems, but it remains unclear how such mechanisms arise and what factors constrain viral evolution. Here, we experimentally evolved T4 phage to overcome a phage-defensive toxin-antitoxin system, <i>toxIN</i>, in <i>Escherichia coli</i>. Through recombination, T4 rapidly acquires segmental amplifications of a previously uncharacterized gene, now named <i>tifA</i>, encoding an inhibitor of the toxin, ToxN. These amplifications subsequently drive large deletions elsewhere in T4’s genome to maintain a genome size compatible with capsid packaging. The deleted regions include accessory genes that help T4 overcome defense systems in alternative hosts. Thus, our results reveal a trade-off in viral evolution; the emergence of one counter-defense mechanism can lead to loss of other such mechanisms, thereby constraining host range. We propose that the accessory genomes of viruses reflect the integrated evolutionary history of the hosts they infected."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/79549/elife-79549-v2.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.79549",
+  "versionDate" : "2022-08-19T14:10:32Z",
+  "title" : "The evolution of a counter-defense mechanism in a virus constrains its host range",
+  "volume" : 11,
+  "impactStatement" : "Bacteriophage can rapidly evolve resistance to anti-phage defense elements in bacteria by amplifying latent counter-defense genes, though this amplification comes at a cost of compensatory deletions that eliminate other counter-defense genes.",
+  "status" : "vor",
+  "id" : "79549",
+  "statusDate" : "2022-08-19T14:10:32Z",
+  "elocationId" : "e79549",
+  "authorLine" : "Sriram Srikant, Chantal K Guegler, Michael T Laub",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  }, {
+    "id" : "microbiology-infectious-disease",
+    "name" : "Microbiology and Infectious Disease"
+  } ],
+  "version" : 2,
+  "published" : "2022-08-04T00:00:00Z"
+}, {
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "Evolutionary transitions in individuality (ETIs) involve the formation of Darwinian collectives from Darwinian particles. The transition from cells to multicellular life is a prime example. During an ETI, collectives become units of selection in their own right. However, the underlying processes are poorly understood. One observation used to identify the completion of an ETI is an increase in collective-level performance accompanied by a decrease in particle-level performance, for example measured by growth rate. This seemingly counterintuitive dynamic has been referred to as 'fitness decoupling' and has been used to interpret both models and experimental data. Extending and unifying results from the literature, we show that fitness of particles and collectives can never decouple because calculations of particle and collective fitness performed over appropriate and equivalent time intervals are necessarily the same provided the population reaches a stable collective size distribution. By way of solution, we draw attention to the value of mechanistic approaches that emphasise traits, and tradeoffs among traits, as opposed to fitness. This trait-based approach is sufficient to capture dynamics that underpin evolutionary transitions. In addition, drawing upon both experimental and theoretical studies, we show that while early stages of transitions might often involve tradeoffs among particle traits, later—and critical-stages are likely to involve the rupture of such tradeoffs. Thus, when observed in the context of ETIs, tradeoff-breaking events stand as a useful marker for these transitions."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/73715/elife-73715-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.73715",
+  "versionDate" : "2022-08-17T00:00:00Z",
+  "title" : "Tradeoff breaking as model of evolutionary transitions in individuality and the limits of the fitness-decoupling metaphor",
+  "volume" : 11,
+  "status" : "poa",
+  "id" : "73715",
+  "statusDate" : "2022-08-17T00:00:00Z",
+  "elocationId" : "e73715",
+  "authorLine" : "Pierrick Bourrat, Guilhem Doulcier ... Katrin Hammerschmidt",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2022-08-17T00:00:00Z"
+} ]

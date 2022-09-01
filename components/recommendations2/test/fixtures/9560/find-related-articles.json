@@ -1,0 +1,126 @@
+[ {
+  "stage" : "published",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Dirks et al.",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/09561/elife-09561-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.09561",
+  "versionDate" : "2015-09-10T00:00:00Z",
+  "title" : "Geological and taphonomic context for the new hominin species <i>Homo naledi</i> from the Dinaledi Chamber, South Africa",
+  "volume" : 4,
+  "impactStatement" : "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
+  "status" : "vor",
+  "id" : "09561",
+  "statusDate" : "2015-09-10T00:00:00Z",
+  "elocationId" : "e09561",
+  "authorLine" : "Paul HGM Dirks, Lee R Berger ... Steven Tucker",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2015-09-10T00:00:00Z"
+}, {
+  "stage" : "published",
+  "titlePrefix" : "Human Evolution",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Stringer",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/10627/elife-10627-v1.pdf",
+  "type" : "insight",
+  "doi" : "10.7554/eLife.10627",
+  "versionDate" : "2015-09-10T00:00:00Z",
+  "title" : "The many mysteries of <i>Homo naledi</i>",
+  "volume" : 4,
+  "status" : "vor",
+  "id" : "10627",
+  "statusDate" : "2015-09-10T00:00:00Z",
+  "elocationId" : "e10627",
+  "authorLine" : "Chris Stringer",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2015-09-10T00:00:00Z"
+}, {
+  "stage" : "published",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Dirks et al.",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/24231/elife-24231-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.24231",
+  "versionDate" : "2017-05-09T00:00:00Z",
+  "title" : "The age of <i>Homo naledi</i> and associated sediments in the Rising Star Cave, South Africa",
+  "volume" : 6,
+  "impactStatement" : "Independent dating techniques have established that the <i>H. naledi</i> fossils are between 236 and 335 thousand years old, indicating that small-brained hominins with relatively primitive body shapes co-existed with our early ancestors in Africa.",
+  "status" : "vor",
+  "id" : "24231",
+  "statusDate" : "2017-05-09T00:00:00Z",
+  "elocationId" : "e24231",
+  "authorLine" : "Paul HGM Dirks, Eric M Roberts ... Lee R Berger",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2017-05-09T00:00:00Z"
+}, {
+  "stage" : "published",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Hawks et al.",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/24232/elife-24232-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.24232",
+  "versionDate" : "2017-05-09T00:00:00Z",
+  "title" : "New fossil remains of <i>Homo naledi</i> from the Lesedi Chamber, South Africa",
+  "volume" : 6,
+  "impactStatement" : "The discovery of new skeletal remains of <i>Homo naledi</i> in the Lesedi Chamber, South Africa, adds more evidence to our understanding of the morphology and behavior of this recently discovered species.",
+  "status" : "vor",
+  "id" : "24232",
+  "statusDate" : "2017-05-09T00:00:00Z",
+  "elocationId" : "e24232",
+  "authorLine" : "John Hawks, Marina Elliott ... Lee R Berger",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2017-05-09T00:00:00Z"
+}, {
+  "stage" : "published",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Berger et al.",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/24234/elife-24234-v1.pdf",
+  "type" : "short-report",
+  "doi" : "10.7554/eLife.24234",
+  "versionDate" : "2017-05-09T00:00:00Z",
+  "title" : "<i>Homo naledi</i> and Pleistocene hominin evolution in subequatorial Africa",
+  "volume" : 6,
+  "impactStatement" : "A late Middle Pleistocene age for <i>Homo naledi</i> demonstrates a diversity of hominin species in Africa at this critical time in the archaeological record.",
+  "status" : "vor",
+  "id" : "24234",
+  "statusDate" : "2017-05-09T00:00:00Z",
+  "elocationId" : "e24234",
+  "authorLine" : "Lee R Berger, John Hawks ... Eric M Roberts",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2017-05-09T00:00:00Z"
+} ]

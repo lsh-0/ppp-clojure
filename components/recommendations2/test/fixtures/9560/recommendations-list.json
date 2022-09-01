@@ -1,0 +1,144 @@
+{
+  "content" : {
+    "total" : 5,
+    "items" : [ {
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "New ages for flowstone, sediments and fossil bones from the Dinaledi Chamber are presented. We combined optically stimulated luminescence dating of sediments with U-Th and palaeomagnetic analyses of flowstones to establish that all sediments containing <i>Homo naledi</i> fossils can be allocated to a single stratigraphic entity (sub-unit 3b), interpreted to be deposited between 236 ka and 414 ka. This result has been confirmed independently by dating three <i>H. naledi</i> teeth with combined U-series and electron spin resonance (US-ESR) dating. Two dating scenarios for the fossils were tested by varying the assumed levels of <sup>222</sup>Rn loss in the encasing sediments: a maximum age scenario provides an average age for the two least altered fossil teeth of 253 +82/–70 ka, whilst a minimum age scenario yields an average age of 200 +70/–61 ka. We consider the maximum age scenario to more closely reflect conditions in the cave, and therefore, the true age of the fossils. By combining the US-ESR maximum age estimate obtained from the teeth, with the U-Th age for the oldest flowstone overlying <i>Homo naledi</i> fossils, we have constrained the depositional age of <i>Homo naledi</i> to a period between 236 ka and 335 ka. These age results demonstrate that a morphologically primitive hominin, <i>Homo naledi,</i> survived into the later parts of the Pleistocene in Africa, and indicate a much younger age for the <i>Homo naledi</i> fossils than have previously been hypothesized based on their morphology."
+        } ],
+        "doi" : "10.7554/eLife.24231.001"
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/24231/elife-24231-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.24231",
+      "versionDate" : "2017-05-09T00:00:00Z",
+      "title" : "The age of <i>Homo naledi</i> and associated sediments in the Rising Star Cave, South Africa",
+      "volume" : 6,
+      "impactStatement" : "Independent dating techniques have established that the <i>H. naledi</i> fossils are between 236 and 335 thousand years old, indicating that small-brained hominins with relatively primitive body shapes co-existed with our early ancestors in Africa.",
+      "status" : "vor",
+      "id" : "24231",
+      "statusDate" : "2017-05-09T00:00:00Z",
+      "elocationId" : "e24231",
+      "authorLine" : "Paul HGM Dirks, Eric M Roberts ... Lee R Berger",
+      "subjects" : [ {
+        "id" : "evolutionary-biology",
+        "name" : "Evolutionary Biology"
+      } ],
+      "version" : 1,
+      "published" : "2017-05-09T00:00:00Z"
+    }, {
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "The Rising Star cave system has produced abundant fossil hominin remains within the Dinaledi Chamber, representing a minimum of 15 individuals attributed to <i>Homo naledi</i>. Further exploration led to the discovery of hominin material, now comprising 131 hominin specimens, within a second chamber, the Lesedi Chamber. The Lesedi Chamber is far separated from the Dinaledi Chamber within the Rising Star cave system, and represents a second depositional context for hominin remains. In each of three collection areas within the Lesedi Chamber, diagnostic skeletal material allows a clear attribution to <i>H. naledi</i>. Both adult and immature material is present. The hominin remains represent at least three individuals based upon duplication of elements, but more individuals are likely present based upon the spatial context. The most significant specimen is the near-complete cranium of a large individual, designated LES1, with an endocranial volume of approximately 610 ml and associated postcranial remains. The Lesedi Chamber skeletal sample extends our knowledge of the morphology and variation of <i>H. naledi</i>, and evidence of <i>H. naledi</i> from both recovery localities shows a consistent pattern of differentiation from other hominin species."
+        } ],
+        "doi" : "10.7554/eLife.24232.001"
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/24232/elife-24232-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.24232",
+      "versionDate" : "2017-05-09T00:00:00Z",
+      "title" : "New fossil remains of <i>Homo naledi</i> from the Lesedi Chamber, South Africa",
+      "volume" : 6,
+      "impactStatement" : "The discovery of new skeletal remains of <i>Homo naledi</i> in the Lesedi Chamber, South Africa, adds more evidence to our understanding of the morphology and behavior of this recently discovered species.",
+      "status" : "vor",
+      "id" : "24232",
+      "statusDate" : "2017-05-09T00:00:00Z",
+      "elocationId" : "e24232",
+      "authorLine" : "John Hawks, Marina Elliott ... Lee R Berger",
+      "subjects" : [ {
+        "id" : "evolutionary-biology",
+        "name" : "Evolutionary Biology"
+      } ],
+      "version" : 1,
+      "published" : "2017-05-09T00:00:00Z"
+    }, {
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "We describe the physical context of the Dinaledi Chamber within the Rising Star cave, South Africa, which contains the fossils of <i>Homo naledi</i>. Approximately 1550 specimens of hominin remains have been recovered from at least 15 individuals, representing a small portion of the total fossil content. Macro-vertebrate fossils are exclusively <i>H. naledi</i>, and occur within clay-rich sediments derived from in situ weathering, and exogenous clay and silt, which entered the chamber through fractures that prevented passage of coarser-grained material. The chamber was always in the dark zone, and not accessible to non-hominins. Bone taphonomy indicates that hominin individuals reached the chamber complete, with disarticulation occurring during/after deposition. Hominins accumulated over time as older laminated mudstone units and sediment along the cave floor were eroded. Preliminary evidence is consistent with deliberate body disposal in a single location, by a hominin species other than <i>Homo sapiens</i>, at an as-yet unknown date."
+        } ],
+        "doi" : "10.7554/eLife.09561.001"
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/09561/elife-09561-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.09561",
+      "versionDate" : "2015-09-10T00:00:00Z",
+      "title" : "Geological and taphonomic context for the new hominin species <i>Homo naledi</i> from the Dinaledi Chamber, South Africa",
+      "volume" : 4,
+      "impactStatement" : "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
+      "status" : "vor",
+      "id" : "09561",
+      "statusDate" : "2015-09-10T00:00:00Z",
+      "elocationId" : "e09561",
+      "authorLine" : "Paul HGM Dirks, Lee R Berger ... Steven Tucker",
+      "subjects" : [ {
+        "id" : "evolutionary-biology",
+        "name" : "Evolutionary Biology"
+      } ],
+      "version" : 1,
+      "published" : "2015-09-10T00:00:00Z"
+    }, {
+      "stage" : "published",
+      "titlePrefix" : "Human Evolution",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "More than 1500 fossils from the Rising Star cave system in South Africa have been assigned to a new human species, <i>Homo naledi</i>, which displays a unique combination of primitive and derived traits throughout the skeleton."
+        } ]
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/10627/elife-10627-v1.pdf",
+      "type" : "insight",
+      "doi" : "10.7554/eLife.10627",
+      "versionDate" : "2015-09-10T00:00:00Z",
+      "title" : "The many mysteries of <i>Homo naledi</i>",
+      "volume" : 4,
+      "status" : "vor",
+      "id" : "10627",
+      "statusDate" : "2015-09-10T00:00:00Z",
+      "elocationId" : "e10627",
+      "authorLine" : "Chris Stringer",
+      "subjects" : [ {
+        "id" : "evolutionary-biology",
+        "name" : "Evolutionary Biology"
+      } ],
+      "version" : 1,
+      "published" : "2015-09-10T00:00:00Z"
+    }, {
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "New discoveries and dating of fossil remains from the Rising Star cave system, Cradle of Humankind, South Africa, have strong implications for our understanding of Pleistocene human evolution in Africa. Direct dating of <i>Homo naledi</i> fossils from the Dinaledi Chamber (<a href=\"#bib10\">Berger et al., 2015</a>) shows that they were deposited between about 236 ka and 335 ka (<a href=\"#bib36\">Dirks et al., 2017</a>), placing <i>H. naledi</i> in the later Middle Pleistocene. Hawks and colleagues (<a href=\"#bib55\">Hawks et al., 2017</a>) report the discovery of a second chamber within the Rising Star system (<a href=\"#bib34\">Dirks et al., 2015</a>) that contains <i>H. naledi</i> remains. Previously, only large-brained modern humans or their close relatives had been demonstrated to exist at this late time in Africa, but the fossil evidence for any hominins in subequatorial Africa was very sparse. It is now evident that a diversity of hominin lineages existed in this region, with some divergent lineages contributing DNA to living humans and at least <i>H. naledi</i> representing a survivor from the earliest stages of diversification within <i>Homo</i>. The existence of a diverse array of hominins in subequatorial comports with our present knowledge of diversity across other savanna-adapted species, as well as with palaeoclimate and paleoenvironmental data. <i>H. naledi</i> casts the fossil and archaeological records into a new light, as we cannot exclude that this lineage was responsible for the production of Acheulean or Middle Stone Age tool industries."
+        } ],
+        "doi" : "10.7554/eLife.24234.001"
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/24234/elife-24234-v1.pdf",
+      "type" : "short-report",
+      "doi" : "10.7554/eLife.24234",
+      "versionDate" : "2017-05-09T00:00:00Z",
+      "title" : "<i>Homo naledi</i> and Pleistocene hominin evolution in subequatorial Africa",
+      "volume" : 6,
+      "impactStatement" : "A late Middle Pleistocene age for <i>Homo naledi</i> demonstrates a diversity of hominin species in Africa at this critical time in the archaeological record.",
+      "status" : "vor",
+      "id" : "24234",
+      "statusDate" : "2017-05-09T00:00:00Z",
+      "elocationId" : "e24234",
+      "authorLine" : "Lee R Berger, John Hawks ... Eric M Roberts",
+      "subjects" : [ {
+        "id" : "evolutionary-biology",
+        "name" : "Evolutionary Biology"
+      } ],
+      "version" : 1,
+      "published" : "2017-05-09T00:00:00Z"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.recommendations+json",
+  "content-type-version" : 2,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

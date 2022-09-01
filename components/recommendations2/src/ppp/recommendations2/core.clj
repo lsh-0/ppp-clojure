@@ -38,7 +38,7 @@
 (defn find-article
   [id api-key]
   (let [results (article-api/article-version-list id {:api-key api-key})]
-    ;;(utils/spit-json results "find-article.json")
+    (utils/spit-json results "find-article.json")
     results))
 
 (defn find-related-articles
@@ -49,7 +49,7 @@
         [content error?] (api-raml/handle-api-response results)]
     (if error?
       nil
-      (do ;;(utils/spit-json content "find-related-articles.json")
+      (do (utils/spit-json content "find-related-articles.json")
           (sort article-comparator content)))))
 
 (defn find-collections
@@ -59,7 +59,7 @@
         [content error?] (api-raml/handle-api-response results)]
     (if error?
       nil
-      (do ;;(utils/spit-json content "find-collections.json")
+      (do (utils/spit-json content "find-collections.json")
           (:items content)))))
 
 (defn find-articles-by-subject
@@ -83,7 +83,7 @@
                 ;;content (take 4 (remove self? content)) ;; this seems better
                 ]
 
-            (do ;; (utils/spit-json content "find-articles-by-subject.json")
+            (do (utils/spit-json content "find-articles-by-subject.json")
                 content
                 )))))))
 
@@ -95,9 +95,12 @@
         [content error?] (api-raml/handle-api-response podcast-episode-list)]
     (if error?
       nil ;; log error? assume it's been handled elsewhere and carry on? push into `handle-api-response` ?
-      ;; todo:
-      ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L198-L206
-      (do ;;(utils/spit-json content "find-podcast-episodes.json")
+
+
+      ;; todo: ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L198-L206
+
+
+      (do (utils/spit-json content "find-podcast-episodes.json")
           (:items content)))))
 
 (defn-spec find-article-recommendations :ppp/list-of-maps
@@ -112,11 +115,6 @@
             collections #(find-collections id api-key)
             recent-articles-with-subject #(find-articles-by-subject id content)
             podcasts #(find-podcast-episodes id)
-
-            ;; call above functions in parallel (pmap ...), return a single list of results (reduce into ...)
-            ;;results (reduce into (pmap #(%) [relations collections recent-articles-with-subject podcasts]))
-            ;;result-list (pmap #(%) [relations collections recent-articles-with-subject podcasts])
-
             runner (fn [f]
                      (try
                        (f)
@@ -125,23 +123,28 @@
                          (println e)
                          )))
 
-            ;; do the requests synchronously
-            result-list (mapv runner [relations
-                                      collections
-                                      recent-articles-with-subject
-                                      podcasts ;; todo
-                                      ])
+            ;; do the requests synchronously for now. switch `mapv` to `pmap` to do them asynchronously.
+            [relations collections recent-articles-with-subject podcasts]
+            (mapv runner [relations collections recent-articles-with-subject podcasts])
 
-            ;; if any result is empty, 
-            result-list (->> result-list
-                             (remove empty?) ;; todo: remove
-                             (reduce into))
+            recommendations (reduce into [relations collections podcasts])
+            num-recommendations (count recommendations)
+            recommendations (if (>= num-recommendations 3)
+                              recommendations
 
-            ;; what is this doing? some kind of de-duplication?
-            ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L227-L229
-            ;; https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L30
+                              ;; scrounge about for more recommendations in the search results,
+                              ;; ignoring anything already recommended,
+                              ;; taking no more than needed to make up the difference.
+                              ;; see:
+                              ;; - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L225-L229
+                              ;; - https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L44
+                              (let [idx (set recommendations)
+                                    num (- 3 num-recommendations)]
+                                (into recommendations
+                                      (take num
+                                            (take-while #(not (contains? idx %)) recent-articles-with-subject)))))
             ]
-        result-list))))
+        recommendations))))
 
 (defn find-recommendations
   [type id api-key]
@@ -198,7 +201,8 @@
     (if error?
       type-content
 
-      (let [content (paginate results (:page kwargs) (:per-page kwargs) (:order kwargs))
+      (let [;; todo: this pagination will have to happen in `find-recommendations` as there is some weird abstract-fetching logic that happens after pagination has occurred.
+            content (paginate results (:page kwargs) (:per-page kwargs) (:order kwargs))
             content-type-pair (negotiate content (:content-type-list kwargs))
             [content-type, content-type-opts] content-type-pair]
 

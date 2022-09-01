@@ -78,7 +78,7 @@
                     core/find-podcast-episodes (constantly empty-response)]
         (is (= expected (core/recommendation-list "article" 1234)))))))
 
-(deftest recommendations-list--article-found-some-recommendations
+(deftest recommendations-list--79530
   (testing "recommendations for an article that exists"
     (with-redefs [core/find-article (-> "find-article.json" fixture-path utils/slurp-json constantly)
                   core/find-related-articles (-> "find-related-articles.json" fixture-path utils/slurp-json constantly)
@@ -86,6 +86,18 @@
                   core/find-articles-by-subject (-> "find-articles-by-subject.json" fixture-path utils/slurp-json constantly)
                   core/find-podcast-episodes (-> "find-podcast-episodes.json" fixture-path utils/slurp-json constantly)]
       (let [expected (-> "recommendations-list.json" fixture-path utils/slurp-json)
+            actual (core/recommendation-list "article" 1234) ;; 79530
+            ]
+        (is (= expected actual))))))
+
+(deftest recommendations-list--9560
+  (testing "recommendations for an article that exists"
+    (with-redefs [core/find-article (-> "9560/find-article.json" fixture-path utils/slurp-json constantly)
+                  core/find-related-articles (-> "9560/find-related-articles.json" fixture-path utils/slurp-json constantly)
+                  core/find-collections (-> "9560/find-collections.json" fixture-path utils/slurp-json constantly)
+                  core/find-articles-by-subject (-> "9560/find-articles-by-subject.json" fixture-path utils/slurp-json constantly)
+                  core/find-podcast-episodes (-> "9560/find-podcast-episodes.json" fixture-path utils/slurp-json constantly)]
+      (let [expected (-> "9560/recommendations-list.json" fixture-path utils/slurp-json)
             actual (core/recommendation-list "article" 1234) ;; 79530
             ]
         (is (= expected actual))
