@@ -32,6 +32,6 @@
 (defn spit-json
   [edn output-fname]
   (let [output-path (fs/absolute output-fname)]
-    (when false
+    (when true
       (spit output-path (json/generate-string edn {:pretty true})))
     (str output-path)))

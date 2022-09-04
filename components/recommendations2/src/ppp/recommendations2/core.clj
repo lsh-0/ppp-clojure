@@ -167,6 +167,13 @@
             recommendations (vec (reduce into [relations collections podcasts]))
             num-recommendations (count recommendations)
 
+            ;; something is stripping the copyright from search results, making two otherwise bits of identical content unequal.
+            ;; something is adding an abstract to related article content, making two otherwise bits of identical content unequal.
+            ;; I don't know why, it doesn't seem like a good idea, so instead we're 
+            ;; going to select a few unique keys and compare those to weed out duplicates.
+            idx-item (fn [item]
+                       (-> item (select-keys [:id :type]) vals set))
+
             ;; see `find-articles-by-subject` above for more on this magic literal `3`.
             recommendations (if (>= num-recommendations 3)
                               recommendations
@@ -178,11 +185,12 @@
                               ;; see:
                               ;; - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L225-L229
                               ;; - https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L44
-                              (let [idx (set recommendations)
+                              (let [idx (set (map idx-item recommendations))
                                     num (- 3 num-recommendations)]
                                 (into recommendations
                                       (take num
-                                            (take-while #(not (contains? idx %)) recommendations)))))
+                                            (remove (fn [s]
+                                                      (contains? idx (idx-item s))) recent-articles-with-subject)))))
             ]
         recommendations))))
 
@@ -251,6 +259,9 @@
             content-type-pair (negotiate (:content-type-list kwargs))
             v2-content-type? (-> content-type-pair second :version (= 2))
             results (if v2-content-type? (mapv attach-abstract results) results)
+
+            ;; not sure who is stripping this or why, but presence of the 'copyright' is causing inequality
+            results (mapv #(dissoc % :copyright) results)
             
             content (paginate results (:page kwargs) (:per-page kwargs) (:order kwargs))
 
