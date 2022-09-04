@@ -160,9 +160,8 @@
                          (println e)
                          )))
 
-            ;; do the requests synchronously for now. switch `mapv` to `pmap` to do them asynchronously.
             [relations collections recent-articles-with-subject podcasts]
-            (mapv runner [relations collections recent-articles-with-subject podcasts])
+            (pmap runner [relations collections recent-articles-with-subject podcasts])
 
             recommendations (vec (reduce into [relations collections podcasts]))
             num-recommendations (count recommendations)
