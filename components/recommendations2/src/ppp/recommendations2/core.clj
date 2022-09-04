@@ -10,21 +10,21 @@
    ))
 
 (def article-order
-  {:retraction 1,
-   :correction 2,
-   :external-article 3,
-   :registered-report 4,
-   :replication-study 5,
-   :research-advance 6,
-   :scientific-correspondence 7,
-   :research-article 8,
-   :research-communication 8,
-   :tools-resources 9,
-   :feature 10,
-   :insight 11,
-   :editorial 12,
-   :short-report 13,
-   :review-article 14})
+  {"retraction" 1,
+   "correction" 2,
+   "external-article" 3,
+   "registered-report" 4,
+   "replication-study" 5,
+   "research-advance" 6,
+   "scientific-correspondence" 7,
+   "research-article" 8,
+   "research-communication" 8,
+   "tools-resources" 9,
+   "feature" 10,
+   "insight" 11,
+   "editorial" 12,
+   "short-report" 13,
+   "review-article" 14})
 
 (defn article-comparator
   "compares two articles, sorting by article type if types are different, or published date if types are the same."
@@ -32,14 +32,36 @@
   (let [at (:type a)
         bt (:type b)]
     (if (= at bt)
-      (compare (:published a) (:published b))
+      ;; when content types are the same, order by published date desc
+      (compare (:published b) (:published a))
       (compare (get article-order at) (get article-order bt)))))
+
+(defn article?
+  [item]
+  ;; todo: not great. if we switched to a defrecord we could use `instance?`, but then there is all the coercing to and from ...
+  ;;(instance? ArticleVersion item)
+  (contains? item :statusDate))
 
 (defn find-article
   [id api-key]
   (let [results (article-api/article-version-list id {:api-key api-key})]
     (utils/spit-json results "find-article.json")
     results))
+
+(defn attach-abstract
+  [item]
+  (if-not (article? item)
+    item
+
+    (let [complete (:content (article-api/article (:id item) {}))
+          ;; not sure what the php serialise+decode is for (deepcopy?):
+          ;; - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L255
+          abstract (-> complete :abstract :content)
+          doi (-> complete :abstract :doi)]
+      
+      (cond-> item
+        true (assoc :abstract {:content abstract})
+        doi (assoc-in [:abstract :doi] doi)))))
 
 (defn find-related-articles
   [id api-key]
@@ -71,16 +93,31 @@
         subject-id (get-in article-versions [:versions 0 :subjects 0 :id])
         search-for-subject [subject-id]] ;; 'subjected' trait
     (when subject-id
-      (let [search-results (search/search search-for sort-by search-for-type {:subject-list search-for-subject})
+      (let [search-results (search/search search-for sort-by search-for-type {:subject-list search-for-subject :per-page 5})
             [content error?] (api-raml/handle-api-response search-results)]
         (if error?
           nil
           (let [self? (fn [article]
                         (= (str id) (:id article)))
 
-                ;; `->slice(0, 5)` => (take 4 ...)
-                content (remove self? (take 4 (:items content))) ;; what recommendations is doing
-                ;;content (take 4 (remove self? content)) ;; this seems better
+                ;; I think there is something undocumented/implicit happening here:
+                ;; - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L191
+
+                ;; these search results are used to pad the recommendations if there are fewer than '3' recommendations.
+                ;; therefore we need just 3 results from search.
+                ;; however, it's possible the search results will return the article we're looking for recommendations for, so this article needs to be removed.
+                ;; now we need just 4 results and to remove ourselves, possibly still leaving just 4 results.
+
+                ;; I haven't implemented that here, but I am just fetching 5 results from search instead of the default 20.
+                
+                ;; `->slice(0, 5)` => (take 4 ...) ?
+                ;; this `->slice` is *not* php's `array_slice`:
+                ;; - https://www.php.net/manual/en/function.array-slice.php
+                ;; but may map to an implementation of one:
+                ;; - https://github.com/elifesciences/api-sdk-php/blob/5c83812b8d2ffdd4d21e033170b818b391e66479/src/Collection/ArraySequence.php#L86-L89
+                ;;content (remove self? (take 4 (:items content))) ;; seems to give correct results, but doesn't seem accurate
+
+                content (remove self? (:items content))
                 ]
 
             (do (utils/spit-json content "find-articles-by-subject.json")
@@ -127,14 +164,17 @@
             [relations collections recent-articles-with-subject podcasts]
             (mapv runner [relations collections recent-articles-with-subject podcasts])
 
-            recommendations (reduce into [relations collections podcasts])
+            recommendations (vec (reduce into [relations collections podcasts]))
             num-recommendations (count recommendations)
+
+            ;; see `find-articles-by-subject` above for more on this magic literal `3`.
             recommendations (if (>= num-recommendations 3)
                               recommendations
 
                               ;; scrounge about for more recommendations in the search results,
                               ;; ignoring anything already recommended,
                               ;; taking no more than needed to make up the difference.
+                              ;; (use of `set` assumes same content from different sources is identical)
                               ;; see:
                               ;; - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L225-L229
                               ;; - https://github.com/elifesciences/recommendations/blob/cdd445d7abe44d85acbdf7d6404cc52b514db97f/src/functions.php#L10-L44
@@ -142,7 +182,7 @@
                                     num (- 3 num-recommendations)]
                                 (into recommendations
                                       (take num
-                                            (take-while #(not (contains? idx %)) recent-articles-with-subject)))))
+                                            (take-while #(not (contains? idx %)) recommendations)))))
             ]
         recommendations))))
 
@@ -160,7 +200,7 @@
      :items items}))
 
 (defn negotiate
-  [content acceptable-content-type-list]
+  [acceptable-content-type-list]
   ;; what magic is this doing?
   ;; https://github.com/elifesciences/recommendations/blob/cf601c2290834d8cad34716e04a5da1982f9d820/src/bootstrap.php#L292-L295
   (let [v2-compatible? true ;; assume whatever content is returned is v1 and v2 compatible
@@ -202,8 +242,18 @@
       type-content
 
       (let [;; todo: this pagination will have to happen in `find-recommendations` as there is some weird abstract-fetching logic that happens after pagination has occurred.
+
+            ;; we've found recommendations for the given type and id.
+            ;; if the version of the content-type negotiated is version 2 (latest, default), we need to attach abstracts to any article summaries that are missing them.
+
+            ;; todo: what article content is still missing abstracts? was this a temporary thing?
+
+            content-type-pair (negotiate (:content-type-list kwargs))
+            v2-content-type? (-> content-type-pair second :version (= 2))
+            results (if v2-content-type? (mapv attach-abstract results) results)
+            
             content (paginate results (:page kwargs) (:per-page kwargs) (:order kwargs))
-            content-type-pair (negotiate content (:content-type-list kwargs))
+
             [content-type, content-type-opts] content-type-pair]
 
         {:content content
