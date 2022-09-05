@@ -5,56 +5,6 @@
     "holder" : "Dirks et al.",
     "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
   },
-  "pdf" : "https://cdn.elifesciences.org/articles/09561/elife-09561-v1.pdf",
-  "type" : "research-article",
-  "doi" : "10.7554/eLife.09561",
-  "versionDate" : "2015-09-10T00:00:00Z",
-  "title" : "Geological and taphonomic context for the new hominin species <i>Homo naledi</i> from the Dinaledi Chamber, South Africa",
-  "volume" : 4,
-  "impactStatement" : "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
-  "status" : "vor",
-  "id" : "09561",
-  "statusDate" : "2015-09-10T00:00:00Z",
-  "elocationId" : "e09561",
-  "authorLine" : "Paul HGM Dirks, Lee R Berger ... Steven Tucker",
-  "subjects" : [ {
-    "id" : "evolutionary-biology",
-    "name" : "Evolutionary Biology"
-  } ],
-  "version" : 1,
-  "published" : "2015-09-10T00:00:00Z"
-}, {
-  "stage" : "published",
-  "titlePrefix" : "Human Evolution",
-  "copyright" : {
-    "license" : "CC-BY-4.0",
-    "holder" : "Stringer",
-    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
-  },
-  "pdf" : "https://cdn.elifesciences.org/articles/10627/elife-10627-v1.pdf",
-  "type" : "insight",
-  "doi" : "10.7554/eLife.10627",
-  "versionDate" : "2015-09-10T00:00:00Z",
-  "title" : "The many mysteries of <i>Homo naledi</i>",
-  "volume" : 4,
-  "status" : "vor",
-  "id" : "10627",
-  "statusDate" : "2015-09-10T00:00:00Z",
-  "elocationId" : "e10627",
-  "authorLine" : "Chris Stringer",
-  "subjects" : [ {
-    "id" : "evolutionary-biology",
-    "name" : "Evolutionary Biology"
-  } ],
-  "version" : 1,
-  "published" : "2015-09-10T00:00:00Z"
-}, {
-  "stage" : "published",
-  "copyright" : {
-    "license" : "CC-BY-4.0",
-    "holder" : "Dirks et al.",
-    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
-  },
   "pdf" : "https://cdn.elifesciences.org/articles/24231/elife-24231-v1.pdf",
   "type" : "research-article",
   "doi" : "10.7554/eLife.24231",
@@ -98,6 +48,56 @@
   } ],
   "version" : 1,
   "published" : "2017-05-09T00:00:00Z"
+}, {
+  "stage" : "published",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Dirks et al.",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/09561/elife-09561-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.09561",
+  "versionDate" : "2015-09-10T00:00:00Z",
+  "title" : "Geological and taphonomic context for the new hominin species <i>Homo naledi</i> from the Dinaledi Chamber, South Africa",
+  "volume" : 4,
+  "impactStatement" : "A new hominin species found in a South African cave is part of one of the most unusual hominin fossil assemblages on record.",
+  "status" : "vor",
+  "id" : "09561",
+  "statusDate" : "2015-09-10T00:00:00Z",
+  "elocationId" : "e09561",
+  "authorLine" : "Paul HGM Dirks, Lee R Berger ... Steven Tucker",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2015-09-10T00:00:00Z"
+}, {
+  "stage" : "published",
+  "titlePrefix" : "Human Evolution",
+  "copyright" : {
+    "license" : "CC-BY-4.0",
+    "holder" : "Stringer",
+    "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/10627/elife-10627-v1.pdf",
+  "type" : "insight",
+  "doi" : "10.7554/eLife.10627",
+  "versionDate" : "2015-09-10T00:00:00Z",
+  "title" : "The many mysteries of <i>Homo naledi</i>",
+  "volume" : 4,
+  "status" : "vor",
+  "id" : "10627",
+  "statusDate" : "2015-09-10T00:00:00Z",
+  "elocationId" : "e10627",
+  "authorLine" : "Chris Stringer",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2015-09-10T00:00:00Z"
 }, {
   "stage" : "published",
   "copyright" : {

@@ -1,0 +1,763 @@
+{
+  "http-resp" : {
+    "cached" : null,
+    "request-time" : 388,
+    "repeatable?" : false,
+    "protocol-version" : {
+      "name" : "HTTP",
+      "major" : 1,
+      "minor" : 1
+    },
+    "streaming?" : true,
+    "chunked?" : false,
+    "reason-phrase" : "OK",
+    "headers" : {
+      "X-Cache" : "MISS, MISS",
+      "X-Timer" : "S1662382879.931000,VS0,VE242",
+      "Referrer-Policy" : "same-origin",
+      "warning" : "Deprecation: Support for this Content-Type version will be removed",
+      "Server" : "nginx",
+      "Age" : "0",
+      "Via" : "kong/0.10.4, 1.1 varnish, 1.1 varnish",
+      "Content-Type" : "application/vnd.elife.article-poa+json; version=3",
+      "Access-Control-Allow-Origin" : "*",
+      "X-Content-Type-Options" : "nosniff",
+      "Content-Length" : "3970",
+      "X-Frame-Options" : "DENY",
+      "X-Kong-Upstream-Latency" : "31",
+      "Connection" : "close",
+      "Accept-Ranges" : "bytes",
+      "X-Kong-Proxy-Latency" : "0",
+      "KONG-Authenticated" : "False",
+      "X-Consumer-Groups-Filtered" : "user",
+      "X-Cache-Hits" : "0, 0",
+      "Date" : "Mon, 05 Sep 2022 13:01:19 GMT",
+      "Vary" : "Accept, Authorization, Accept-Encoding",
+      "Cache-Control" : "public, max-age=300, stale-while-revalidate=300, stale-if-error=86400",
+      "X-Served-By" : "cache-iad-kiad7000146-IAD, cache-syd10164-SYD"
+    },
+    "orig-content-encoding" : "gzip",
+    "status" : 200,
+    "length" : 3970,
+    "trace-redirects" : [ ]
+  },
+  "content" : {
+    "dataSets" : {
+      "availability" : [ {
+        "text" : "RNA-seq data has been deposited in GEO under accession number GSE163478.All data generated or analysed during this study are included in the manuscript and supporting file; Source Data files have been provided for all figures.Information about AML  patient samples obtained from Martini Hospital (UMCG) (Netherlands) and University Hospital Birmingham NHS Foundation Trust, University of Birmingham  (UK) have been provided in supplementary Table 1.Source of mice used can be found in Material and methods.",
+        "type" : "paragraph"
+      } ],
+      "generated" : [ {
+        "authors" : [ {
+          "name" : "Vilaplana-Lopera N",
+          "type" : "group"
+        }, {
+          "name" : "et al",
+          "type" : "group"
+        } ],
+        "date" : "2021",
+        "details" : "NCBI Gene Expression Omnibus,GSE163478",
+        "id" : "dataset1",
+        "title" : "Crosstalk between AML and stromal cells triggers acetate secretion through the metabolic rewiring of stromal cells",
+        "uri" : "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE163478"
+      } ],
+      "used" : [ {
+        "authors" : [ {
+          "name" : "Ninib Baryawno",
+          "type" : "group"
+        }, {
+          "name" : "Dariusz Przybylski",
+          "type" : "group"
+        }, {
+          "name" : "Monika S Kowalczyk ",
+          "type" : "group"
+        }, {
+          "name" : "Youmna Kfoury",
+          "type" : "group"
+        }, {
+          "name" : "Nicolas Severe",
+          "type" : "group"
+        }, {
+          "name" : "Karin Gustafsson",
+          "type" : "group"
+        }, {
+          "name" : "Konstantinos D Kokkaliaris",
+          "type" : "group"
+        }, {
+          "name" : "Francois Mercier",
+          "type" : "group"
+        }, {
+          "name" : "Marcin Tabaka",
+          "type" : "group"
+        }, {
+          "name" : "Matan Hofree",
+          "type" : "group"
+        }, {
+          "name" : "Danielle Dionne",
+          "type" : "group"
+        }, {
+          "name" : "Ani Papazian",
+          "type" : "group"
+        }, {
+          "name" : "Dongjun Lee",
+          "type" : "group"
+        }, {
+          "name" : "Orr Ashenberg",
+          "type" : "group"
+        }, {
+          "name" : "Ayshwarya Subramanian",
+          "type" : "group"
+        }, {
+          "name" : "Eeshit Dhaval Vaishnav",
+          "type" : "group"
+        }, {
+          "name" : "Orit Rozenblatt-Rosen",
+          "type" : "group"
+        }, {
+          "name" : "Aviv Regev",
+          "type" : "group"
+        }, {
+          "name" : "David T Scadden",
+          "type" : "group"
+        } ],
+        "date" : "2019",
+        "details" : "NCBI Gene Expression Omnibus,GSE128423",
+        "id" : "dataset2",
+        "title" : "A cellular taxonomy of the bone marrow stroma in homeostasis and leukemia demonstrates cancer-crosstalk with stroma to impair normal tissue function",
+        "uri" : "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128423"
+      } ]
+    },
+    "researchOrganisms" : [ "Human" ],
+    "stage" : "published",
+    "abstract" : {
+      "content" : [ {
+        "text" : "Acute myeloid leukaemia (AML) cells interact and modulate components of their surrounding microenvironment into their own benefit. Stromal cells have been shown to support AML survival and progression through various mechanisms. Nonetheless, whether AML cells could establish beneficial metabolic interactions with stromal cells is underexplored. By using a combination of human AML cell lines and AML patient samples together with mouse stromal cells and a MLL-AF9 mouse model, here we identify a novel metabolic crosstalk between AML and stromal cells where AML cells prompt stromal cells to secrete acetate for their own consumption to feed the tricarboxylic acid cycle (TCA) and lipid biosynthesis. By performing transcriptome analysis and tracer-based metabolic NMR analysis, we observe that stromal cells present a higher rate of glycolysis when co-cultured with AML cells. We also find that acetate in stromal cells is derived from pyruvate via chemical conversion under the influence of reactive oxygen species (ROS) following ROS transfer from AML to stromal cells via gap junctions. Overall, we present a unique metabolic communication between AML and stromal cells and propose two different molecular targets, ACSS2 and gap junctions, that could potentially be exploited for adjuvant therapy.",
+        "type" : "paragraph"
+      } ]
+    },
+    "copyright" : {
+      "license" : "CC-BY-4.0",
+      "holder" : "Vilaplana-Lopera et al.",
+      "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+    },
+    "pdf" : "https://cdn.elifesciences.org/articles/75908/elife-75908-v1.pdf",
+    "type" : "research-article",
+    "ethics" : [ {
+      "text" : "Animal experimentation: Animal experiments were conducted with the ethical approval of the Norwegian Food and Safety Authority under project number 19472, with a particular focus on reduction and refinement. Animals were housed under specific opportunistic and pathogen free environment at the Animal Facility of the University of Oslo, Norway. The animals were euthanized by CO2 and absence of reflexes was confirmed before necropsy.",
+      "type" : "paragraph"
+    }, {
+      "text" : "Human subjects: AML and PBMC primary specimens' procedures were obtained in accordance with the Declaration of Helsinki at the University Medical Center Groningen, approved by the UMCG Medical Ethical Committee or at the University Hospital Birmingham NHS Foundation Trust, approved by the West Midlands - Solihull Research Ethics Committee (10/H1206//58).",
+      "type" : "paragraph"
+    } ],
+    "doi" : "10.7554/eLife.75908",
+    "versionDate" : "2022-09-02T00:00:00Z",
+    "title" : "Crosstalk between AML and stromal cells triggers acetate secretion through the metabolic rewiring of stromal cells",
+    "volume" : 11,
+    "funding" : {
+      "awards" : [ {
+        "awardId" : "H2020-MSCA-ITN-2015-675790",
+        "id" : "par-1",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Vilaplana-Lopera, Nuria",
+            "preferred" : "Nuria Vilaplana-Lopera"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Papatzikas, Grigorios",
+            "preferred" : "Grigorios Papatzikas"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Cunnigham, Alan",
+            "preferred" : "Alan Cunnigham"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Erdem, Ayşegüll",
+            "preferred" : "Ayşegüll Erdem"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100010661",
+          "name" : [ "Horizon 2020 Framework Programme" ]
+        }
+      }, {
+        "awardId" : "HaemMetabolome [EC-675790]",
+        "id" : "par-2",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Cazier, Jean-Baptiste",
+            "preferred" : "Jean-Baptiste Cazier"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100000780",
+          "name" : [ "European Commission" ]
+        }
+      }, {
+        "awardId" : "HaemMetabolome [EC-675790]",
+        "id" : "par-3",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Schuringa, Jan Jacob",
+            "preferred" : "Jan Jacob Schuringa"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100000780",
+          "name" : [ "European Commission" ]
+        }
+      }, {
+        "awardId" : "HaemMetabolome [EC-675790]",
+        "id" : "par-4",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Günther, Ulrich",
+            "preferred" : "Ulrich Günther"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100000780",
+          "name" : [ "European Commission" ]
+        }
+      }, {
+        "awardId" : "HaemMetabolome [EC-675790]",
+        "id" : "par-5",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Garcia, Paloma",
+            "preferred" : "Paloma Garcia"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100000780",
+          "name" : [ "European Commission" ]
+        }
+      }, {
+        "awardId" : "HaemMetabolome [EC-675790",
+        "id" : "par-6",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Schnütgen, Frank",
+            "preferred" : "Frank Schnütgen"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Cazier, Jean-Baptiste",
+            "preferred" : "Jean-Baptiste Cazier"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Schuringa, Jan Jacob",
+            "preferred" : "Jan Jacob Schuringa"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Günther, Ulrich",
+            "preferred" : "Ulrich Günther"
+          },
+          "type" : "person"
+        }, {
+          "name" : {
+            "index" : "Garcia, Paloma",
+            "preferred" : "Paloma Garcia"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100000780",
+          "name" : [ "European Commission" ]
+        }
+      }, {
+        "awardId" : "SFB815,TP A10",
+        "id" : "par-7",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Schnütgen, Frank",
+            "preferred" : "Frank Schnütgen"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100001659",
+          "name" : [ "Deutsche Forschungsgemeinschaft" ]
+        }
+      }, {
+        "awardId" : "208400/Z/17/Z",
+        "id" : "par-8",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Günther, Ulrich",
+            "preferred" : "Ulrich Günther"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100010269",
+          "name" : [ "Wellcome Trust" ]
+        }
+      }, {
+        "awardId" : "2014/5668",
+        "id" : "par-9",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Arranz, Lorena",
+            "preferred" : "Lorena Arranz"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100007137",
+          "name" : [ "Helse Nord RHF" ]
+        }
+      }, {
+        "awardId" : "67262-DIF Post-Covid Support Fund",
+        "id" : "par-10",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Garcia, Paloma",
+            "preferred" : "Paloma Garcia"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100000855",
+          "name" : [ "University of Birmingham" ]
+        }
+      }, {
+        "awardId" : "H2020-MSCA-ITN-2015-675790",
+        "id" : "par-11",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Papatzikas, Grigorios",
+            "preferred" : "Grigorios Papatzikas"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100010661",
+          "name" : [ "Horizon 2020 Framework Programme" ]
+        }
+      }, {
+        "awardId" : "H2020-MSCA-ITN-2015-675790",
+        "id" : "par-12",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Cunnigham, Alan",
+            "preferred" : "Alan Cunnigham"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100010661",
+          "name" : [ "Horizon 2020 Framework Programme" ]
+        }
+      }, {
+        "awardId" : "H2020-MSCA-ITN-2015-675790",
+        "id" : "par-13",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Erdem, Ayşegüll",
+            "preferred" : "Ayşegüll Erdem"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100010661",
+          "name" : [ "Horizon 2020 Framework Programme" ]
+        }
+      } ],
+      "statement" : "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    },
+    "status" : "poa",
+    "id" : "75908",
+    "statusDate" : "2022-09-02T00:00:00Z",
+    "elocationId" : "e75908",
+    "authorLine" : "Nuria Vilaplana-Lopera, Vincent Cuminetti ... Paloma Garcia",
+    "subjects" : [ {
+      "id" : "biochemistry-chemical-biology",
+      "name" : "Biochemistry and Chemical Biology"
+    }, {
+      "id" : "cancer-biology",
+      "name" : "Cancer Biology"
+    } ],
+    "version" : 1,
+    "additionalFiles" : [ {
+      "caption" : [ {
+        "text" : "Any figure supplements, source code, source data, videos or supplementary files associated with this article are contained within this zip.",
+        "type" : "paragraph"
+      } ],
+      "filename" : "elife-75908-supp-v1.zip",
+      "id" : "SD1-data",
+      "label" : "All additional files",
+      "mediaType" : "application/zip",
+      "uri" : "https://cdn.elifesciences.org/articles/75908/elife-75908-supp-v1.zip"
+    } ],
+    "xml" : "https://cdn.elifesciences.org/articles/75908/elife-75908-v1.xml",
+    "authors" : [ {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Vilaplana-Lopera, Nuria",
+        "preferred" : "Nuria Vilaplana-Lopera"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Norway",
+            "locality" : [ "Tromso" ]
+          },
+          "formatted" : [ "Tromso", "Norway" ]
+        },
+        "name" : [ "Department of Medical Biology", "UiT The Arctic University of Norway" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Cuminetti, Vincent",
+        "preferred" : "Vincent Cuminetti"
+      },
+      "orcid" : "0000-0001-8396-710X",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Almaghrabi, Ruba",
+        "preferred" : "Ruba Almaghrabi"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Papatzikas, Grigorios",
+        "preferred" : "Grigorios Papatzikas"
+      },
+      "orcid" : "0000-0002-0163-4174",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Germany",
+            "locality" : [ "Lubeck" ]
+          },
+          "formatted" : [ "Lubeck", "Germany" ]
+        },
+        "name" : [ "Institute of Chemistry and Metabolomics", "University of Lübeck" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Rout, Ashok Kumar",
+        "preferred" : "Ashok Kumar Rout"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Jeeves, Mark",
+        "preferred" : "Mark Jeeves"
+      },
+      "orcid" : "0000-0001-9736-0990",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "González, Elena",
+        "preferred" : "Elena González"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Alyahyawi, Yara",
+        "preferred" : "Yara Alyahyawi"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Netherlands",
+            "locality" : [ "Groningen" ]
+          },
+          "formatted" : [ "Groningen", "Netherlands" ]
+        },
+        "name" : [ "Department of Experimental Hematology", "University Medical Center Groningen" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Cunnigham, Alan",
+        "preferred" : "Alan Cunnigham"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Netherlands",
+            "locality" : [ "Groningen" ]
+          },
+          "formatted" : [ "Groningen", "Netherlands" ]
+        },
+        "name" : [ "Department of Experimental Hematology", "University Medical Center Groningen" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Erdem, Ayşegüll",
+        "preferred" : "Ayşegüll Erdem"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Germany",
+            "locality" : [ "Frankfurt" ]
+          },
+          "formatted" : [ "Frankfurt", "Germany" ]
+        },
+        "name" : [ "Department of Medicine, Hematology/Oncology", "University Hospital Frankfurt" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Schnütgen, Frank",
+        "preferred" : "Frank Schnütgen"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Raghavan, Manoj",
+        "preferred" : "Manoj Raghavan"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Potluri, Sandeep",
+        "preferred" : "Sandeep Potluri"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Cazier, Jean-Baptiste",
+        "preferred" : "Jean-Baptiste Cazier"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Netherlands",
+            "locality" : [ "Groningen" ]
+          },
+          "formatted" : [ "Groningen", "Netherlands" ]
+        },
+        "name" : [ "Department of Experimental Hematology", "University Medical Center Groningen" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Schuringa, Jan Jacob",
+        "preferred" : "Jan Jacob Schuringa"
+      },
+      "orcid" : "0000-0001-8452-8555",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Reed, Michelle AC",
+        "preferred" : "Michelle AC Reed"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Norway",
+            "locality" : [ "Tromso" ]
+          },
+          "formatted" : [ "Tromso", "Norway" ]
+        },
+        "name" : [ "Department of Medical Biology", "UiT The Arctic University of Norway" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Arranz, Lorena",
+        "preferred" : "Lorena Arranz"
+      },
+      "orcid" : "0000-0002-5896-4238",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Germany",
+            "locality" : [ "Lubeck" ]
+          },
+          "formatted" : [ "Lubeck", "Germany" ]
+        },
+        "name" : [ "Institute of Chemistry and Metabolomics", "University of Lübeck" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Günther, Ulrich",
+        "preferred" : "Ulrich Günther"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom",
+            "locality" : [ "Birmingham" ]
+          },
+          "formatted" : [ "Birmingham", "United Kingdom" ]
+        },
+        "name" : [ "Institute of Cancer and Genomic Sciences", "University of Birmingham" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "emailAddresses" : [ "p.garcia@bham.ac.uk" ],
+      "name" : {
+        "index" : "Garcia, Paloma",
+        "preferred" : "Paloma Garcia"
+      },
+      "orcid" : "0000-0001-5582-8575",
+      "type" : "person"
+    } ],
+    "published" : "2022-09-02T00:00:00Z",
+    "reviewers" : [ {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United Kingdom"
+          },
+          "formatted" : [ "United Kingdom" ]
+        },
+        "name" : [ "Imperial College London" ]
+      } ],
+      "name" : {
+        "index" : "Lo Celso, Cristina",
+        "preferred" : "Cristina Lo Celso"
+      },
+      "role" : "Reviewing Editor",
+      "type" : "person"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.article-poa+json",
+  "content-type-version" : 3,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

@@ -42,10 +42,16 @@
   ;;(instance? ArticleVersion item)
   (contains? item :statusDate))
 
-(defn find-article
+(defn find-article-versions
   [id api-key]
   (let [results (article-api/article-version-list id {:api-key api-key})]
-    (utils/spit-json results "find-article.json")
+    (utils/spit-json results "find-article-versions.json")
+    results))
+
+(defn find-article
+  [id]
+  (let [results (article-api/article id {})]
+    (utils/spit-json results (str "find-article--" id ".json"))
     results))
 
 (defn attach-abstract
@@ -53,12 +59,11 @@
   (if-not (article? item)
     item
 
-    (let [complete (:content (article-api/article (:id item) {}))
+    (let [complete (:content (find-article (:id item)))
           ;; not sure what the php serialise+decode is for (deepcopy?):
           ;; - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L255
           abstract (-> complete :abstract :content)
           doi (-> complete :abstract :doi)]
-      
       (cond-> item
         true (assoc :abstract {:content abstract})
         doi (assoc-in [:abstract :doi] doi)))))
@@ -71,8 +76,9 @@
         [content error?] (api-raml/handle-api-response results)]
     (if error?
       nil
-      (do (utils/spit-json content "find-related-articles.json")
-          (sort article-comparator content)))))
+      (let [content (sort article-comparator content)]
+        (utils/spit-json content "find-related-articles.json")
+        content))))
 
 (defn find-collections
   ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L169-L171
@@ -81,8 +87,9 @@
         [content error?] (api-raml/handle-api-response results)]
     (if error?
       nil
-      (do (utils/spit-json content "find-collections.json")
-          (:items content)))))
+      (let [content (:items content)]
+        (utils/spit-json content "find-collections.json")
+        content))))
 
 (defn find-articles-by-subject
   [id article-versions]
@@ -137,12 +144,13 @@
       ;; todo: ;; https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L198-L206
 
 
-      (do (utils/spit-json content "find-podcast-episodes.json")
-          (:items content)))))
+      (let [content (:items content)]
+        (utils/spit-json content "find-podcast-episodes.json")
+        content))))
 
 (defn-spec find-article-recommendations :ppp/list-of-maps
   [id :api-raml/manuscript-id, api-key :api-raml/api-key]
-  (let [article-versions (find-article id api-key)
+  (let [article-versions (find-article-versions id api-key)
         [content error?] (api-raml/handle-api-response article-versions)]
     (if error?
       [content]
