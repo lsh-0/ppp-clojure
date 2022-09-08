@@ -6,7 +6,8 @@ see CHANGELOG.md for a more formal list of changes by release
 
 * recommendations2, a local implementation of recommendations
     - done, sort of
-        - still a bunch of finessing and correctness to do
+        - still have podcasts to do
+        - still have some weird edge cases to do
 
 # todo (0.0.2)
 
