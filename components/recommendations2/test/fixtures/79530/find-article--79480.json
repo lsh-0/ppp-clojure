@@ -1,0 +1,203 @@
+{
+  "http-resp" : {
+    "cached" : null,
+    "request-time" : 397,
+    "repeatable?" : false,
+    "protocol-version" : {
+      "name" : "HTTP",
+      "major" : 1,
+      "minor" : 1
+    },
+    "streaming?" : true,
+    "chunked?" : false,
+    "reason-phrase" : "OK",
+    "headers" : {
+      "X-Cache" : "MISS, MISS",
+      "X-Timer" : "S1662382879.527870,VS0,VE255",
+      "Referrer-Policy" : "same-origin",
+      "warning" : "Deprecation: Support for this Content-Type version will be removed",
+      "Server" : "nginx",
+      "Age" : "0",
+      "Via" : "kong/0.10.4, 1.1 varnish, 1.1 varnish",
+      "Content-Type" : "application/vnd.elife.article-poa+json; version=3",
+      "Access-Control-Allow-Origin" : "*",
+      "X-Content-Type-Options" : "nosniff",
+      "Content-Length" : "2071",
+      "X-Frame-Options" : "DENY",
+      "X-Kong-Upstream-Latency" : "26",
+      "Connection" : "close",
+      "Accept-Ranges" : "bytes",
+      "X-Kong-Proxy-Latency" : "0",
+      "KONG-Authenticated" : "False",
+      "X-Consumer-Groups-Filtered" : "user",
+      "X-Cache-Hits" : "0, 0",
+      "Date" : "Mon, 05 Sep 2022 13:01:18 GMT",
+      "Vary" : "Accept, Authorization, Accept-Encoding",
+      "Cache-Control" : "public, max-age=300, stale-while-revalidate=300, stale-if-error=86400",
+      "X-Served-By" : "cache-iad-kcgs7200066-IAD, cache-syd10155-SYD"
+    },
+    "orig-content-encoding" : "gzip",
+    "status" : 200,
+    "length" : 2071,
+    "trace-redirects" : [ ]
+  },
+  "content" : {
+    "dataSets" : {
+      "availability" : [ {
+        "text" : "All data generated or analysed during this study are included in the manuscript and supporting file; Source Data files have been provided for all figures presented.",
+        "type" : "paragraph"
+      } ]
+    },
+    "researchOrganisms" : [ "<i>S. pyogenes</i>" ],
+    "stage" : "published",
+    "abstract" : {
+      "content" : [ {
+        "text" : "Three-component ParABS partition systems ensure stable inheritance of many bacterial chromosomes and low-copy-number plasmids. ParA localizes to the nucleoid through its ATP-dependent non-specific DNA binding activity, whereas centromere-like <i>parS</i>-DNA and ParB form partition complexes that activate ParA-ATPase to drive the system dynamics. The essential <i>parS</i> sequence arrangements vary among ParABS systems, reflecting the architectural diversity of their partition complexes. Here, we focus on the pSM19035 plasmid partition system that uses a ParB<sub>pSM</sub> of the ribbon-helix-helix (RHH) family. We show that <i>parS<sub>pSM</sub></i> with four or more contiguous ParB<sub>pSM</sub>-binding sequence repeats is required to assemble a stable ParA<sub>pSM</sub>-ParB<sub>pSM</sub> complex and efficiently activate the ParA<sub>pSM</sub>-ATPase, stimulating complex disassembly. Disruption of the contiguity of the <i>parS<sub>pSM</sub></i> sequence array destabilizes the ParA<sub>pSM</sub>-ParB<sub>pSM</sub> complex and prevents efficient ATPase activation. Our findings reveal the unique architecture of the pSM19035 partition complex and how it interacts with nucleoid-bound ParA<sub>pSM</sub>-ATP.",
+        "type" : "paragraph"
+      } ]
+    },
+    "copyright" : {
+      "license" : "CC0-1.0",
+      "statement" : "This is an open-access article, free of all copyright, and may be freely reproduced, distributed, transmitted, modified, built upon, or otherwise used by anyone for any lawful purpose. The work is made available under the <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\">Creative Commons CC0</a> public domain dedication."
+    },
+    "pdf" : "https://cdn.elifesciences.org/articles/79480/elife-79480-v1.pdf",
+    "type" : "research-article",
+    "doi" : "10.7554/eLife.79480",
+    "versionDate" : "2022-09-05T00:00:00Z",
+    "title" : "Distinct architectural requirements for the <i>parS</i> centromeric sequence of the pSM19035 plasmid partition machinery",
+    "volume" : 11,
+    "funding" : {
+      "awards" : [ {
+        "id" : "par-1",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Mizuuchi, Kiyoshi",
+            "preferred" : "Kiyoshi Mizuuchi"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100000062",
+          "name" : [ "National Institute of Diabetes and Digestive and Kidney Diseases" ]
+        }
+      }, {
+        "awardId" : "2018-097054-B-I00,2021AEP031",
+        "id" : "par-2",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Alonso, Juan Carlos",
+            "preferred" : "Juan Carlos Alonso"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/501100004837",
+          "name" : [ "Ministerio de Ciencia e Innovación" ]
+        }
+      } ],
+      "statement" : "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    },
+    "status" : "poa",
+    "id" : "79480",
+    "statusDate" : "2022-09-05T00:00:00Z",
+    "elocationId" : "e79480",
+    "authorLine" : "Andrea Volante, Juan Carlos Alonso, Kiyoshi Mizuuchi",
+    "subjects" : [ {
+      "id" : "biochemistry-chemical-biology",
+      "name" : "Biochemistry and Chemical Biology"
+    }, {
+      "id" : "cell-biology",
+      "name" : "Cell Biology"
+    } ],
+    "version" : 1,
+    "additionalFiles" : [ {
+      "caption" : [ {
+        "text" : "Any figure supplements, source code, source data, videos or supplementary files associated with this article are contained within this zip.",
+        "type" : "paragraph"
+      } ],
+      "filename" : "elife-79480-supp-v1.zip",
+      "id" : "SD1-data",
+      "label" : "All additional files",
+      "mediaType" : "application/zip",
+      "uri" : "https://cdn.elifesciences.org/articles/79480/elife-79480-supp-v1.zip"
+    } ],
+    "xml" : "https://cdn.elifesciences.org/articles/79480/elife-79480-v1.xml",
+    "authors" : [ {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Bethesda" ]
+          },
+          "formatted" : [ "Bethesda", "United States" ]
+        },
+        "name" : [ "National Institute of Diabetes and Digestive and Kidney Diseases" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Volante, Andrea",
+        "preferred" : "Andrea Volante"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Spain",
+            "locality" : [ "Madrid" ]
+          },
+          "formatted" : [ "Madrid", "Spain" ]
+        },
+        "name" : [ "Department of Microbial Biotechnology", "National Center for Biotechnology" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "name" : {
+        "index" : "Alonso, Juan Carlos",
+        "preferred" : "Juan Carlos Alonso"
+      },
+      "orcid" : "0000-0002-5178-7179",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Bethesda" ]
+          },
+          "formatted" : [ "Bethesda", "United States" ]
+        },
+        "name" : [ "National Institute of Diabetes and Digestive and Kidney Diseases" ]
+      } ],
+      "competingInterests" : "The authors declare that no competing interests exist.",
+      "emailAddresses" : [ "kiyoshimi@niddk.nih.gov" ],
+      "name" : {
+        "index" : "Mizuuchi, Kiyoshi",
+        "preferred" : "Kiyoshi Mizuuchi"
+      },
+      "orcid" : "0000-0001-8193-9244",
+      "type" : "person"
+    } ],
+    "published" : "2022-09-05T00:00:00Z",
+    "reviewers" : [ {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States"
+          },
+          "formatted" : [ "United States" ]
+        },
+        "name" : [ "Johns Hopkins University" ]
+      } ],
+      "name" : {
+        "index" : "Xiao, Jie",
+        "preferred" : "Jie Xiao"
+      },
+      "role" : "Reviewing Editor",
+      "type" : "person"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.article-poa+json",
+  "content-type-version" : 3,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

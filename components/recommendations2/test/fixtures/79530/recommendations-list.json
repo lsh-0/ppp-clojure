@@ -1,0 +1,96 @@
+{
+  "content" : {
+    "total" : 3,
+    "items" : [ {
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "While early genetic and low-resolution structural observations suggested that extracellular conductive filaments on metal reducing organisms such as <i>Geobacter</i> were composed of Type IV pili, it has now been established that bacterial <i>c</i>-type cytochromes can polymerize to form extracellular filaments capable of long-range electron transport. Atomic structures exist for two such cytochrome filaments, formed from the hexaheme cytochrome OmcS and the tetraheme cytochrome OmcE. Due to the highly conserved heme packing within the central OmcS and OmcE cores, and shared pattern of heme coordination between subunits, it has been suggested that these polymers have a common origin. We have now used cryo-EM to determine the structure of a third extracellular filament, formed from the <i>Geobacter sulfurreducens</i> octaheme cytochrome, OmcZ. In contrast to the linear heme chains in OmcS and OmcE from the same organism, the packing of hemes, heme:heme angles, and between-subunit heme coordination is quite different in OmcZ. A branched heme arrangement within OmcZ leads to a highly surface exposed heme in every subunit, which may account for the formation of conductive biofilm networks, and explain the higher measured conductivity of OmcZ filaments. This new structural evidence suggests that conductive cytochrome polymers arose independently on more than one occasion from different ancestral multiheme proteins."
+        } ]
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/81551/elife-81551-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.81551",
+      "versionDate" : "2022-09-05T00:00:00Z",
+      "title" : "Structure of <i>Geobacter</i> OmcZ filaments suggests extracellular cytochrome polymers evolved independently multiple times",
+      "volume" : 11,
+      "status" : "poa",
+      "id" : "81551",
+      "statusDate" : "2022-09-05T00:00:00Z",
+      "elocationId" : "e81551",
+      "authorLine" : "Fengbin Wang, Chi Ho Chan ... Daniel R Bond",
+      "subjects" : [ {
+        "id" : "biochemistry-chemical-biology",
+        "name" : "Biochemistry and Chemical Biology"
+      }, {
+        "id" : "structural-biology-molecular-biophysics",
+        "name" : "Structural Biology and Molecular Biophysics"
+      } ],
+      "version" : 1,
+      "published" : "2022-09-05T00:00:00Z"
+    }, {
+      "researchOrganisms" : [ "<i>S. pyogenes</i>" ],
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "Three-component ParABS partition systems ensure stable inheritance of many bacterial chromosomes and low-copy-number plasmids. ParA localizes to the nucleoid through its ATP-dependent non-specific DNA binding activity, whereas centromere-like <i>parS</i>-DNA and ParB form partition complexes that activate ParA-ATPase to drive the system dynamics. The essential <i>parS</i> sequence arrangements vary among ParABS systems, reflecting the architectural diversity of their partition complexes. Here, we focus on the pSM19035 plasmid partition system that uses a ParB<sub>pSM</sub> of the ribbon-helix-helix (RHH) family. We show that <i>parS<sub>pSM</sub></i> with four or more contiguous ParB<sub>pSM</sub>-binding sequence repeats is required to assemble a stable ParA<sub>pSM</sub>-ParB<sub>pSM</sub> complex and efficiently activate the ParA<sub>pSM</sub>-ATPase, stimulating complex disassembly. Disruption of the contiguity of the <i>parS<sub>pSM</sub></i> sequence array destabilizes the ParA<sub>pSM</sub>-ParB<sub>pSM</sub> complex and prevents efficient ATPase activation. Our findings reveal the unique architecture of the pSM19035 partition complex and how it interacts with nucleoid-bound ParA<sub>pSM</sub>-ATP."
+        } ]
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/79480/elife-79480-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.79480",
+      "versionDate" : "2022-09-05T00:00:00Z",
+      "title" : "Distinct architectural requirements for the <i>parS</i> centromeric sequence of the pSM19035 plasmid partition machinery",
+      "volume" : 11,
+      "status" : "poa",
+      "id" : "79480",
+      "statusDate" : "2022-09-05T00:00:00Z",
+      "elocationId" : "e79480",
+      "authorLine" : "Andrea Volante, Juan Carlos Alonso, Kiyoshi Mizuuchi",
+      "subjects" : [ {
+        "id" : "biochemistry-chemical-biology",
+        "name" : "Biochemistry and Chemical Biology"
+      }, {
+        "id" : "cell-biology",
+        "name" : "Cell Biology"
+      } ],
+      "version" : 1,
+      "published" : "2022-09-05T00:00:00Z"
+    }, {
+      "researchOrganisms" : [ "Human" ],
+      "stage" : "published",
+      "abstract" : {
+        "content" : [ {
+          "type" : "paragraph",
+          "text" : "Acute myeloid leukaemia (AML) cells interact and modulate components of their surrounding microenvironment into their own benefit. Stromal cells have been shown to support AML survival and progression through various mechanisms. Nonetheless, whether AML cells could establish beneficial metabolic interactions with stromal cells is underexplored. By using a combination of human AML cell lines and AML patient samples together with mouse stromal cells and a MLL-AF9 mouse model, here we identify a novel metabolic crosstalk between AML and stromal cells where AML cells prompt stromal cells to secrete acetate for their own consumption to feed the tricarboxylic acid cycle (TCA) and lipid biosynthesis. By performing transcriptome analysis and tracer-based metabolic NMR analysis, we observe that stromal cells present a higher rate of glycolysis when co-cultured with AML cells. We also find that acetate in stromal cells is derived from pyruvate via chemical conversion under the influence of reactive oxygen species (ROS) following ROS transfer from AML to stromal cells via gap junctions. Overall, we present a unique metabolic communication between AML and stromal cells and propose two different molecular targets, ACSS2 and gap junctions, that could potentially be exploited for adjuvant therapy."
+        } ]
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/75908/elife-75908-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.75908",
+      "versionDate" : "2022-09-02T00:00:00Z",
+      "title" : "Crosstalk between AML and stromal cells triggers acetate secretion through the metabolic rewiring of stromal cells",
+      "volume" : 11,
+      "status" : "poa",
+      "id" : "75908",
+      "statusDate" : "2022-09-02T00:00:00Z",
+      "elocationId" : "e75908",
+      "authorLine" : "Nuria Vilaplana-Lopera, Vincent Cuminetti ... Paloma Garcia",
+      "subjects" : [ {
+        "id" : "biochemistry-chemical-biology",
+        "name" : "Biochemistry and Chemical Biology"
+      }, {
+        "id" : "cancer-biology",
+        "name" : "Cancer Biology"
+      } ],
+      "version" : 1,
+      "published" : "2022-09-02T00:00:00Z"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.recommendations+json",
+  "content-type-version" : 2,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

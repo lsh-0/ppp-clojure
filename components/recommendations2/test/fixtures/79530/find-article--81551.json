@@ -1,0 +1,321 @@
+{
+  "http-resp" : {
+    "cached" : null,
+    "request-time" : 405,
+    "repeatable?" : false,
+    "protocol-version" : {
+      "name" : "HTTP",
+      "major" : 1,
+      "minor" : 1
+    },
+    "streaming?" : true,
+    "chunked?" : false,
+    "reason-phrase" : "OK",
+    "headers" : {
+      "X-Cache" : "MISS, MISS",
+      "X-Timer" : "S1662382878.120230,VS0,VE261",
+      "Referrer-Policy" : "same-origin",
+      "warning" : "Deprecation: Support for this Content-Type version will be removed",
+      "Server" : "nginx",
+      "Age" : "0",
+      "Via" : "kong/0.10.4, 1.1 varnish, 1.1 varnish",
+      "Content-Type" : "application/vnd.elife.article-poa+json; version=3",
+      "Access-Control-Allow-Origin" : "*",
+      "X-Content-Type-Options" : "nosniff",
+      "Content-Length" : "2445",
+      "X-Frame-Options" : "DENY",
+      "X-Kong-Upstream-Latency" : "24",
+      "Connection" : "close",
+      "Accept-Ranges" : "bytes",
+      "X-Kong-Proxy-Latency" : "0",
+      "KONG-Authenticated" : "False",
+      "X-Consumer-Groups-Filtered" : "user",
+      "X-Cache-Hits" : "0, 0",
+      "Date" : "Mon, 05 Sep 2022 13:01:18 GMT",
+      "Vary" : "Accept, Authorization, Accept-Encoding",
+      "Cache-Control" : "public, max-age=300, stale-while-revalidate=300, stale-if-error=86400",
+      "X-Served-By" : "cache-iad-kjyo7100131-IAD, cache-syd10131-SYD"
+    },
+    "orig-content-encoding" : "gzip",
+    "status" : 200,
+    "length" : 2445,
+    "trace-redirects" : [ ]
+  },
+  "content" : {
+    "dataSets" : {
+      "availability" : [ {
+        "text" : "PDB (model)deposited with accession code 8D9MEMDB (map)deposited with accession code EMD-27266",
+        "type" : "paragraph"
+      } ],
+      "generated" : [ {
+        "authors" : [ {
+          "name" : "Wang F",
+          "type" : "group"
+        }, {
+          "name" : "Chan CH",
+          "type" : "group"
+        }, {
+          "name" : "Mustafa K",
+          "type" : "group"
+        }, {
+          "name" : "Hochbaum AI",
+          "type" : "group"
+        }, {
+          "name" : "Bond DR",
+          "type" : "group"
+        }, {
+          "name" : "Egelman EH",
+          "type" : "group"
+        } ],
+        "date" : "2022",
+        "details" : "PDB, 8D9M",
+        "id" : "dataset1",
+        "title" : "Cryo-EM of the OmcZ nanowires from Geobacter sulfurreducens",
+        "uri" : "https://www.rcsb.org/structure/unreleased/8D9M"
+      } ]
+    },
+    "stage" : "published",
+    "abstract" : {
+      "content" : [ {
+        "text" : "While early genetic and low-resolution structural observations suggested that extracellular conductive filaments on metal reducing organisms such as <i>Geobacter</i> were composed of Type IV pili, it has now been established that bacterial <i>c</i>-type cytochromes can polymerize to form extracellular filaments capable of long-range electron transport. Atomic structures exist for two such cytochrome filaments, formed from the hexaheme cytochrome OmcS and the tetraheme cytochrome OmcE. Due to the highly conserved heme packing within the central OmcS and OmcE cores, and shared pattern of heme coordination between subunits, it has been suggested that these polymers have a common origin. We have now used cryo-EM to determine the structure of a third extracellular filament, formed from the <i>Geobacter sulfurreducens</i> octaheme cytochrome, OmcZ. In contrast to the linear heme chains in OmcS and OmcE from the same organism, the packing of hemes, heme:heme angles, and between-subunit heme coordination is quite different in OmcZ. A branched heme arrangement within OmcZ leads to a highly surface exposed heme in every subunit, which may account for the formation of conductive biofilm networks, and explain the higher measured conductivity of OmcZ filaments. This new structural evidence suggests that conductive cytochrome polymers arose independently on more than one occasion from different ancestral multiheme proteins.",
+        "type" : "paragraph"
+      } ]
+    },
+    "copyright" : {
+      "license" : "CC-BY-4.0",
+      "holder" : "Wang et al.",
+      "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a> permitting unrestricted use and redistribution provided that the original author and source are credited."
+    },
+    "pdf" : "https://cdn.elifesciences.org/articles/81551/elife-81551-v1.pdf",
+    "type" : "research-article",
+    "doi" : "10.7554/eLife.81551",
+    "versionDate" : "2022-09-05T00:00:00Z",
+    "title" : "Structure of <i>Geobacter</i> OmcZ filaments suggests extracellular cytochrome polymers evolved independently multiple times",
+    "volume" : 11,
+    "funding" : {
+      "awards" : [ {
+        "awardId" : "GM122510",
+        "id" : "par-1",
+        "recipients" : [ {
+          "name" : {
+            "index" : "Egelman, Edward H",
+            "preferred" : "Edward H Egelman"
+          },
+          "type" : "person"
+        } ],
+        "source" : {
+          "funderId" : "10.13039/100000002",
+          "name" : [ "National Institutes of Health" ]
+        }
+      } ],
+      "statement" : "The funders had no role in study design, data collection and interpretation, or the decision to submit the work for publication."
+    },
+    "status" : "poa",
+    "id" : "81551",
+    "statusDate" : "2022-09-05T00:00:00Z",
+    "elocationId" : "e81551",
+    "authorLine" : "Fengbin Wang, Chi Ho Chan ... Daniel R Bond",
+    "subjects" : [ {
+      "id" : "biochemistry-chemical-biology",
+      "name" : "Biochemistry and Chemical Biology"
+    }, {
+      "id" : "structural-biology-molecular-biophysics",
+      "name" : "Structural Biology and Molecular Biophysics"
+    } ],
+    "version" : 1,
+    "additionalFiles" : [ {
+      "caption" : [ {
+        "text" : "Any figure supplements, source code, source data, videos or supplementary files associated with this article are contained within this zip.",
+        "type" : "paragraph"
+      } ],
+      "filename" : "elife-81551-supp-v1.zip",
+      "id" : "SD1-data",
+      "label" : "All additional files",
+      "mediaType" : "application/zip",
+      "uri" : "https://cdn.elifesciences.org/articles/81551/elife-81551-supp-v1.zip"
+    } ],
+    "xml" : "https://cdn.elifesciences.org/articles/81551/elife-81551-v1.xml",
+    "authors" : [ {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Charlottesville" ]
+          },
+          "formatted" : [ "Charlottesville", "United States" ]
+        },
+        "name" : [ "Department of Biochemistry and Molecular Genetics", "University of Virginia" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "name" : {
+        "index" : "Wang, Fengbin",
+        "preferred" : "Fengbin Wang"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "St. Paul" ]
+          },
+          "formatted" : [ "St. Paul", "United States" ]
+        },
+        "name" : [ "Department of Plant and MIcrobial Biology", "University of Minnesota" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "name" : {
+        "index" : "Chan, Chi Ho",
+        "preferred" : "Chi Ho Chan"
+      },
+      "orcid" : "0000-0002-6596-3436",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Bothell" ]
+          },
+          "formatted" : [ "Bothell", "United States" ]
+        },
+        "name" : [ "Division of Computing and Software Systems", "University of Washington Bothell" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "name" : {
+        "index" : "Suciu, Victor",
+        "preferred" : "Victor Suciu"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Irvine" ]
+          },
+          "formatted" : [ "Irvine", "United States" ]
+        },
+        "name" : [ "Department of Chemistry", "University of California, Irvine" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "name" : {
+        "index" : "Mustafa, Khawla",
+        "preferred" : "Khawla Mustafa"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Saint Paul" ]
+          },
+          "formatted" : [ "Saint Paul", "United States" ]
+        },
+        "name" : [ "Department of Plant and Microbial Biology", "University of Minnesota" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "name" : {
+        "index" : "Ammend, Madeline",
+        "preferred" : "Madeline Ammend"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Bothell" ]
+          },
+          "formatted" : [ "Bothell", "United States" ]
+        },
+        "name" : [ "Division of Computing and Software Systems", "University of Washington Bothell" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "name" : {
+        "index" : "Si, Dong",
+        "preferred" : "Dong Si"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Irvine" ]
+          },
+          "formatted" : [ "Irvine", "United States" ]
+        },
+        "name" : [ "Department of Chemistry", "University of California, Irvine" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "emailAddresses" : [ "hochbaum@uci.edu" ],
+      "name" : {
+        "index" : "Hochbaum, Allon I",
+        "preferred" : "Allon I Hochbaum"
+      },
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Charlottesville" ]
+          },
+          "formatted" : [ "Charlottesville", "United States" ]
+        },
+        "name" : [ "Department of Biochemistry and Molecular Genetics", "University of Virginia" ]
+      } ],
+      "competingInterests" : "Edward H Egelman, Reviewing editor, <i>eLife</i>.",
+      "emailAddresses" : [ "egelman@virginia.edu" ],
+      "name" : {
+        "index" : "Egelman, Edward H",
+        "preferred" : "Edward H Egelman"
+      },
+      "orcid" : "0000-0003-4844-5212",
+      "type" : "person"
+    }, {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "United States",
+            "locality" : [ "Saint Paul" ]
+          },
+          "formatted" : [ "Saint Paul", "United States" ]
+        },
+        "name" : [ "Department of Plant and Microbial Biology", "University of Minnesota" ]
+      } ],
+      "competingInterests" : "No competing interests declared.",
+      "emailAddresses" : [ "dbond@umn.edu" ],
+      "name" : {
+        "index" : "Bond, Daniel R",
+        "preferred" : "Daniel R Bond"
+      },
+      "orcid" : "0000-0001-8083-7107",
+      "type" : "person"
+    } ],
+    "published" : "2022-09-05T00:00:00Z",
+    "reviewers" : [ {
+      "affiliations" : [ {
+        "address" : {
+          "components" : {
+            "country" : "Germany"
+          },
+          "formatted" : [ "Germany" ]
+        },
+        "name" : [ "Goethe University" ]
+      } ],
+      "name" : {
+        "index" : "Dötsch, Volker",
+        "preferred" : "Volker Dötsch"
+      },
+      "role" : "Reviewing Editor",
+      "type" : "person"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.article-poa+json",
+  "content-type-version" : 3,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

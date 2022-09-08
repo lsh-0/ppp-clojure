@@ -4,10 +4,52 @@ see CHANGELOG.md for a more formal list of changes by release
 
 # done
 
+* recommendations2, a local implementation of recommendations
+    - done, sort of
+        - still have podcasts to do
+        - still have some weird edge cases to do
+
 # todo (0.0.2)
 
-* recommendations2, a local implementation of recommendations
-    - ...
+* api-gateway vs http-server projects
+    - api-gateway would pose as a replacement for the api-gateway
+        - access it the same way and it proxies requests back and forth
+    - http-server would have namespaces and use replacement components
+        - proxying requests only when a local implementation doesn't exist
+    - this way we can compare the differences between: 
+        - accessing the api-gateway directly
+        - through the ppp proxy
+            - which may also be configured to bypass the api-gateway and talk to the services directly
+        - through the ppp reimplementation
+
+* revisit running tests
+    - I want to run a specific test
+        - https://github.com/metabase/metabase/wiki/Migrating-from-Leiningen-to-tools.deps#running-specific-tests
+
+* correctness testing
+    - I want to compare calls to recommendations with local implementation
+
+* speed testing
+    - I want to compare speed of local recommendations vs remote
+
+* stand-alone recommendations2 project
+    - I want to build a standalone recommendations2 project
+    - could it be a drop-in replacement for the current recommendations?
+
+# consider
+
+* rename 'content-type-list' in the component interfaces, to something else
+    - this parameter is the list of acceptable content types and versions sent by the user
+        - "acceptable-content-type-list" ?
+    - it may be confusing with the other parameters
+        - like "type" (content type) and "id" (content id) in recommendations
+
+* how to keep content type definitions and versions in one place
+    - components only refer to content-types and not versions unless they have to
+    - this list of content-types can be used in tests without hardcoding versions
+        - how to test for content-type upgrades and downgrades?
+# todo bucket
+
 * http-server, per-route caching rules
     - recommendations has some: 
         - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/ApiResponse.php#L13
@@ -15,7 +57,7 @@ see CHANGELOG.md for a more formal list of changes by release
 * http, set 'vary' header
     - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Vary
     - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/ApiResponse.php#L14
-    - accept header will vary response
+    - 'accept' header will vary response
 * http, set response timeout
     - https://github.com/elifesciences/recommendations/blob/develop/src/bootstrap.php#L53
 * http, set connection timeout
@@ -26,20 +68,7 @@ see CHANGELOG.md for a more formal list of changes by release
     - https://github.com/elifesciences/recommendations/blob/5a9d9c929b7d81430a52fe84fd4a1220efb79509/src/bootstrap.php#L299
 * http, bunch of asynchronous calls at once
     - https://github.com/elifesciences/recommendations/blob/develop/src/bootstrap.php#L214
-
-# consider
-
-* rename 'content-type-list' in the component interfaces, to something else
-    - this parameter is the list of acceptable content types and versions sent by the user
-        - "acceptable-content-type-list" ?
-    - it may be confusing with the other parameters
-        - like "type" (content type) and "id" (content id) in recommendations
-
-# todo bucket
-
-* revisit running tests
-    - I want to run a specific test
-        - https://github.com/metabase/metabase/wiki/Migrating-from-Leiningen-to-tools.deps#running-specific-tests
+    - this looks like it may fail *all* requests if any *one* request fails?
 * a 'bus' implementation for components to notify other components
 * two implementations of the /articles interface
     - http proxy
@@ -64,3 +93,8 @@ see CHANGELOG.md for a more formal list of changes by release
     - isn't this centrally managed in root deps.edn?
 * a gui
 * a long list of use-cases
+    - how to add a new api endpoint to system
+    - how to handle error responses from api-gateway
+    - where to put per-component dependencies
+    - where to put shared dependencies
+    - 

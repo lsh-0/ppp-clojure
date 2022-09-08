@@ -4,7 +4,7 @@
 **/.cpcache
 **/.gradle
 *~
-
+/*.json
 /example/example/**
 artifacts
 projects/**/pom.xml

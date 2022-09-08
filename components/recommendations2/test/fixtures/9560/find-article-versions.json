@@ -1,0 +1,78 @@
+{
+  "http-resp" : {
+    "cached" : null,
+    "request-time" : 147,
+    "repeatable?" : false,
+    "protocol-version" : {
+      "name" : "HTTP",
+      "major" : 1,
+      "minor" : 1
+    },
+    "streaming?" : true,
+    "chunked?" : false,
+    "reason-phrase" : "OK",
+    "headers" : {
+      "X-Cache" : "MISS, HIT",
+      "X-Timer" : "S1662382743.230450,VS0,VE0",
+      "Referrer-Policy" : "same-origin",
+      "warning" : "Deprecation: Support for this Content-Type version will be removed",
+      "Server" : "nginx",
+      "Age" : "139",
+      "Via" : "kong/0.10.4, 1.1 varnish, 1.1 varnish",
+      "Content-Type" : "application/vnd.elife.article-history+json; version=1",
+      "Access-Control-Allow-Origin" : "*",
+      "X-Content-Type-Options" : "nosniff",
+      "Content-Length" : "661",
+      "X-Frame-Options" : "DENY",
+      "X-Kong-Upstream-Latency" : "54",
+      "Connection" : "close",
+      "Accept-Ranges" : "bytes",
+      "X-Kong-Proxy-Latency" : "0",
+      "KONG-Authenticated" : "False",
+      "X-Consumer-Groups-Filtered" : "user",
+      "X-Cache-Hits" : "0, 1",
+      "Date" : "Mon, 05 Sep 2022 12:59:03 GMT",
+      "Vary" : "Accept, Authorization, Accept-Encoding",
+      "Cache-Control" : "public, max-age=300, stale-while-revalidate=300, stale-if-error=86400",
+      "X-Served-By" : "cache-iad-kjyo7100098-IAD, cache-syd10168-SYD"
+    },
+    "orig-content-encoding" : "gzip",
+    "status" : 200,
+    "length" : 661,
+    "trace-redirects" : [ ]
+  },
+  "content" : {
+    "received" : "2015-06-19",
+    "accepted" : "2015-08-04",
+    "versions" : [ {
+      "stage" : "published",
+      "copyright" : {
+        "license" : "CC-BY-4.0",
+        "holder" : "Berger et al.",
+        "statement" : "This article is distributed under the terms of the <a href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons Attribution License</a>, which permits unrestricted use and redistribution provided that the original author and source are credited."
+      },
+      "pdf" : "https://cdn.elifesciences.org/articles/09560/elife-09560-v1.pdf",
+      "type" : "research-article",
+      "doi" : "10.7554/eLife.09560",
+      "versionDate" : "2015-09-10T00:00:00Z",
+      "title" : "<i>Homo naledi</i>, a new species of the genus <i>Homo</i> from the Dinaledi Chamber, South Africa",
+      "volume" : 4,
+      "impactStatement" : "A new hominin species has been unearthed in the Dinaledi Chamber of the Rising Star cave system in the largest assemblage of a single species of hominins yet discovered in Africa.",
+      "status" : "vor",
+      "id" : "09560",
+      "statusDate" : "2015-09-10T00:00:00Z",
+      "elocationId" : "e09560",
+      "authorLine" : "Lee R Berger, John Hawks ... Bernhard Zipfel",
+      "subjects" : [ {
+        "id" : "evolutionary-biology",
+        "name" : "Evolutionary Biology"
+      } ],
+      "version" : 1,
+      "published" : "2015-09-10T00:00:00Z"
+    } ]
+  },
+  "content-type" : "application/vnd.elife.article-history+json",
+  "content-type-version" : 1,
+  "content-type-version-deprecated?" : false,
+  "authenticated?" : false
+}

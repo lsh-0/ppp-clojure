@@ -1,0 +1,141 @@
+[ {
+  "figuresPdf" : "https://cdn.elifesciences.org/articles/80008/elife-80008-figures-v2.pdf",
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "In humans and other mammals, germline mutations are more likely to arise in fathers than in mothers. Although this sex bias has long been attributed to DNA replication errors in spermatogenesis, recent evidence from humans points to the importance of mutagenic processes that do not depend on cell division, calling into question our understanding of this basic phenomenon. Here, we infer the ratio of paternal-to-maternal mutations, <i>α</i>, in 42 species of amniotes, from putatively neutral substitution rates of sex chromosomes and autosomes. Despite marked differences in gametogenesis, physiologies and environments across species, fathers consistently contribute more mutations than mothers in all the species examined, including mammals, birds, and reptiles. In mammals, <i>α</i> is as high as 4 and correlates with generation times; in birds and snakes, <i>α</i> appears more stable around 2. These observations are consistent with a simple model, in which mutations accrue at equal rates in both sexes during early development and at a higher rate in the male germline after sexual differentiation, with a conserved paternal-to-maternal ratio across species. Thus, <i>α</i> may reflect the relative contributions of two or more developmental phases to total germline mutations, and is expected to depend on generation time even if mutations do not track cell divisions."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/80008/elife-80008-v2.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.80008",
+  "versionDate" : "2022-09-02T08:10:48Z",
+  "title" : "A paternal bias in germline mutation is widespread in amniotes and can arise independently of cell division numbers",
+  "volume" : 11,
+  "impactStatement" : "A paternal bias in germline mutation is seen throughout amniotes and may be explained by sex differences in DNA damage and repair after primordial germ cell specification.",
+  "status" : "vor",
+  "id" : "80008",
+  "statusDate" : "2022-09-02T08:10:48Z",
+  "elocationId" : "e80008",
+  "authorLine" : "Marc de Manuel, Felix L Wu, Molly Przeworski",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  }, {
+    "id" : "genetics-genomics",
+    "name" : "Genetics and Genomics"
+  } ],
+  "version" : 2,
+  "published" : "2022-08-02T00:00:00Z"
+}, {
+  "researchOrganisms" : [ "Human" ],
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "Cancer genomes exhibit surprisingly weak signatures of negative selection<sup>1,2</sup>. This may be because selective pressures are relaxed or because genome-wide linkage prevents deleterious mutations from being removed (Hill-Robertson interference)<sup>3</sup>. By stratifying tumors by their genome-wide mutational burden, we observe negative selection (dN/dS ~ 0.56) in low mutational burden tumors, while remaining cancers exhibit dN/dS ratios ~1. This suggests that most tumors do not remove deleterious passengers. To buffer against deleterious passengers, tumors upregulate heat shock pathways as their mutational burden increases. Finally, evolutionary modeling finds that Hill-Robertson interference alone can reproduce patterns of attenuated selection and estimates the total fitness cost of passengers to be 46% per cell on average. Collectively, our findings suggest that the lack of observed negative selection in most tumors is not due to relaxed selective pressures, but rather the inability of selection to remove deleterious mutations in the presence of genome-wide linkage."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/67790/elife-67790-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.67790",
+  "versionDate" : "2022-09-01T00:00:00Z",
+  "title" : "Most cancers carry a substantial deleterious load due to Hill-Robertson interference",
+  "volume" : 11,
+  "status" : "poa",
+  "id" : "67790",
+  "statusDate" : "2022-09-01T00:00:00Z",
+  "elocationId" : "e67790",
+  "authorLine" : "Susanne Tilk, Svyatoslav Tkachenko ... Christopher D McFarland",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  }, {
+    "id" : "genetics-genomics",
+    "name" : "Genetics and Genomics"
+  } ],
+  "version" : 1,
+  "published" : "2022-09-01T00:00:00Z"
+}, {
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "Ribonucleotide reductases (RNRs) are used by all free-living organisms and many viruses to catalyze an essential step in the <i>de novo</i> biosynthesis of DNA precursors. RNRs are remarkably diverse by primary sequence and cofactor requirement, while sharing a conserved fold and radical-based mechanism for nucleotide reduction. Here, we structurally aligned the diverse RNR family by the conserved catalytic barrel to reconstruct the first large-scale phylogeny consisting of 6,779 sequences that unites all extant classes of the RNR family and performed evo-velocity analysis to independently validate our evolutionary model. With a robust phylogeny in-hand, we uncovered a novel, phylogenetically distinct clade that is placed as ancestral to the classes I and II RNRs, which we have termed clade Ø. We employed small-angle X-ray scattering (SAXS), cryogenic-electron microscopy (cryo-EM), and AlphaFold2 to investigate a member of this clade from <i>Synechococcus</i> phage S-CBP4 and report the most minimal RNR architecture to-date. Based on our analyses, we propose an evolutionary model of diversification in the RNR family and delineate how our phylogeny can be used as a roadmap for targeted future study."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/79790/elife-79790-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.79790",
+  "versionDate" : "2022-09-01T00:00:00Z",
+  "title" : "Comprehensive phylogenetic analysis of the ribonucleotide reductase family reveals an ancestral clade",
+  "volume" : 11,
+  "status" : "poa",
+  "id" : "79790",
+  "statusDate" : "2022-09-01T00:00:00Z",
+  "elocationId" : "e79790",
+  "authorLine" : "Audrey A Burnim, Matthew A Spence ... Nozomi Ando",
+  "subjects" : [ {
+    "id" : "biochemistry-chemical-biology",
+    "name" : "Biochemistry and Chemical Biology"
+  }, {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2022-09-01T00:00:00Z"
+}, {
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "In animals with slow ontogeny and long-term maternal investment, immatures are likely to experience the birth of a younger sibling before reaching maturity. In these species, the birth of a sibling marks a major event in an offspring's early life, as the older siblings experience a decrease in maternal support. The transition to siblinghood (TTS) is often considered to be stressful for the older offspring, but physiological evidence is lacking. To explore the TTS in wild bonobos, we investigated physiological changes in urinary cortisol (stress response), neopterin (cell-mediated immunity), and total triiodothyronine (T3, metabolic rate), as well as changes in behaviors that reflect the mother-offspring relationship. Following a sibling's birth, urinary cortisol levels of the older offspring increased fivefold, independent of their age, and remained elevated for seven months. The cortisol level increase was associated with declining neopterin levels, however T3 levels and behavioral measures did not change. Our results indicate that the TTS is accompanied by elevated cortisol levels and that this change does not coincide with nutritional weaning and attainment of physical independence. Our results suggest that bonobos and humans experience TTS in similar ways and that this developmental event may have emerged in the last common ancestor."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/77227/elife-77227-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.77227",
+  "versionDate" : "2022-08-30T00:00:00Z",
+  "title" : "Transition to siblinghood causes a substantial and long-lasting increase in urinary cortisol levels in wild bonobos",
+  "volume" : 11,
+  "status" : "poa",
+  "id" : "77227",
+  "statusDate" : "2022-08-30T00:00:00Z",
+  "elocationId" : "e77227",
+  "authorLine" : "Verena Behringer, Andreas Berghänel ... Gottfried Hohmann",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2022-08-30T00:00:00Z"
+}, {
+  "figuresPdf" : "https://cdn.elifesciences.org/articles/81567/elife-81567-figures-v1.pdf",
+  "researchOrganisms" : [ "<i>D. melanogaster</i>" ],
+  "stage" : "published",
+  "abstract" : {
+    "content" : [ {
+      "type" : "paragraph",
+      "text" : "Transposable elements (TEs) are selfish genetic parasites that increase their copy number at the expense of host fitness. The ‘success’, or genome-wide abundance, of TEs differs widely between species. Deciphering the causes for this large variety in TE abundance has remained a central question in evolutionary genomics. We previously proposed that species-specific TE abundance could be driven by the inadvertent consequences of host-direct epigenetic silencing of TEs—the spreading of repressive epigenetic marks from silenced TEs into adjacent sequences. Here, we compared this TE-mediated local enrichment of repressive marks, or ‘the epigenetic effect of TEs’, in six species in the <i>Drosophila melanogaster</i> subgroup to dissect step-by-step the role of such effect in determining genomic TE abundance. We found that TE-mediated local enrichment of repressive marks is prevalent and substantially varies across and even within species. While this TE-mediated effect alters the epigenetic states of adjacent genes, we surprisingly discovered that the transcription of neighboring genes could reciprocally impact this spreading. Importantly, our multi-species analysis provides the power and appropriate phylogenetic resolution to connect species-specific host chromatin regulation, TE-mediated epigenetic effects, the strength of natural selection against TEs, and genomic TE abundance unique to individual species. Our findings point toward the importance of host chromatin landscapes in shaping genome evolution through the epigenetic effects of a selfish genetic parasite."
+    } ]
+  },
+  "pdf" : "https://cdn.elifesciences.org/articles/81567/elife-81567-v1.pdf",
+  "type" : "research-article",
+  "doi" : "10.7554/eLife.81567",
+  "versionDate" : "2022-08-23T00:00:00Z",
+  "title" : "Species-specific chromatin landscape determines how transposable elements shape genome evolution",
+  "volume" : 11,
+  "impactStatement" : "The ultimate driver for the substantial between-species difference in the success of transposable elements, the widely distributed genetic parasite, may lie in the overall chromatin environment.",
+  "status" : "vor",
+  "id" : "81567",
+  "statusDate" : "2022-08-23T00:00:00Z",
+  "elocationId" : "e81567",
+  "authorLine" : "Yuheng Huang, Harsh Shukla, Yuh Chwen G Lee",
+  "subjects" : [ {
+    "id" : "evolutionary-biology",
+    "name" : "Evolutionary Biology"
+  } ],
+  "version" : 1,
+  "published" : "2022-08-23T00:00:00Z"
+} ]

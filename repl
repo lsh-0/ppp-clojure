@@ -1,2 +1,12 @@
 #!/bin/bash
-clojure -A:dev -A:build -M:repl
+# starts a development repl in the command-line.core ns.
+
+# this is mostly to dogfood the usefulness of the command-line project.
+# if it turns out not to be to useful, I might revert back to the 'user' ns.
+
+# I have this in my .clojure/rebel_readline.edn file to prevent line breaking on enter:
+# {:key-bindings {:emacs [[(13) :clojure-force-accept-line]]}}
+# see:
+# - https://github.com/bhauman/rebel-readline/issues/101
+
+clojure -A:dev -A:test -A:build -M:repl
